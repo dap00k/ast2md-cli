@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Type1",
+        "namespace": "",
+        "properties": [],
+        "methods": [],
+        "uses": [],
+        "is_abstract": false,
+        "implements": []
+    },
+    {
+        "name": "Type3",
+        "namespace": "",
+        "properties": [],
+        "methods": [],
+        "uses": [],
+        "is_abstract": false,
+        "implements": []
+    },
+    {
+        "name": "Type2",
+        "namespace": "",
+        "properties": ["prop1","prop2"],
+        "methods": [],
+        "uses": [ 
+            {"name": "Type3","namespace": "","type": true,"properties": [],"methods": [], "type_freq": 1,"property_freq":0,"method_freq":0},
+            {"name": "Type1","namespace": "","type": true,"properties": [],"methods": [], "type_freq": 1,"property_freq":0,"method_freq":0}
+        ],
+        "is_abstract": false,
+        "implements": []
+    }
+]

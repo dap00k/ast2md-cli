@@ -1,0 +1,11 @@
+(source_file "EmptyClass.swift"
+  (class_decl range=[EmptyClass.swift:1:1 - line:1:14] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (destructor_decl implicit range=[EmptyClass.swift:1:7 - line:1:7] "deinit" interface type='(Type1) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[EmptyClass.swift:1:7 - line:1:7]))
+    (constructor_decl implicit range=[EmptyClass.swift:1:7 - line:1:7] "init()" interface type='(Type1.Type) -> () -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[EmptyClass.swift:1:7 - line:1:7]
+        (return_stmt range=[EmptyClass.swift:1:7 - line:1:7])))))

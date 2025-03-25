@@ -1,0 +1,20 @@
+[
+ {
+   "name": "Type2",
+   "namespace": "",
+   "properties": ["a","b"],
+   "methods": ["doSomething()", "doSomethingToo()"],
+   "uses": [],
+   "is_abstract": false,
+   "implements": []
+},
+{
+   "name": "Type1",
+   "namespace": "",
+   "properties": ["c","d"],
+   "methods": ["doSomethingElse()"],
+   "uses": [{"name": "Type2","namespace": "","type": true,"properties": ["a","b"],"methods": ["doSomething()", "doSomethingToo()"], "type_freq": 1,"property_freq":2,"method_freq":2}],
+   "is_abstract": false,
+   "implements": []
+}
+]

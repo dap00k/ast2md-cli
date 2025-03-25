@@ -1,0 +1,19 @@
+(source_file "Return.swift"
+  (class_decl range=[Return.swift:1:1 - line:5:1] "t1" interface type='t1.Type' access=internal non-resilient
+    (func_decl range=[Return.swift:2:5 - line:4:5] "x()" interface type='(t1) -> () -> Int' access=internal
+      (parameter "self")
+      (parameter_list range=[Return.swift:2:11 - line:2:12])
+      (result
+        (type_ident id='Int' bind=Swift.(file).Int))
+      (brace_stmt range=[Return.swift:2:20 - line:4:5]
+        (return_stmt range=[Return.swift:3:9 - line:3:16]
+          (integer_literal_expr type='Int' location=Return.swift:3:16 range=[Return.swift:3:16 - line:3:16] value=1 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))))
+    (destructor_decl implicit range=[Return.swift:1:7 - line:1:7] "deinit" interface type='(t1) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[Return.swift:1:7 - line:1:7]))
+    (constructor_decl implicit range=[Return.swift:1:7 - line:1:7] "init()" interface type='(t1.Type) -> () -> t1' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[Return.swift:1:7 - line:1:7]
+        (return_stmt range=[Return.swift:1:7 - line:1:7])))))

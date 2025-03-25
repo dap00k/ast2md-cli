@@ -1,0 +1,1258 @@
+(source_file "ViewController.swift"
+  (import_decl range=[ViewController.swift:8:1 - line:8:8] 'UIKit')
+  (import_decl range=[ViewController.swift:9:1 - line:9:8] 'Speech')
+  (class_decl range=[ViewController.swift:11:8 - line:187:1] "ViewController" interface type='ViewController.Type' access=public non-resilient inherits: UIViewController, SFSpeechRecognizerDelegate
+    (pattern_binding_decl range=[ViewController.swift:14:13 - line:14:91]
+      (pattern_named type='SFSpeechRecognizer' 'speechRecognizer')
+      Original init:
+      (force_value_expr type='SFSpeechRecognizer' location=ViewController.swift:14:91 range=[ViewController.swift:14:36 - line:14:91]
+        (call_expr type='SFSpeechRecognizer?' location=ViewController.swift:14:36 range=[ViewController.swift:14:36 - line:14:90] nothrow isolationCrossing=none
+          (constructor_ref_call_expr type='(Locale) -> SFSpeechRecognizer?' location=ViewController.swift:14:36 range=[ViewController.swift:14:36 - line:14:36] nothrow isolationCrossing=none
+            (declref_expr implicit type='(SFSpeechRecognizer.Type) -> (Locale) -> SFSpeechRecognizer?' location=ViewController.swift:14:36 range=[ViewController.swift:14:36 - line:14:36] decl=Speech.(file).SFSpeechRecognizer.init(locale:) function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr type='SFSpeechRecognizer.Type' location=ViewController.swift:14:36 range=[ViewController.swift:14:36 - line:14:36] typerepr='SFSpeechRecognizer'))))
+          (argument_list labels=locale:
+            (argument label=locale
+              (call_expr type='Locale' location=ViewController.swift:14:63 range=[ViewController.swift:14:63 - line:14:89] nothrow isolationCrossing=none
+                (constructor_ref_call_expr type='(String) -> Locale' location=ViewController.swift:14:63 range=[ViewController.swift:14:63 - line:14:63] nothrow isolationCrossing=none
+                  (declref_expr implicit type='(Locale.Type) -> (String) -> Locale' location=ViewController.swift:14:63 range=[ViewController.swift:14:63 - line:14:63] decl=Foundation.(file).Locale.init(identifier:) function_ref=single)
+                  (argument_list implicit
+                    (argument
+                      (type_expr type='Locale.Type' location=ViewController.swift:14:63 range=[ViewController.swift:14:63 - line:14:63] typerepr='Locale'))))
+                (argument_list labels=identifier:
+                  (argument label=identifier
+                    (string_literal_expr type='String' location=ViewController.swift:14:82 range=[ViewController.swift:14:82 - line:14:82] encoding=utf8 value="en-US" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))))))))
+      Processed init:
+      (force_value_expr type='SFSpeechRecognizer' location=ViewController.swift:14:91 range=[ViewController.swift:14:36 - line:14:91]
+        (call_expr type='SFSpeechRecognizer?' location=ViewController.swift:14:36 range=[ViewController.swift:14:36 - line:14:90] nothrow isolationCrossing=none
+          (constructor_ref_call_expr type='(Locale) -> SFSpeechRecognizer?' location=ViewController.swift:14:36 range=[ViewController.swift:14:36 - line:14:36] nothrow isolationCrossing=none
+            (declref_expr implicit type='(SFSpeechRecognizer.Type) -> (Locale) -> SFSpeechRecognizer?' location=ViewController.swift:14:36 range=[ViewController.swift:14:36 - line:14:36] decl=Speech.(file).SFSpeechRecognizer.init(locale:) function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr type='SFSpeechRecognizer.Type' location=ViewController.swift:14:36 range=[ViewController.swift:14:36 - line:14:36] typerepr='SFSpeechRecognizer'))))
+          (argument_list labels=locale:
+            (argument label=locale
+              (call_expr type='Locale' location=ViewController.swift:14:63 range=[ViewController.swift:14:63 - line:14:89] nothrow isolationCrossing=none
+                (constructor_ref_call_expr type='(String) -> Locale' location=ViewController.swift:14:63 range=[ViewController.swift:14:63 - line:14:63] nothrow isolationCrossing=none
+                  (declref_expr implicit type='(Locale.Type) -> (String) -> Locale' location=ViewController.swift:14:63 range=[ViewController.swift:14:63 - line:14:63] decl=Foundation.(file).Locale.init(identifier:) function_ref=single)
+                  (argument_list implicit
+                    (argument
+                      (type_expr type='Locale.Type' location=ViewController.swift:14:63 range=[ViewController.swift:14:63 - line:14:63] typerepr='Locale'))))
+                (argument_list labels=identifier:
+                  (argument label=identifier
+                    (string_literal_expr type='String' location=ViewController.swift:14:82 range=[ViewController.swift:14:82 - line:14:82] encoding=utf8 value="en-US" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))))))))
+    (var_decl range=[ViewController.swift:14:17 - line:14:17] "speechRecognizer" interface type='SFSpeechRecognizer' access=private let readImpl=stored immutable
+      (accessor_decl implicit range=[ViewController.swift:14:17 - line:14:17] 'anonname=0x115b83c58' interface type='(ViewController) -> () -> SFSpeechRecognizer' access=private get_for=speechRecognizer
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:14:17 - line:14:17]
+          (return_stmt implicit
+            (member_ref_expr implicit type='SFSpeechRecognizer' decl=ViewController.(file).ViewController.speechRecognizer@ViewController.swift:14:17 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:14:17 function_ref=unapplied))))))
+    (pattern_binding_decl range=[ViewController.swift:16:13 - line:16:74]
+      (pattern_typed type='SFSpeechAudioBufferRecognitionRequest?'
+        (pattern_named type='SFSpeechAudioBufferRecognitionRequest?' 'recognitionRequest')
+        (type_optional
+          (type_ident id='SFSpeechAudioBufferRecognitionRequest' bind=Speech.(file).SFSpeechAudioBufferRecognitionRequest)))
+      Processed init:
+      (nil_literal_expr implicit type='SFSpeechAudioBufferRecognitionRequest?' initializer=**NULL**))
+    (var_decl range=[ViewController.swift:16:17 - line:16:17] "recognitionRequest" interface type='SFSpeechAudioBufferRecognitionRequest?' access=private readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[ViewController.swift:16:17 - line:16:17] 'anonname=0x115b87c10' interface type='(ViewController) -> () -> SFSpeechAudioBufferRecognitionRequest?' access=private get_for=recognitionRequest
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:16:17 - line:16:17]
+          (return_stmt implicit
+            (member_ref_expr implicit type='SFSpeechAudioBufferRecognitionRequest?' decl=ViewController.(file).ViewController.recognitionRequest@ViewController.swift:16:17 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:16:17 function_ref=unapplied)))))
+      (accessor_decl implicit range=[ViewController.swift:16:17 - line:16:17] 'anonname=0x115b87e88' interface type='(ViewController) -> (SFSpeechAudioBufferRecognitionRequest?) -> ()' access=private set_for=recognitionRequest
+        (parameter "self" interface type='ViewController')
+        (parameter_list range=[ViewController.swift:16:17 - line:16:17]
+          (parameter "value" interface type='SFSpeechAudioBufferRecognitionRequest?'))
+        (brace_stmt implicit range=[ViewController.swift:16:17 - line:16:17]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue SFSpeechAudioBufferRecognitionRequest?' decl=ViewController.(file).ViewController.recognitionRequest@ViewController.swift:16:17 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:16:17 function_ref=unapplied))
+            (declref_expr implicit type='SFSpeechAudioBufferRecognitionRequest?' decl=ViewController.(file).ViewController.<anonymous>.value@ViewController.swift:16:17 function_ref=unapplied))))
+      (accessor_decl implicit range=[ViewController.swift:16:17 - line:16:17] 'anonname=0x115b88058' interface type='(ViewController) -> () -> ()' access=private _modify_for=recognitionRequest
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:16:17 - line:16:17]
+          (yield_stmt implicit range=[ViewController.swift:16:17 - line:16:17]
+            (inout_expr implicit type='inout SFSpeechAudioBufferRecognitionRequest?'
+              (member_ref_expr implicit type='@lvalue SFSpeechAudioBufferRecognitionRequest?' decl=ViewController.(file).ViewController.recognitionRequest@ViewController.swift:16:17 direct_to_impl
+                (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:16:17 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[ViewController.swift:18:13 - line:18:57]
+      (pattern_typed type='SFSpeechRecognitionTask?'
+        (pattern_named type='SFSpeechRecognitionTask?' 'recognitionTask')
+        (type_optional
+          (type_ident id='SFSpeechRecognitionTask' bind=Speech.(file).SFSpeechRecognitionTask)))
+      Processed init:
+      (nil_literal_expr implicit type='SFSpeechRecognitionTask?' initializer=**NULL**))
+    (var_decl range=[ViewController.swift:18:17 - line:18:17] "recognitionTask" interface type='SFSpeechRecognitionTask?' access=private readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[ViewController.swift:18:17 - line:18:17] 'anonname=0x115b97120' interface type='(ViewController) -> () -> SFSpeechRecognitionTask?' access=private get_for=recognitionTask
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:18:17 - line:18:17]
+          (return_stmt implicit
+            (member_ref_expr implicit type='SFSpeechRecognitionTask?' decl=ViewController.(file).ViewController.recognitionTask@ViewController.swift:18:17 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:18:17 function_ref=unapplied)))))
+      (accessor_decl implicit range=[ViewController.swift:18:17 - line:18:17] 'anonname=0x115b97398' interface type='(ViewController) -> (SFSpeechRecognitionTask?) -> ()' access=private set_for=recognitionTask
+        (parameter "self" interface type='ViewController')
+        (parameter_list range=[ViewController.swift:18:17 - line:18:17]
+          (parameter "value" interface type='SFSpeechRecognitionTask?'))
+        (brace_stmt implicit range=[ViewController.swift:18:17 - line:18:17]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue SFSpeechRecognitionTask?' decl=ViewController.(file).ViewController.recognitionTask@ViewController.swift:18:17 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:18:17 function_ref=unapplied))
+            (declref_expr implicit type='SFSpeechRecognitionTask?' decl=ViewController.(file).ViewController.<anonymous>.value@ViewController.swift:18:17 function_ref=unapplied))))
+      (accessor_decl implicit range=[ViewController.swift:18:17 - line:18:17] 'anonname=0x115b97568' interface type='(ViewController) -> () -> ()' access=private _modify_for=recognitionTask
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:18:17 - line:18:17]
+          (yield_stmt implicit range=[ViewController.swift:18:17 - line:18:17]
+            (inout_expr implicit type='inout SFSpeechRecognitionTask?'
+              (member_ref_expr implicit type='@lvalue SFSpeechRecognitionTask?' decl=ViewController.(file).ViewController.recognitionTask@ViewController.swift:18:17 direct_to_impl
+                (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:18:17 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[ViewController.swift:20:13 - line:20:45]
+      (pattern_named type='AVAudioEngine' 'audioEngine')
+      Original init:
+      (call_expr type='AVAudioEngine' location=ViewController.swift:20:31 range=[ViewController.swift:20:31 - line:20:45] nothrow isolationCrossing=none
+        (constructor_ref_call_expr type='() -> AVAudioEngine' location=ViewController.swift:20:31 range=[ViewController.swift:20:31 - line:20:31] nothrow isolationCrossing=none
+          (declref_expr implicit type='(AVAudioEngine.Type) -> () -> AVAudioEngine' location=ViewController.swift:20:31 range=[ViewController.swift:20:31 - line:20:31] decl=AVFAudio.(file).AVAudioEngine.init() function_ref=single)
+          (argument_list implicit
+            (argument
+              (type_expr type='AVAudioEngine.Type' location=ViewController.swift:20:31 range=[ViewController.swift:20:31 - line:20:31] typerepr='AVAudioEngine'))))
+        (argument_list))
+      Processed init:
+      (call_expr type='AVAudioEngine' location=ViewController.swift:20:31 range=[ViewController.swift:20:31 - line:20:45] nothrow isolationCrossing=none
+        (constructor_ref_call_expr type='() -> AVAudioEngine' location=ViewController.swift:20:31 range=[ViewController.swift:20:31 - line:20:31] nothrow isolationCrossing=none
+          (declref_expr implicit type='(AVAudioEngine.Type) -> () -> AVAudioEngine' location=ViewController.swift:20:31 range=[ViewController.swift:20:31 - line:20:31] decl=AVFAudio.(file).AVAudioEngine.init() function_ref=single)
+          (argument_list implicit
+            (argument
+              (type_expr type='AVAudioEngine.Type' location=ViewController.swift:20:31 range=[ViewController.swift:20:31 - line:20:31] typerepr='AVAudioEngine'))))
+        (argument_list)))
+    (var_decl range=[ViewController.swift:20:17 - line:20:17] "audioEngine" interface type='AVAudioEngine' access=private let readImpl=stored immutable
+      (accessor_decl implicit range=[ViewController.swift:20:17 - line:20:17] 'anonname=0x115b997c0' interface type='(ViewController) -> () -> AVAudioEngine' access=private get_for=audioEngine
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:20:17 - line:20:17]
+          (return_stmt implicit
+            (member_ref_expr implicit type='AVAudioEngine' decl=ViewController.(file).ViewController.audioEngine@ViewController.swift:20:17 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:20:17 function_ref=unapplied))))))
+    (pattern_binding_decl range=[ViewController.swift:22:15 - line:22:39]
+      (pattern_typed type='UITextView?'
+        (pattern_named type='UITextView?' 'textView')
+        (type_implicitly_unwrapped_optional
+          (type_ident id='UITextView' bind=UIKit.(file).UITextView)))
+      Processed init:
+      (nil_literal_expr implicit type='UITextView?' initializer=**NULL**))
+    (var_decl range=[ViewController.swift:22:19 - line:22:19] "textView" interface type='UITextView?' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[ViewController.swift:22:19 - line:22:19] 'anonname=0x115b9cda0' interface type='(ViewController) -> () -> UITextView?' access=internal get_for=textView
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:22:19 - line:22:19]
+          (return_stmt implicit
+            (member_ref_expr implicit type='UITextView?' decl=ViewController.(file).ViewController.textView@ViewController.swift:22:19 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:22:19 function_ref=unapplied)))))
+      (accessor_decl implicit range=[ViewController.swift:22:19 - line:22:19] 'anonname=0x115bb1620' interface type='(ViewController) -> (UITextView?) -> ()' access=internal set_for=textView
+        (parameter "self" interface type='ViewController')
+        (parameter_list range=[ViewController.swift:22:19 - line:22:19]
+          (parameter "value" interface type='UITextView?'))
+        (brace_stmt implicit range=[ViewController.swift:22:19 - line:22:19]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue UITextView?' decl=ViewController.(file).ViewController.textView@ViewController.swift:22:19 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:22:19 function_ref=unapplied))
+            (declref_expr implicit type='UITextView?' decl=ViewController.(file).ViewController.<anonymous>.value@ViewController.swift:22:19 function_ref=unapplied))))
+      (accessor_decl implicit range=[ViewController.swift:22:19 - line:22:19] 'anonname=0x115bb1830' interface type='(ViewController) -> () -> ()' access=internal _modify_for=textView
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:22:19 - line:22:19]
+          (yield_stmt implicit range=[ViewController.swift:22:19 - line:22:19]
+            (inout_expr implicit type='inout UITextView?'
+              (member_ref_expr implicit type='@lvalue UITextView?' decl=ViewController.(file).ViewController.textView@ViewController.swift:22:19 direct_to_impl
+                (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:22:19 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[ViewController.swift:24:15 - line:24:41]
+      (pattern_typed type='UIButton?'
+        (pattern_named type='UIButton?' 'recordButton')
+        (type_implicitly_unwrapped_optional
+          (type_ident id='UIButton' bind=UIKit.(file).UIButton)))
+      Processed init:
+      (nil_literal_expr implicit type='UIButton?' initializer=**NULL**))
+    (var_decl range=[ViewController.swift:24:19 - line:24:19] "recordButton" interface type='UIButton?' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[ViewController.swift:24:19 - line:24:19] 'anonname=0x115bb2398' interface type='(ViewController) -> () -> UIButton?' access=internal get_for=recordButton
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:24:19 - line:24:19]
+          (return_stmt implicit
+            (member_ref_expr implicit type='UIButton?' decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:24:19 function_ref=unapplied)))))
+      (accessor_decl implicit range=[ViewController.swift:24:19 - line:24:19] 'anonname=0x115bb2610' interface type='(ViewController) -> (UIButton?) -> ()' access=internal set_for=recordButton
+        (parameter "self" interface type='ViewController')
+        (parameter_list range=[ViewController.swift:24:19 - line:24:19]
+          (parameter "value" interface type='UIButton?'))
+        (brace_stmt implicit range=[ViewController.swift:24:19 - line:24:19]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue UIButton?' decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19 direct_to_storage
+              (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:24:19 function_ref=unapplied))
+            (declref_expr implicit type='UIButton?' decl=ViewController.(file).ViewController.<anonymous>.value@ViewController.swift:24:19 function_ref=unapplied))))
+      (accessor_decl implicit range=[ViewController.swift:24:19 - line:24:19] 'anonname=0x115bb2820' interface type='(ViewController) -> () -> ()' access=internal _modify_for=recordButton
+        (parameter "self" interface type='ViewController')
+        (parameter_list)
+        (brace_stmt implicit range=[ViewController.swift:24:19 - line:24:19]
+          (yield_stmt implicit range=[ViewController.swift:24:19 - line:24:19]
+            (inout_expr implicit type='inout UIButton?'
+              (member_ref_expr implicit type='@lvalue UIButton?' decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19 direct_to_impl
+                (declref_expr implicit type='ViewController' decl=ViewController.(file).ViewController.<anonymous>.self@ViewController.swift:24:19 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[ViewController.swift:29:13 - line:34:5]
+      (pattern_typed type='SFSpeechLanguageModel.Configuration'
+        (pattern_named type='SFSpeechLanguageModel.Configuration' 'lmConfiguration')
+        (type_member
+          (type_ident id='SFSpeechLanguageModel' bind=Speech.(file).SFSpeechLanguageModel)
+          (type_ident id='Configuration' bind=Speech.(file).SFSpeechLanguageModel extension.Configuration))))
+    (var_decl range=[ViewController.swift:29:17 - line:29:17] "lmConfiguration" interface type='SFSpeechLanguageModel.Configuration' access=private readImpl=getter immutable
+      (accessor_decl range=[ViewController.swift:29:70 - line:34:5] 'anonname=0x123196a20' interface type='(ViewController) -> () -> SFSpeechLanguageModel.Configuration' access=private get_for=lmConfiguration
+        (parameter "self")
+        (parameter_list)
+        (brace_stmt range=[ViewController.swift:29:70 - line:34:5]
+          (pattern_binding_decl range=[ViewController.swift:30:9 - line:30:99]
+            (pattern_named type='URL' 'outputDir')
+            Original init:
+            (force_value_expr type='URL' location=ViewController.swift:30:99 range=[ViewController.swift:30:25 - line:30:99]
+              (member_ref_expr type='URL?' location=ViewController.swift:30:94 range=[ViewController.swift:30:25 - line:30:94] decl=Swift.(file).Collection extension.first [with (substitution_map generic_signature=<Self where Self : Collection> (substitution Self -> [URL]))]
+                (call_expr type='[URL]' location=ViewController.swift:30:45 range=[ViewController.swift:30:25 - line:30:92] nothrow isolationCrossing=none
+                  (dot_syntax_call_expr type='(FileManager.SearchPathDirectory, FileManager.SearchPathDomainMask) -> [URL]' location=ViewController.swift:30:45 range=[ViewController.swift:30:25 - line:30:45] nothrow isolationCrossing=none
+                    (declref_expr type='(FileManager) -> (FileManager.SearchPathDirectory, FileManager.SearchPathDomainMask) -> [URL]' location=ViewController.swift:30:45 range=[ViewController.swift:30:45 - line:30:45] decl=Foundation.(file).FileManager.urls(for:in:) function_ref=single)
+                    (argument_list implicit
+                      (argument
+                        (member_ref_expr type='FileManager' location=ViewController.swift:30:37 range=[ViewController.swift:30:25 - line:30:37] decl=Foundation.(file).FileManager.default
+                          (type_expr type='FileManager.Type' location=ViewController.swift:30:25 range=[ViewController.swift:30:25 - line:30:25] typerepr='FileManager')))))
+                  (argument_list labels=for:in:
+                    (argument label=for
+                      (dot_syntax_call_expr type='FileManager.SearchPathDirectory' location=ViewController.swift:30:56 range=[ViewController.swift:30:55 - line:30:56] nothrow isolationCrossing=none
+                        (declref_expr type='(FileManager.SearchPathDirectory.Type) -> FileManager.SearchPathDirectory' location=ViewController.swift:30:56 range=[ViewController.swift:30:56 - line:30:56] decl=Foundation.(file).FileManager extension.SearchPathDirectory.cachesDirectory function_ref=unapplied)
+                        (argument_list implicit
+                          (argument
+                            (type_expr implicit type='FileManager.SearchPathDirectory.Type' location=ViewController.swift:30:55 range=[ViewController.swift:30:55 - line:30:55] typerepr='FileManager.SearchPathDirectory')))))
+                    (argument label=in
+                      (member_ref_expr type='FileManager.SearchPathDomainMask' location=ViewController.swift:30:78 range=[ViewController.swift:30:77 - line:30:78] decl=Foundation.(file).FileManager extension.SearchPathDomainMask.userDomainMask
+                        (type_expr implicit type='FileManager.SearchPathDomainMask.Type' location=ViewController.swift:30:77 range=[ViewController.swift:30:77 - line:30:77] typerepr='FileManager.SearchPathDomainMask')))))))
+            Processed init:
+            (force_value_expr type='URL' location=ViewController.swift:30:99 range=[ViewController.swift:30:25 - line:30:99]
+              (member_ref_expr type='URL?' location=ViewController.swift:30:94 range=[ViewController.swift:30:25 - line:30:94] decl=Swift.(file).Collection extension.first [with (substitution_map generic_signature=<Self where Self : Collection> (substitution Self -> [URL]))]
+                (call_expr type='[URL]' location=ViewController.swift:30:45 range=[ViewController.swift:30:25 - line:30:92] nothrow isolationCrossing=none
+                  (dot_syntax_call_expr type='(FileManager.SearchPathDirectory, FileManager.SearchPathDomainMask) -> [URL]' location=ViewController.swift:30:45 range=[ViewController.swift:30:25 - line:30:45] nothrow isolationCrossing=none
+                    (declref_expr type='(FileManager) -> (FileManager.SearchPathDirectory, FileManager.SearchPathDomainMask) -> [URL]' location=ViewController.swift:30:45 range=[ViewController.swift:30:45 - line:30:45] decl=Foundation.(file).FileManager.urls(for:in:) function_ref=single)
+                    (argument_list implicit
+                      (argument
+                        (member_ref_expr type='FileManager' location=ViewController.swift:30:37 range=[ViewController.swift:30:25 - line:30:37] decl=Foundation.(file).FileManager.default
+                          (type_expr type='FileManager.Type' location=ViewController.swift:30:25 range=[ViewController.swift:30:25 - line:30:25] typerepr='FileManager')))))
+                  (argument_list labels=for:in:
+                    (argument label=for
+                      (dot_syntax_call_expr type='FileManager.SearchPathDirectory' location=ViewController.swift:30:56 range=[ViewController.swift:30:55 - line:30:56] nothrow isolationCrossing=none
+                        (declref_expr type='(FileManager.SearchPathDirectory.Type) -> FileManager.SearchPathDirectory' location=ViewController.swift:30:56 range=[ViewController.swift:30:56 - line:30:56] decl=Foundation.(file).FileManager extension.SearchPathDirectory.cachesDirectory function_ref=unapplied)
+                        (argument_list implicit
+                          (argument
+                            (type_expr implicit type='FileManager.SearchPathDirectory.Type' location=ViewController.swift:30:55 range=[ViewController.swift:30:55 - line:30:55] typerepr='FileManager.SearchPathDirectory')))))
+                    (argument label=in
+                      (member_ref_expr type='FileManager.SearchPathDomainMask' location=ViewController.swift:30:78 range=[ViewController.swift:30:77 - line:30:78] decl=Foundation.(file).FileManager extension.SearchPathDomainMask.userDomainMask
+                        (type_expr implicit type='FileManager.SearchPathDomainMask.Type' location=ViewController.swift:30:77 range=[ViewController.swift:30:77 - line:30:77] typerepr='FileManager.SearchPathDomainMask'))))))))
+
+          (var_decl range=[ViewController.swift:30:13 - line:30:13] "outputDir" interface type='URL' access=private let readImpl=stored immutable)
+
+          (pattern_binding_decl range=[ViewController.swift:31:9 - line:31:73]
+            (pattern_named type='URL' 'dynamicLanguageModel')
+            Original init:
+            (call_expr type='URL' location=ViewController.swift:31:46 range=[ViewController.swift:31:36 - line:31:73] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='(String) -> URL' location=ViewController.swift:31:46 range=[ViewController.swift:31:36 - line:31:46] nothrow isolationCrossing=none
+                (declref_expr type='(URL) -> (String) -> URL' location=ViewController.swift:31:46 range=[ViewController.swift:31:46 - line:31:46] decl=Foundation.(file).URL.appendingPathComponent function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (declref_expr type='URL' location=ViewController.swift:31:36 range=[ViewController.swift:31:36 - line:31:36] decl=ViewController.(file).ViewController.<anonymous>.outputDir@ViewController.swift:30:13 function_ref=unapplied))))
+              (argument_list
+                (argument
+                  (string_literal_expr type='String' location=ViewController.swift:31:69 range=[ViewController.swift:31:69 - line:31:69] encoding=utf8 value="LM" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))))
+            Processed init:
+            (call_expr type='URL' location=ViewController.swift:31:46 range=[ViewController.swift:31:36 - line:31:73] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='(String) -> URL' location=ViewController.swift:31:46 range=[ViewController.swift:31:36 - line:31:46] nothrow isolationCrossing=none
+                (declref_expr type='(URL) -> (String) -> URL' location=ViewController.swift:31:46 range=[ViewController.swift:31:46 - line:31:46] decl=Foundation.(file).URL.appendingPathComponent function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (declref_expr type='URL' location=ViewController.swift:31:36 range=[ViewController.swift:31:36 - line:31:36] decl=ViewController.(file).ViewController.<anonymous>.outputDir@ViewController.swift:30:13 function_ref=unapplied))))
+              (argument_list
+                (argument
+                  (string_literal_expr type='String' location=ViewController.swift:31:69 range=[ViewController.swift:31:69 - line:31:69] encoding=utf8 value="LM" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))))
+
+          (var_decl range=[ViewController.swift:31:13 - line:31:13] "dynamicLanguageModel" interface type='URL' access=private let readImpl=stored immutable)
+
+          (pattern_binding_decl range=[ViewController.swift:32:9 - line:32:73]
+            (pattern_named type='URL' 'dynamicVocabulary')
+            Original init:
+            (call_expr type='URL' location=ViewController.swift:32:43 range=[ViewController.swift:32:33 - line:32:73] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='(String) -> URL' location=ViewController.swift:32:43 range=[ViewController.swift:32:33 - line:32:43] nothrow isolationCrossing=none
+                (declref_expr type='(URL) -> (String) -> URL' location=ViewController.swift:32:43 range=[ViewController.swift:32:43 - line:32:43] decl=Foundation.(file).URL.appendingPathComponent function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (declref_expr type='URL' location=ViewController.swift:32:33 range=[ViewController.swift:32:33 - line:32:33] decl=ViewController.(file).ViewController.<anonymous>.outputDir@ViewController.swift:30:13 function_ref=unapplied))))
+              (argument_list
+                (argument
+                  (string_literal_expr type='String' location=ViewController.swift:32:66 range=[ViewController.swift:32:66 - line:32:66] encoding=utf8 value="Vocab" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))))
+            Processed init:
+            (call_expr type='URL' location=ViewController.swift:32:43 range=[ViewController.swift:32:33 - line:32:73] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='(String) -> URL' location=ViewController.swift:32:43 range=[ViewController.swift:32:33 - line:32:43] nothrow isolationCrossing=none
+                (declref_expr type='(URL) -> (String) -> URL' location=ViewController.swift:32:43 range=[ViewController.swift:32:43 - line:32:43] decl=Foundation.(file).URL.appendingPathComponent function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (declref_expr type='URL' location=ViewController.swift:32:33 range=[ViewController.swift:32:33 - line:32:33] decl=ViewController.(file).ViewController.<anonymous>.outputDir@ViewController.swift:30:13 function_ref=unapplied))))
+              (argument_list
+                (argument
+                  (string_literal_expr type='String' location=ViewController.swift:32:66 range=[ViewController.swift:32:66 - line:32:66] encoding=utf8 value="Vocab" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))))
+
+          (var_decl range=[ViewController.swift:32:13 - line:32:13] "dynamicVocabulary" interface type='URL' access=private let readImpl=stored immutable)
+
+          (return_stmt range=[ViewController.swift:33:9 - line:33:118]
+            (call_expr type='SFSpeechLanguageModel.Configuration' location=ViewController.swift:33:38 range=[ViewController.swift:33:16 - line:33:118] nothrow isolationCrossing=none
+              (constructor_ref_call_expr type='(URL, URL?) -> SFSpeechLanguageModel.Configuration' location=ViewController.swift:33:38 range=[ViewController.swift:33:16 - line:33:38] nothrow isolationCrossing=none
+                (declref_expr implicit type='(SFSpeechLanguageModel.Configuration.Type) -> (URL, URL?) -> SFSpeechLanguageModel.Configuration' location=ViewController.swift:33:38 range=[ViewController.swift:33:38 - line:33:38] decl=Speech.(file).SFSpeechLanguageModel extension.Configuration.init(languageModel:vocabulary:) function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (type_expr type='SFSpeechLanguageModel.Configuration.Type' location=ViewController.swift:33:16 range=[ViewController.swift:33:16 - line:33:38] typerepr='SFSpeechLanguageModel.Configuration'))))
+              (argument_list labels=languageModel:vocabulary:
+                (argument label=languageModel
+                  (declref_expr type='URL' location=ViewController.swift:33:67 range=[ViewController.swift:33:67 - line:33:67] decl=ViewController.(file).ViewController.<anonymous>.dynamicLanguageModel@ViewController.swift:31:13 function_ref=unapplied))
+                (argument label=vocabulary
+                  (inject_into_optional implicit type='URL?' location=ViewController.swift:33:101 range=[ViewController.swift:33:101 - line:33:101]
+                    (declref_expr type='URL' location=ViewController.swift:33:101 range=[ViewController.swift:33:101 - line:33:101] decl=ViewController.(file).ViewController.<anonymous>.dynamicVocabulary@ViewController.swift:32:13 function_ref=unapplied)))))))))
+    (func_decl range=[ViewController.swift:38:21 - line:43:5] "viewDidLoad()" interface type='(ViewController) -> () -> ()' access=public override=UIKit.(file).UIViewController.viewDidLoad() @objc dynamic
+      (parameter "self" interface type='ViewController')
+      (parameter_list range=[ViewController.swift:38:37 - line:38:38])
+      (brace_stmt range=[ViewController.swift:38:40 - line:43:5]
+        (call_expr type='Void' location=ViewController.swift:39:15 range=[ViewController.swift:39:9 - line:39:27] nothrow isolationCrossing=none
+          (dot_syntax_call_expr type='() -> Void' location=ViewController.swift:39:15 range=[ViewController.swift:39:9 - line:39:15] nothrow isolationCrossing=none
+            (declref_expr type='(UIViewController) -> () -> Void' location=ViewController.swift:39:15 range=[ViewController.swift:39:15 - line:39:15] decl=UIKit.(file).UIViewController.viewDidLoad() function_ref=single)
+            (argument_list implicit
+              (argument
+                (super_ref_expr type='UIViewController' location=ViewController.swift:39:9 range=[ViewController.swift:39:9 - line:39:9]))))
+          (argument_list))
+        (assign_expr type='()' location=ViewController.swift:42:32 range=[ViewController.swift:42:9 - line:42:34]
+          (member_ref_expr type='@lvalue Bool' location=ViewController.swift:42:22 range=[ViewController.swift:42:9 - line:42:22] decl=UIKit.(file).UIControl.isEnabled
+            (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:42:9 range=[ViewController.swift:42:9 - line:42:9]
+              (force_value_expr implicit type='UIButton' location=ViewController.swift:42:9 range=[ViewController.swift:42:9 - line:42:9] implicit_iuo_unwrap
+                (load_expr implicit type='UIButton?' location=ViewController.swift:42:9 range=[ViewController.swift:42:9 - line:42:9]
+                  (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:42:9 range=[ViewController.swift:42:9 - line:42:9] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                    (declref_expr implicit type='ViewController' location=ViewController.swift:42:9 range=[ViewController.swift:42:9 - line:42:9] decl=ViewController.(file).ViewController.viewDidLoad().self@ViewController.swift:38:26 function_ref=unapplied))))))
+          (boolean_literal_expr type='Bool' location=ViewController.swift:42:34 range=[ViewController.swift:42:34 - line:42:34] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))))
+    (func_decl range=[ViewController.swift:45:21 - line:92:5] "viewDidAppear(_:)" interface type='(ViewController) -> (Bool) -> ()' access=public override=UIKit.(file).UIViewController.viewDidAppear @objc dynamic
+      (parameter "self" interface type='ViewController')
+      (parameter_list range=[ViewController.swift:45:39 - line:45:56]
+        (parameter "animated" interface type='Bool'))
+      (brace_stmt range=[ViewController.swift:45:58 - line:92:5]
+        (call_expr type='Void' location=ViewController.swift:46:15 range=[ViewController.swift:46:9 - line:46:37] nothrow isolationCrossing=none
+          (dot_syntax_call_expr type='(Bool) -> Void' location=ViewController.swift:46:15 range=[ViewController.swift:46:9 - line:46:15] nothrow isolationCrossing=none
+            (declref_expr type='(UIViewController) -> (Bool) -> Void' location=ViewController.swift:46:15 range=[ViewController.swift:46:15 - line:46:15] decl=UIKit.(file).UIViewController.viewDidAppear function_ref=single)
+            (argument_list implicit
+              (argument
+                (super_ref_expr type='UIViewController' location=ViewController.swift:46:9 range=[ViewController.swift:46:9 - line:46:9]))))
+          (argument_list
+            (argument
+              (declref_expr type='Bool' location=ViewController.swift:46:29 range=[ViewController.swift:46:29 - line:46:29] decl=ViewController.(file).ViewController.viewDidAppear(_:).animated@ViewController.swift:45:42 function_ref=unapplied))))
+        (assign_expr type='()' location=ViewController.swift:49:35 range=[ViewController.swift:49:9 - line:49:37]
+          (member_ref_expr type='@lvalue (any SFSpeechRecognizerDelegate)?' location=ViewController.swift:49:26 range=[ViewController.swift:49:9 - line:49:26] decl=Speech.(file).SFSpeechRecognizer.delegate
+            (member_ref_expr type='SFSpeechRecognizer' location=ViewController.swift:49:9 range=[ViewController.swift:49:9 - line:49:9] decl=ViewController.(file).ViewController.speechRecognizer@ViewController.swift:14:17
+              (declref_expr implicit type='ViewController' location=ViewController.swift:49:9 range=[ViewController.swift:49:9 - line:49:9] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied)))
+          (inject_into_optional implicit type='(any SFSpeechRecognizerDelegate)?' location=ViewController.swift:49:37 range=[ViewController.swift:49:37 - line:49:37]
+            (erasure_expr implicit type='any SFSpeechRecognizerDelegate' location=ViewController.swift:49:37 range=[ViewController.swift:49:37 - line:49:37]
+              (normal_conformance type=ViewController protocol=SFSpeechRecognizerDelegate
+                (value req=speechRecognizer(_:availabilityDidChange:) witness=ViewController.(file).ViewController.speechRecognizer(_:availabilityDidChange:)@ViewController.swift:160:17)
+                (inherited_conformance type=ViewController protocol=NSObjectProtocol
+                  (normal_conformance type=NSObject protocol=NSObjectProtocol lazy)))
+              (declref_expr type='ViewController' location=ViewController.swift:49:37 range=[ViewController.swift:49:37 - line:49:37] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied))))
+        (call_expr type='Void' location=ViewController.swift:52:28 range=[ViewController.swift:52:9 - line:91:9] nothrow isolationCrossing=none
+          (dot_syntax_call_expr type='(@escaping (SFSpeechRecognizerAuthorizationStatus) -> Void) -> Void' location=ViewController.swift:52:28 range=[ViewController.swift:52:9 - line:52:28] nothrow isolationCrossing=none
+            (declref_expr type='(SFSpeechRecognizer.Type) -> (@escaping (SFSpeechRecognizerAuthorizationStatus) -> Void) -> Void' location=ViewController.swift:52:28 range=[ViewController.swift:52:28 - line:52:28] decl=Speech.(file).SFSpeechRecognizer.requestAuthorization function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr type='SFSpeechRecognizer.Type' location=ViewController.swift:52:9 range=[ViewController.swift:52:9 - line:52:9] typerepr='SFSpeechRecognizer'))))
+          (argument_list
+            (argument
+              (closure_expr type='(SFSpeechRecognizerAuthorizationStatus) -> Void' location=ViewController.swift:52:49 range=[ViewController.swift:52:49 - line:91:9] discriminator=0 global-actor-isolated=MainActor captures=(self) escaping single-expression
+                (parameter_list range=[ViewController.swift:52:51 - line:52:51]
+                  (parameter "authStatus" interface type='SFSpeechRecognizerAuthorizationStatus'))
+                (brace_stmt range=[ViewController.swift:52:49 - line:91:9]
+                  (return_stmt implicit range=[ViewController.swift:56:13 - line:90:13]
+                    (call_expr type='Void' location=ViewController.swift:56:33 range=[ViewController.swift:56:13 - line:90:13] nothrow isolationCrossing=none
+                      (dot_syntax_call_expr type='(@escaping @Sendable () -> Void) -> Void' location=ViewController.swift:56:33 range=[ViewController.swift:56:13 - line:56:33] nothrow isolationCrossing=none
+                        (declref_expr type='(OperationQueue) -> (@escaping @Sendable () -> Void) -> Void' location=ViewController.swift:56:33 range=[ViewController.swift:56:33 - line:56:33] decl=Foundation.(file).OperationQueue.addOperation function_ref=single)
+                        (argument_list implicit
+                          (argument
+                            (member_ref_expr type='OperationQueue' location=ViewController.swift:56:28 range=[ViewController.swift:56:13 - line:56:28] decl=Foundation.(file).OperationQueue.main
+                              (type_expr type='OperationQueue.Type' location=ViewController.swift:56:13 range=[ViewController.swift:56:13 - line:56:13] typerepr='OperationQueue')))))
+                      (argument_list
+                        (argument
+                          (closure_expr type='@Sendable () -> Void' location=ViewController.swift:56:46 range=[ViewController.swift:56:46 - line:90:13] discriminator=0 global-actor-isolated=MainActor captures=(authStatus<direct>, self) escaping concurrent
+                            (parameter_list range=[ViewController.swift:56:46 - line:56:46])
+                            (brace_stmt range=[ViewController.swift:56:46 - line:90:13]
+                              (switch_stmt range=[ViewController.swift:57:17 - line:89:17]
+                                (declref_expr type='SFSpeechRecognizerAuthorizationStatus' location=ViewController.swift:57:24 range=[ViewController.swift:57:24 - line:57:24] decl=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.authStatus@ViewController.swift:52:51 function_ref=unapplied)
+                                (case_stmt range=[ViewController.swift:58:17 - line:74:21]
+                                  (case_body_variables
+                                  )
+                                  (case_label_item
+                                  (pattern_enum_element type='SFSpeechRecognizerAuthorizationStatus' SFSpeechRecognizerAuthorizationStatus.authorized))
+                                  (brace_stmt implicit range=[ViewController.swift:59:21 - line:74:21]
+                                    (if_stmt range=[ViewController.swift:59:21 - line:74:21]
+                                      (#available
+
+                                        (platform_version_constraint_availability_spec platform='iOS' version='17')
+                                        (other_constraint_availability_spec ))
+                                      (brace_stmt range=[ViewController.swift:59:46 - line:72:21]
+                                        (call_expr type='Task<(), Never>' location=ViewController.swift:60:30 range=[ViewController.swift:60:25 - line:71:25] nothrow isolationCrossing=none
+                                          (dot_syntax_call_expr type='(TaskPriority?, __owned @escaping @Sendable () async -> ()) -> Task<(), Never>' location=ViewController.swift:60:30 range=[ViewController.swift:60:25 - line:60:30] nothrow isolationCrossing=none
+                                            (declref_expr type='(Task<(), Never>.Type) -> (TaskPriority?, __owned @escaping @Sendable () async -> ()) -> Task<(), Never>' location=ViewController.swift:60:30 range=[ViewController.swift:60:30 - line:60:30] decl=_Concurrency.(file).Task extension.detached(priority:operation:) [with (substitution_map generic_signature=<Success, Failure where Success : Sendable, Failure == Never> (substitution Success -> ()) (substitution Failure -> Never))] function_ref=single)
+                                            (argument_list implicit
+                                              (argument
+                                                (type_expr type='Task<(), Never>.Type' location=ViewController.swift:60:25 range=[ViewController.swift:60:25 - line:60:25] typerepr='Task'))))
+                                          (argument_list labels=priority:operation:
+                                            (argument label=priority
+                                              (default_argument_expr implicit type='TaskPriority?' location=ViewController.swift:60:39 range=[ViewController.swift:60:39 - line:60:39] default_args_owner=_Concurrency.(file).Task extension.detached(priority:operation:) [with (substitution_map generic_signature=<Success, Failure where Success : Sendable, Failure == Never> (substitution Success -> ()) (substitution Failure -> Never))] param=0))
+                                            (argument label=operation
+                                              (closure_expr type='@Sendable () async -> ()' location=ViewController.swift:60:39 range=[ViewController.swift:60:39 - line:71:25] discriminator=0 captures=(self) escaping concurrent
+                                                (parameter_list range=[ViewController.swift:60:39 - line:60:39])
+                                                (brace_stmt range=[ViewController.swift:60:39 - line:71:25]
+                                                  (do_catch_stmt range=[ViewController.swift:61:29 - line:69:29]
+                                                    (brace_stmt range=[ViewController.swift:61:32 - line:67:29]
+                                                      (pattern_binding_decl range=[ViewController.swift:62:33 - line:62:140]
+                                                        (pattern_named type='String' 'assetPath')
+                                                        Original init:
+                                                        (force_value_expr type='String' location=ViewController.swift:62:140 range=[ViewController.swift:62:49 - line:62:140]
+                                                          (call_expr type='String?' location=ViewController.swift:62:61 range=[ViewController.swift:62:49 - line:62:139] nothrow isolationCrossing=none
+                                                            (dot_syntax_call_expr type='(String?, String?, String?) -> String?' location=ViewController.swift:62:61 range=[ViewController.swift:62:49 - line:62:61] nothrow isolationCrossing=none
+                                                              (declref_expr type='(Bundle) -> (String?, String?, String?) -> String?' location=ViewController.swift:62:61 range=[ViewController.swift:62:61 - line:62:61] decl=Foundation.(file).Bundle.path(forResource:ofType:inDirectory:) function_ref=single)
+                                                              (argument_list implicit
+                                                                (argument
+                                                                  (member_ref_expr type='Bundle' location=ViewController.swift:62:56 range=[ViewController.swift:62:49 - line:62:56] decl=Foundation.(file).Bundle.main
+                                                                    (type_expr type='Bundle.Type' location=ViewController.swift:62:49 range=[ViewController.swift:62:49 - line:62:49] typerepr='Bundle')))))
+                                                            (argument_list labels=forResource:ofType:inDirectory:
+                                                              (argument label=forResource
+                                                                (inject_into_optional implicit type='String?' location=ViewController.swift:62:79 range=[ViewController.swift:62:79 - line:62:79]
+                                                                  (string_literal_expr type='String' location=ViewController.swift:62:79 range=[ViewController.swift:62:79 - line:62:79] encoding=utf8 value="CustomLMData" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                                                              (argument label=ofType
+                                                                (inject_into_optional implicit type='String?' location=ViewController.swift:62:103 range=[ViewController.swift:62:103 - line:62:103]
+                                                                  (string_literal_expr type='String' location=ViewController.swift:62:103 range=[ViewController.swift:62:103 - line:62:103] encoding=utf8 value="bin" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                                                              (argument label=inDirectory
+                                                                (inject_into_optional implicit type='String?' location=ViewController.swift:62:123 range=[ViewController.swift:62:123 - line:62:123]
+                                                                  (string_literal_expr type='String' location=ViewController.swift:62:123 range=[ViewController.swift:62:123 - line:62:123] encoding=utf8 value="customlm/en_US" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))))))
+                                                        Processed init:
+                                                        (force_value_expr type='String' location=ViewController.swift:62:140 range=[ViewController.swift:62:49 - line:62:140]
+                                                          (call_expr type='String?' location=ViewController.swift:62:61 range=[ViewController.swift:62:49 - line:62:139] nothrow isolationCrossing=none
+                                                            (dot_syntax_call_expr type='(String?, String?, String?) -> String?' location=ViewController.swift:62:61 range=[ViewController.swift:62:49 - line:62:61] nothrow isolationCrossing=none
+                                                              (declref_expr type='(Bundle) -> (String?, String?, String?) -> String?' location=ViewController.swift:62:61 range=[ViewController.swift:62:61 - line:62:61] decl=Foundation.(file).Bundle.path(forResource:ofType:inDirectory:) function_ref=single)
+                                                              (argument_list implicit
+                                                                (argument
+                                                                  (member_ref_expr type='Bundle' location=ViewController.swift:62:56 range=[ViewController.swift:62:49 - line:62:56] decl=Foundation.(file).Bundle.main
+                                                                    (type_expr type='Bundle.Type' location=ViewController.swift:62:49 range=[ViewController.swift:62:49 - line:62:49] typerepr='Bundle')))))
+                                                            (argument_list labels=forResource:ofType:inDirectory:
+                                                              (argument label=forResource
+                                                                (inject_into_optional implicit type='String?' location=ViewController.swift:62:79 range=[ViewController.swift:62:79 - line:62:79]
+                                                                  (string_literal_expr type='String' location=ViewController.swift:62:79 range=[ViewController.swift:62:79 - line:62:79] encoding=utf8 value="CustomLMData" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                                                              (argument label=ofType
+                                                                (inject_into_optional implicit type='String?' location=ViewController.swift:62:103 range=[ViewController.swift:62:103 - line:62:103]
+                                                                  (string_literal_expr type='String' location=ViewController.swift:62:103 range=[ViewController.swift:62:103 - line:62:103] encoding=utf8 value="bin" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                                                              (argument label=inDirectory
+                                                                (inject_into_optional implicit type='String?' location=ViewController.swift:62:123 range=[ViewController.swift:62:123 - line:62:123]
+                                                                  (string_literal_expr type='String' location=ViewController.swift:62:123 range=[ViewController.swift:62:123 - line:62:123] encoding=utf8 value="customlm/en_US" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))))))
+
+                                                      (var_decl range=[ViewController.swift:62:37 - line:62:37] "assetPath" interface type='String' access=private let readImpl=stored immutable)
+
+                                                      (pattern_binding_decl range=[ViewController.swift:63:33 - line:63:78]
+                                                        (pattern_named type='URL' 'assetUrl')
+                                                        Original init:
+                                                        (call_expr type='URL' location=ViewController.swift:63:48 range=[ViewController.swift:63:48 - line:63:78] nothrow isolationCrossing=none
+                                                          (constructor_ref_call_expr type='(__shared String) -> URL' location=ViewController.swift:63:48 range=[ViewController.swift:63:48 - line:63:48] nothrow isolationCrossing=none
+                                                            (declref_expr implicit type='(URL.Type) -> (__shared String) -> URL' location=ViewController.swift:63:48 range=[ViewController.swift:63:48 - line:63:48] decl=Foundation.(file).URL.init(fileURLWithPath:) function_ref=single)
+                                                            (argument_list implicit
+                                                              (argument
+                                                                (type_expr type='URL.Type' location=ViewController.swift:63:48 range=[ViewController.swift:63:48 - line:63:48] typerepr='URL'))))
+                                                          (argument_list labels=fileURLWithPath:
+                                                            (argument label=fileURLWithPath
+                                                              (declref_expr type='String' location=ViewController.swift:63:69 range=[ViewController.swift:63:69 - line:63:69] decl=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.explicit closure discriminator=0.explicit closure discriminator=0.assetPath@ViewController.swift:62:37 function_ref=unapplied))))
+                                                        Processed init:
+                                                        (call_expr type='URL' location=ViewController.swift:63:48 range=[ViewController.swift:63:48 - line:63:78] nothrow isolationCrossing=none
+                                                          (constructor_ref_call_expr type='(__shared String) -> URL' location=ViewController.swift:63:48 range=[ViewController.swift:63:48 - line:63:48] nothrow isolationCrossing=none
+                                                            (declref_expr implicit type='(URL.Type) -> (__shared String) -> URL' location=ViewController.swift:63:48 range=[ViewController.swift:63:48 - line:63:48] decl=Foundation.(file).URL.init(fileURLWithPath:) function_ref=single)
+                                                            (argument_list implicit
+                                                              (argument
+                                                                (type_expr type='URL.Type' location=ViewController.swift:63:48 range=[ViewController.swift:63:48 - line:63:48] typerepr='URL'))))
+                                                          (argument_list labels=fileURLWithPath:
+                                                            (argument label=fileURLWithPath
+                                                              (declref_expr type='String' location=ViewController.swift:63:69 range=[ViewController.swift:63:69 - line:63:69] decl=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.explicit closure discriminator=0.explicit closure discriminator=0.assetPath@ViewController.swift:62:37 function_ref=unapplied)))))
+
+                                                      (var_decl range=[ViewController.swift:63:37 - line:63:37] "assetUrl" interface type='URL' access=private let readImpl=stored immutable)
+
+                                                      (try_expr type='Void' location=ViewController.swift:64:37 range=[ViewController.swift:64:33 - line:66:127]
+                                                        (await_expr type='Void' location=ViewController.swift:64:37 range=[ViewController.swift:64:37 - line:66:127]
+                                                          (call_expr type='Void' location=ViewController.swift:64:65 range=[ViewController.swift:64:43 - line:66:127] throws isolationCrossing=none
+                                                            (dot_syntax_call_expr type='(URL, String, SFSpeechLanguageModel.Configuration) async throws -> Void' location=ViewController.swift:64:65 range=[ViewController.swift:64:43 - line:64:65] nothrow isolationCrossing=none
+                                                              (declref_expr type='(SFSpeechLanguageModel.Type) -> (URL, String, SFSpeechLanguageModel.Configuration) async throws -> Void' location=ViewController.swift:64:65 range=[ViewController.swift:64:65 - line:64:65] decl=Speech.(file).SFSpeechLanguageModel.prepareCustomLanguageModel(for:clientIdentifier:configuration:) function_ref=single)
+                                                              (argument_list implicit
+                                                                (argument
+                                                                  (type_expr type='SFSpeechLanguageModel.Type' location=ViewController.swift:64:43 range=[ViewController.swift:64:43 - line:64:43] typerepr='SFSpeechLanguageModel'))))
+                                                            (argument_list labels=for:clientIdentifier:configuration:
+                                                              (argument label=for
+                                                                (declref_expr type='URL' location=ViewController.swift:64:97 range=[ViewController.swift:64:97 - line:64:97] decl=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.explicit closure discriminator=0.explicit closure discriminator=0.assetUrl@ViewController.swift:63:37 function_ref=unapplied))
+                                                              (argument label=clientIdentifier
+                                                                (string_literal_expr type='String' location=ViewController.swift:65:110 range=[ViewController.swift:65:110 - line:65:110] encoding=utf8 value="com.apple.SpokenWord" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))
+                                                              (argument label=configuration
+                                                                (member_ref_expr type='SFSpeechLanguageModel.Configuration' location=ViewController.swift:66:112 range=[ViewController.swift:66:107 - line:66:112] decl=ViewController.(file).ViewController.lmConfiguration@ViewController.swift:29:17
+                                                                  (declref_expr type='ViewController' location=ViewController.swift:66:107 range=[ViewController.swift:66:107 - line:66:107] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied))))))))
+                                                    (case_stmt range=[ViewController.swift:67:31 - line:69:29]
+                                                      (case_body_variables
+                                                        (var_decl implicit range=[ViewController.swift:67:37 - line:67:37] "error" interface type='any Error' let readImpl=stored immutable)
+                                                      )
+                                                      (case_label_item
+                                                      (pattern_let implicit type='any Error'
+                                                        (pattern_named type='any Error' 'error')))
+                                                      (brace_stmt range=[ViewController.swift:67:37 - line:69:29]
+                                                        (call_expr type='()' location=ViewController.swift:68:33 range=[ViewController.swift:68:33 - line:68:99] nothrow isolationCrossing=none
+                                                          (declref_expr type='(String, any CVarArg...) -> ()' location=ViewController.swift:68:33 range=[ViewController.swift:68:33 - line:68:33] decl=Foundation.(file).NSLog function_ref=single)
+                                                          (argument_list
+                                                            (argument
+                                                              (interpolated_string_literal_expr type='String' location=ViewController.swift:68:39 range=[ViewController.swift:68:39 - line:68:39] trailing_quote_loc=ViewController.swift:68:98 literal_capacity=29 interpolation_count=1 builder_init=Swift.(file).DefaultStringInterpolation.init(literalCapacity:interpolationCount:) result_init=Swift.(file).String extension.init(stringInterpolation:)
+                                                                (tap_expr implicit type='String.StringInterpolation' location=ViewController.swift:68:39 range=[ViewController.swift:68:39 - line:68:39] var=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.explicit closure discriminator=0.explicit closure discriminator=0.$interpolation
+                                                                  (opaque_value_expr implicit type='String.StringInterpolation' location=ViewController.swift:68:39 range=[ViewController.swift:68:39 - line:68:39] @ 0x115d9c5c0)
+                                                                  (brace_stmt implicit range=[ViewController.swift:68:39 - line:68:39]
+                                                                    (var_decl implicit "$interpolation" interface type='String.StringInterpolation' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+                                                                    (call_expr implicit type='()' location=ViewController.swift:68:40 range=[ViewController.swift:68:40 - line:68:39] nothrow isolationCrossing=none
+                                                                      (dot_syntax_call_expr implicit type='(String) -> ()' location=ViewController.swift:68:40 range=[ViewController.swift:68:40 - line:68:40] nothrow isolationCrossing=none
+                                                                        (declref_expr implicit type='(inout DefaultStringInterpolation) -> (String) -> ()' decl=Swift.(file).DefaultStringInterpolation.appendLiteral function_ref=single)
+                                                                        (argument_list implicit
+                                                                          (argument inout
+                                                                            (inout_expr implicit type='inout DefaultStringInterpolation' location=ViewController.swift:68:40 range=[ViewController.swift:68:40 - line:68:40]
+                                                                              (declref_expr implicit type='@lvalue String.StringInterpolation' location=ViewController.swift:68:40 range=[ViewController.swift:68:40 - line:68:40] decl=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.explicit closure discriminator=0.explicit closure discriminator=0.$interpolation function_ref=unapplied)))))
+                                                                      (argument_list implicit
+                                                                        (argument
+                                                                          (string_literal_expr type='String' location=ViewController.swift:68:39 range=[ViewController.swift:68:39 - line:68:39] encoding=utf8 value="Failed to prepare custom LM: " builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))))
+                                                                    (call_expr type='()' location=ViewController.swift:68:70 range=[ViewController.swift:68:70 - line:68:97] nothrow isolationCrossing=none
+                                                                      (dot_syntax_call_expr implicit type='(String) -> ()' location=ViewController.swift:68:70 range=[ViewController.swift:68:70 - line:68:70] nothrow isolationCrossing=none
+                                                                        (declref_expr implicit type='(inout DefaultStringInterpolation) -> (String) -> ()' location=ViewController.swift:68:70 range=[ViewController.swift:68:70 - line:68:70] decl=Swift.(file).DefaultStringInterpolation.appendInterpolation [with (substitution_map generic_signature=<T where T : CustomStringConvertible, T : TextOutputStreamable> (substitution T -> String))] function_ref=single)
+                                                                        (argument_list implicit
+                                                                          (argument inout
+                                                                            (inout_expr implicit type='inout DefaultStringInterpolation' location=ViewController.swift:68:70 range=[ViewController.swift:68:70 - line:68:70]
+                                                                              (declref_expr implicit type='@lvalue String.StringInterpolation' location=ViewController.swift:68:70 range=[ViewController.swift:68:70 - line:68:70] decl=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.explicit closure discriminator=0.explicit closure discriminator=0.$interpolation function_ref=unapplied)))))
+                                                                      (argument_list
+                                                                        (argument
+                                                                          (open_existential_expr implicit type='String' location=ViewController.swift:68:77 range=[ViewController.swift:68:71 - line:68:77]
+                                                                            (opaque_value_expr implicit type='any Error' location=ViewController.swift:68:71 range=[ViewController.swift:68:71 - line:68:71] @ 0x115d9bd90)
+                                                                            (declref_expr type='any Error' location=ViewController.swift:68:71 range=[ViewController.swift:68:71 - line:68:71] decl=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.explicit closure discriminator=0.explicit closure discriminator=0.error@ViewController.swift:67:37 function_ref=unapplied)
+                                                                            (member_ref_expr type='String' location=ViewController.swift:68:77 range=[ViewController.swift:68:71 - line:68:77] decl=Foundation.(file).Error extension.localizedDescription [with (substitution_map generic_signature=<Self where Self : Error> (substitution Self -> @opened("4102F79E-0CA6-11EF-AE79-FAED6A340AED", any Error) Self))]
+                                                                              (opaque_value_expr implicit type='any Error' location=ViewController.swift:68:71 range=[ViewController.swift:68:71 - line:68:71] @ 0x115d9bd90))))))
+                                                                    (call_expr implicit type='()' location=ViewController.swift:68:98 range=[ViewController.swift:68:98 - line:68:98] nothrow isolationCrossing=none
+                                                                      (dot_syntax_call_expr implicit type='(String) -> ()' location=ViewController.swift:68:98 range=[ViewController.swift:68:98 - line:68:98] nothrow isolationCrossing=none
+                                                                        (declref_expr implicit type='(inout DefaultStringInterpolation) -> (String) -> ()' decl=Swift.(file).DefaultStringInterpolation.appendLiteral function_ref=single)
+                                                                        (argument_list implicit
+                                                                          (argument inout
+                                                                            (inout_expr implicit type='inout DefaultStringInterpolation' location=ViewController.swift:68:98 range=[ViewController.swift:68:98 - line:68:98]
+                                                                              (declref_expr implicit type='@lvalue String.StringInterpolation' location=ViewController.swift:68:98 range=[ViewController.swift:68:98 - line:68:98] decl=ViewController.(file).ViewController.viewDidAppear(_:).explicit closure discriminator=0.explicit closure discriminator=0.explicit closure discriminator=0.$interpolation function_ref=unapplied)))))
+                                                                      (argument_list implicit
+                                                                        (argument
+                                                                          (string_literal_expr type='String' location=ViewController.swift:68:98 range=[ViewController.swift:68:98 - line:68:98] encoding=utf8 value="" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**))))))))
+                                                            (argument
+                                                              (vararg_expansion_expr implicit type='any CVarArg...'
+                                                                (array_expr implicit type='any CVarArg...' initializer=**NULL**))))))))
+                                                  (await_expr type='()' location=ViewController.swift:70:29 range=[ViewController.swift:70:29 - line:70:86]
+                                                    (call_expr type='()' location=ViewController.swift:70:45 range=[ViewController.swift:70:35 - line:70:86] nothrow isolationCrossing=none
+                                                      (dot_syntax_call_expr type='(().Type, @MainActor @Sendable () throws -> ()) async throws -> ()' location=ViewController.swift:70:45 range=[ViewController.swift:70:35 - line:70:45] nothrow isolationCrossing=none
+                                                        (declref_expr type='(MainActor.Type) -> (().Type, @MainActor @Sendable () throws -> ()) async throws -> ()' location=ViewController.swift:70:45 range=[ViewController.swift:70:45 - line:70:45] decl=_Concurrency.(file).MainActor extension.run(resultType:body:) [with (substitution_map generic_signature=<T where T : Sendable> (substitution T -> ()))] function_ref=single)
+                                                        (argument_list implicit
+                                                          (argument
+                                                            (type_expr type='MainActor.Type' location=ViewController.swift:70:35 range=[ViewController.swift:70:35 - line:70:35] typerepr='MainActor'))))
+                                                      (argument_list labels=resultType:body:
+                                                        (argument label=resultType
+                                                          (default_argument_expr implicit type='().Type' location=ViewController.swift:70:49 range=[ViewController.swift:70:49 - line:70:49] default_args_owner=_Concurrency.(file).MainActor extension.run(resultType:body:) [with (substitution_map generic_signature=<T where T : Sendable> (substitution T -> ()))] param=0))
+                                                        (argument label=body
+                                                          (function_conversion_expr implicit type='@MainActor @Sendable () throws -> ()' location=ViewController.swift:70:49 range=[ViewController.swift:70:49 - line:70:86]
+                                                            (closure_expr type='@MainActor @Sendable () -> ()' location=ViewController.swift:70:49 range=[ViewController.swift:70:49 - line:70:86] discriminator=0 global-actor-isolated=MainActor captures=(self<direct><noescape>) concurrent single-expression
+                                                              (parameter_list range=[ViewController.swift:70:49 - line:70:49])
+                                                              (brace_stmt range=[ViewController.swift:70:49 - line:70:86]
+                                                                (return_stmt implicit range=[ViewController.swift:70:51 - line:70:81]
+                                                                  (assign_expr type='()' location=ViewController.swift:70:79 range=[ViewController.swift:70:51 - line:70:81]
+                                                                    (member_ref_expr type='@lvalue Bool' location=ViewController.swift:70:69 range=[ViewController.swift:70:51 - line:70:69] decl=UIKit.(file).UIControl.isEnabled
+                                                                      (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:70:56 range=[ViewController.swift:70:51 - line:70:56]
+                                                                        (force_value_expr implicit type='UIButton' location=ViewController.swift:70:56 range=[ViewController.swift:70:51 - line:70:56] implicit_iuo_unwrap
+                                                                          (load_expr implicit type='UIButton?' location=ViewController.swift:70:56 range=[ViewController.swift:70:51 - line:70:56]
+                                                                            (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:70:56 range=[ViewController.swift:70:51 - line:70:56] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                                              (declref_expr type='ViewController' location=ViewController.swift:70:51 range=[ViewController.swift:70:51 - line:70:51] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied))))))
+                                                                    (boolean_literal_expr type='Bool' location=ViewController.swift:70:81 range=[ViewController.swift:70:81 - line:70:81] value=true builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))))))))))))))))
+                                      (brace_stmt range=[ViewController.swift:72:28 - line:74:21]
+                                        (assign_expr type='()' location=ViewController.swift:73:53 range=[ViewController.swift:73:25 - line:73:55]
+                                          (member_ref_expr type='@lvalue Bool' location=ViewController.swift:73:43 range=[ViewController.swift:73:25 - line:73:43] decl=UIKit.(file).UIControl.isEnabled
+                                            (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:73:30 range=[ViewController.swift:73:25 - line:73:30]
+                                              (force_value_expr implicit type='UIButton' location=ViewController.swift:73:30 range=[ViewController.swift:73:25 - line:73:30] implicit_iuo_unwrap
+                                                (load_expr implicit type='UIButton?' location=ViewController.swift:73:30 range=[ViewController.swift:73:25 - line:73:30]
+                                                  (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:73:30 range=[ViewController.swift:73:25 - line:73:30] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                    (declref_expr type='ViewController' location=ViewController.swift:73:25 range=[ViewController.swift:73:25 - line:73:25] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied))))))
+                                          (boolean_literal_expr type='Bool' location=ViewController.swift:73:55 range=[ViewController.swift:73:55 - line:73:55] value=true builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))))))
+                                (case_stmt range=[ViewController.swift:75:17 - line:77:106]
+                                  (case_body_variables
+                                  )
+                                  (case_label_item
+                                  (pattern_enum_element type='SFSpeechRecognizerAuthorizationStatus' SFSpeechRecognizerAuthorizationStatus.denied))
+                                  (brace_stmt implicit range=[ViewController.swift:76:21 - line:77:106]
+                                    (assign_expr type='()' location=ViewController.swift:76:49 range=[ViewController.swift:76:21 - line:76:51]
+                                      (member_ref_expr type='@lvalue Bool' location=ViewController.swift:76:39 range=[ViewController.swift:76:21 - line:76:39] decl=UIKit.(file).UIControl.isEnabled
+                                        (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:76:26 range=[ViewController.swift:76:21 - line:76:26]
+                                          (force_value_expr implicit type='UIButton' location=ViewController.swift:76:26 range=[ViewController.swift:76:21 - line:76:26] implicit_iuo_unwrap
+                                            (load_expr implicit type='UIButton?' location=ViewController.swift:76:26 range=[ViewController.swift:76:21 - line:76:26]
+                                              (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:76:26 range=[ViewController.swift:76:21 - line:76:26] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                (declref_expr type='ViewController' location=ViewController.swift:76:21 range=[ViewController.swift:76:21 - line:76:21] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied))))))
+                                      (boolean_literal_expr type='Bool' location=ViewController.swift:76:51 range=[ViewController.swift:76:51 - line:76:51] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+                                    (call_expr type='Void' location=ViewController.swift:77:39 range=[ViewController.swift:77:21 - line:77:106] nothrow isolationCrossing=none
+                                      (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:77:39 range=[ViewController.swift:77:21 - line:77:39] nothrow isolationCrossing=none
+                                        (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:77:39 range=[ViewController.swift:77:39 - line:77:39] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=single)
+                                        (argument_list implicit
+                                          (argument
+                                            (force_value_expr implicit type='UIButton' location=ViewController.swift:77:26 range=[ViewController.swift:77:21 - line:77:26] implicit_iuo_unwrap
+                                              (load_expr implicit type='UIButton?' location=ViewController.swift:77:26 range=[ViewController.swift:77:21 - line:77:26]
+                                                (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:77:26 range=[ViewController.swift:77:21 - line:77:26] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                  (declref_expr type='ViewController' location=ViewController.swift:77:21 range=[ViewController.swift:77:21 - line:77:21] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied)))))))
+                                      (argument_list labels=_:for:
+                                        (argument
+                                          (inject_into_optional implicit type='String?' location=ViewController.swift:77:48 range=[ViewController.swift:77:48 - line:77:48]
+                                            (string_literal_expr type='String' location=ViewController.swift:77:48 range=[ViewController.swift:77:48 - line:77:48] encoding=utf8 value="User denied access to speech recognition" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                                        (argument label=for
+                                          (member_ref_expr type='UIControl.State' location=ViewController.swift:77:98 range=[ViewController.swift:77:97 - line:77:98] decl=UIKit.(file).UIControl extension.State.disabled
+                                            (type_expr implicit type='UIControl.State.Type' location=ViewController.swift:77:97 range=[ViewController.swift:77:97 - line:77:97] typerepr='UIControl.State')))))))
+                                (case_stmt range=[ViewController.swift:79:17 - line:81:110]
+                                  (case_body_variables
+                                  )
+                                  (case_label_item
+                                  (pattern_enum_element type='SFSpeechRecognizerAuthorizationStatus' SFSpeechRecognizerAuthorizationStatus.restricted))
+                                  (brace_stmt implicit range=[ViewController.swift:80:21 - line:81:110]
+                                    (assign_expr type='()' location=ViewController.swift:80:49 range=[ViewController.swift:80:21 - line:80:51]
+                                      (member_ref_expr type='@lvalue Bool' location=ViewController.swift:80:39 range=[ViewController.swift:80:21 - line:80:39] decl=UIKit.(file).UIControl.isEnabled
+                                        (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:80:26 range=[ViewController.swift:80:21 - line:80:26]
+                                          (force_value_expr implicit type='UIButton' location=ViewController.swift:80:26 range=[ViewController.swift:80:21 - line:80:26] implicit_iuo_unwrap
+                                            (load_expr implicit type='UIButton?' location=ViewController.swift:80:26 range=[ViewController.swift:80:21 - line:80:26]
+                                              (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:80:26 range=[ViewController.swift:80:21 - line:80:26] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                (declref_expr type='ViewController' location=ViewController.swift:80:21 range=[ViewController.swift:80:21 - line:80:21] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied))))))
+                                      (boolean_literal_expr type='Bool' location=ViewController.swift:80:51 range=[ViewController.swift:80:51 - line:80:51] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+                                    (call_expr type='Void' location=ViewController.swift:81:39 range=[ViewController.swift:81:21 - line:81:110] nothrow isolationCrossing=none
+                                      (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:81:39 range=[ViewController.swift:81:21 - line:81:39] nothrow isolationCrossing=none
+                                        (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:81:39 range=[ViewController.swift:81:39 - line:81:39] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=single)
+                                        (argument_list implicit
+                                          (argument
+                                            (force_value_expr implicit type='UIButton' location=ViewController.swift:81:26 range=[ViewController.swift:81:21 - line:81:26] implicit_iuo_unwrap
+                                              (load_expr implicit type='UIButton?' location=ViewController.swift:81:26 range=[ViewController.swift:81:21 - line:81:26]
+                                                (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:81:26 range=[ViewController.swift:81:21 - line:81:26] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                  (declref_expr type='ViewController' location=ViewController.swift:81:21 range=[ViewController.swift:81:21 - line:81:21] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied)))))))
+                                      (argument_list labels=_:for:
+                                        (argument
+                                          (inject_into_optional implicit type='String?' location=ViewController.swift:81:48 range=[ViewController.swift:81:48 - line:81:48]
+                                            (string_literal_expr type='String' location=ViewController.swift:81:48 range=[ViewController.swift:81:48 - line:81:48] encoding=utf8 value="Speech recognition restricted on this device" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                                        (argument label=for
+                                          (member_ref_expr type='UIControl.State' location=ViewController.swift:81:102 range=[ViewController.swift:81:101 - line:81:102] decl=UIKit.(file).UIControl extension.State.disabled
+                                            (type_expr implicit type='UIControl.State.Type' location=ViewController.swift:81:101 range=[ViewController.swift:81:101 - line:81:101] typerepr='UIControl.State')))))))
+                                (case_stmt range=[ViewController.swift:83:17 - line:85:103]
+                                  (case_body_variables
+                                  )
+                                  (case_label_item
+                                  (pattern_enum_element type='SFSpeechRecognizerAuthorizationStatus' SFSpeechRecognizerAuthorizationStatus.notDetermined))
+                                  (brace_stmt implicit range=[ViewController.swift:84:21 - line:85:103]
+                                    (assign_expr type='()' location=ViewController.swift:84:49 range=[ViewController.swift:84:21 - line:84:51]
+                                      (member_ref_expr type='@lvalue Bool' location=ViewController.swift:84:39 range=[ViewController.swift:84:21 - line:84:39] decl=UIKit.(file).UIControl.isEnabled
+                                        (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:84:26 range=[ViewController.swift:84:21 - line:84:26]
+                                          (force_value_expr implicit type='UIButton' location=ViewController.swift:84:26 range=[ViewController.swift:84:21 - line:84:26] implicit_iuo_unwrap
+                                            (load_expr implicit type='UIButton?' location=ViewController.swift:84:26 range=[ViewController.swift:84:21 - line:84:26]
+                                              (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:84:26 range=[ViewController.swift:84:21 - line:84:26] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                (declref_expr type='ViewController' location=ViewController.swift:84:21 range=[ViewController.swift:84:21 - line:84:21] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied))))))
+                                      (boolean_literal_expr type='Bool' location=ViewController.swift:84:51 range=[ViewController.swift:84:51 - line:84:51] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+                                    (call_expr type='Void' location=ViewController.swift:85:39 range=[ViewController.swift:85:21 - line:85:103] nothrow isolationCrossing=none
+                                      (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:85:39 range=[ViewController.swift:85:21 - line:85:39] nothrow isolationCrossing=none
+                                        (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:85:39 range=[ViewController.swift:85:39 - line:85:39] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=single)
+                                        (argument_list implicit
+                                          (argument
+                                            (force_value_expr implicit type='UIButton' location=ViewController.swift:85:26 range=[ViewController.swift:85:21 - line:85:26] implicit_iuo_unwrap
+                                              (load_expr implicit type='UIButton?' location=ViewController.swift:85:26 range=[ViewController.swift:85:21 - line:85:26]
+                                                (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:85:26 range=[ViewController.swift:85:21 - line:85:26] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                  (declref_expr type='ViewController' location=ViewController.swift:85:21 range=[ViewController.swift:85:21 - line:85:21] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied)))))))
+                                      (argument_list labels=_:for:
+                                        (argument
+                                          (inject_into_optional implicit type='String?' location=ViewController.swift:85:48 range=[ViewController.swift:85:48 - line:85:48]
+                                            (string_literal_expr type='String' location=ViewController.swift:85:48 range=[ViewController.swift:85:48 - line:85:48] encoding=utf8 value="Speech recognition not yet authorized" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                                        (argument label=for
+                                          (member_ref_expr type='UIControl.State' location=ViewController.swift:85:95 range=[ViewController.swift:85:94 - line:85:95] decl=UIKit.(file).UIControl extension.State.disabled
+                                            (type_expr implicit type='UIControl.State.Type' location=ViewController.swift:85:94 range=[ViewController.swift:85:94 - line:85:94] typerepr='UIControl.State')))))))
+                                (case_stmt range=[ViewController.swift:87:17 - line:88:51]
+                                  (case_label_item default
+                                  (pattern_any type='SFSpeechRecognizerAuthorizationStatus'))
+                                  (brace_stmt implicit range=[ViewController.swift:88:21 - line:88:51]
+                                    (assign_expr type='()' location=ViewController.swift:88:49 range=[ViewController.swift:88:21 - line:88:51]
+                                      (member_ref_expr type='@lvalue Bool' location=ViewController.swift:88:39 range=[ViewController.swift:88:21 - line:88:39] decl=UIKit.(file).UIControl.isEnabled
+                                        (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:88:26 range=[ViewController.swift:88:21 - line:88:26]
+                                          (force_value_expr implicit type='UIButton' location=ViewController.swift:88:26 range=[ViewController.swift:88:21 - line:88:26] implicit_iuo_unwrap
+                                            (load_expr implicit type='UIButton?' location=ViewController.swift:88:26 range=[ViewController.swift:88:21 - line:88:26]
+                                              (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:88:26 range=[ViewController.swift:88:21 - line:88:26] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                                (declref_expr type='ViewController' location=ViewController.swift:88:21 range=[ViewController.swift:88:21 - line:88:21] decl=ViewController.(file).ViewController.viewDidAppear(_:).self@ViewController.swift:45:26 function_ref=unapplied))))))
+                                      (boolean_literal_expr type='Bool' location=ViewController.swift:88:51 range=[ViewController.swift:88:51 - line:88:51] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))))))))))))))))))
+    (func_decl range=[ViewController.swift:94:13 - line:156:5] "startRecording()" interface type='(ViewController) -> () throws -> ()' access=private
+      (parameter "self" interface type='ViewController')
+      (parameter_list range=[ViewController.swift:94:32 - line:94:33])
+      (brace_stmt range=[ViewController.swift:94:42 - line:156:5]
+        (if_stmt range=[ViewController.swift:97:9 - line:100:9]
+          (pattern
+            (pattern_optional_some implicit type='SFSpeechRecognitionTask?'
+              (pattern_let implicit type='SFSpeechRecognitionTask'
+                (pattern_named type='SFSpeechRecognitionTask' 'recognitionTask')))
+            (load_expr implicit type='SFSpeechRecognitionTask?' location=ViewController.swift:97:34 range=[ViewController.swift:97:34 - line:97:34]
+              (member_ref_expr type='@lvalue SFSpeechRecognitionTask?' location=ViewController.swift:97:34 range=[ViewController.swift:97:34 - line:97:34] decl=ViewController.(file).ViewController.recognitionTask@ViewController.swift:18:17
+                (declref_expr implicit type='ViewController' location=ViewController.swift:97:34 range=[ViewController.swift:97:34 - line:97:34] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))))
+          (brace_stmt range=[ViewController.swift:97:50 - line:100:9]
+            (call_expr type='Void' location=ViewController.swift:98:29 range=[ViewController.swift:98:13 - line:98:36] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='() -> Void' location=ViewController.swift:98:29 range=[ViewController.swift:98:13 - line:98:29] nothrow isolationCrossing=none
+                (declref_expr type='(SFSpeechRecognitionTask) -> () -> Void' location=ViewController.swift:98:29 range=[ViewController.swift:98:29 - line:98:29] decl=Speech.(file).SFSpeechRecognitionTask.cancel() function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (declref_expr type='SFSpeechRecognitionTask' location=ViewController.swift:98:13 range=[ViewController.swift:98:13 - line:98:13] decl=ViewController.(file).ViewController.startRecording().recognitionTask@ViewController.swift:97:16 function_ref=unapplied))))
+              (argument_list))
+            (assign_expr type='()' location=ViewController.swift:99:34 range=[ViewController.swift:99:13 - line:99:36]
+              (member_ref_expr type='@lvalue SFSpeechRecognitionTask?' location=ViewController.swift:99:18 range=[ViewController.swift:99:13 - line:99:18] decl=ViewController.(file).ViewController.recognitionTask@ViewController.swift:18:17
+                (declref_expr type='ViewController' location=ViewController.swift:99:13 range=[ViewController.swift:99:13 - line:99:13] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))
+              (nil_literal_expr type='SFSpeechRecognitionTask?' location=ViewController.swift:99:36 range=[ViewController.swift:99:36 - line:99:36] initializer=**NULL**))))
+        (pattern_binding_decl range=[ViewController.swift:103:9 - line:103:58]
+          (pattern_named type='AVAudioSession' 'audioSession')
+          Original init:
+          (call_expr type='AVAudioSession' location=ViewController.swift:103:43 range=[ViewController.swift:103:28 - line:103:58] nothrow isolationCrossing=none
+            (dot_syntax_call_expr type='() -> AVAudioSession' location=ViewController.swift:103:43 range=[ViewController.swift:103:28 - line:103:43] nothrow isolationCrossing=none
+              (declref_expr type='(AVAudioSession.Type) -> () -> AVAudioSession' location=ViewController.swift:103:43 range=[ViewController.swift:103:43 - line:103:43] decl=AVFAudio.(file).AVAudioSession.sharedInstance() function_ref=single)
+              (argument_list implicit
+                (argument
+                  (type_expr type='AVAudioSession.Type' location=ViewController.swift:103:28 range=[ViewController.swift:103:28 - line:103:28] typerepr='AVAudioSession'))))
+            (argument_list))
+          Processed init:
+          (call_expr type='AVAudioSession' location=ViewController.swift:103:43 range=[ViewController.swift:103:28 - line:103:58] nothrow isolationCrossing=none
+            (dot_syntax_call_expr type='() -> AVAudioSession' location=ViewController.swift:103:43 range=[ViewController.swift:103:28 - line:103:43] nothrow isolationCrossing=none
+              (declref_expr type='(AVAudioSession.Type) -> () -> AVAudioSession' location=ViewController.swift:103:43 range=[ViewController.swift:103:43 - line:103:43] decl=AVFAudio.(file).AVAudioSession.sharedInstance() function_ref=single)
+              (argument_list implicit
+                (argument
+                  (type_expr type='AVAudioSession.Type' location=ViewController.swift:103:28 range=[ViewController.swift:103:28 - line:103:28] typerepr='AVAudioSession'))))
+            (argument_list)))
+
+        (var_decl range=[ViewController.swift:103:13 - line:103:13] "audioSession" interface type='AVAudioSession' access=private let readImpl=stored immutable)
+
+        (try_expr type='()' location=ViewController.swift:104:26 range=[ViewController.swift:104:9 - line:104:87]
+          (call_expr type='()' location=ViewController.swift:104:26 range=[ViewController.swift:104:13 - line:104:87] throws isolationCrossing=none
+            (dot_syntax_call_expr type='(AVAudioSession.Category, AVAudioSession.Mode, AVAudioSession.CategoryOptions) throws -> ()' location=ViewController.swift:104:26 range=[ViewController.swift:104:13 - line:104:26] nothrow isolationCrossing=none
+              (declref_expr type='(AVAudioSession) -> (AVAudioSession.Category, AVAudioSession.Mode, AVAudioSession.CategoryOptions) throws -> ()' location=ViewController.swift:104:26 range=[ViewController.swift:104:26 - line:104:26] decl=AVFAudio.(file).AVAudioSession.setCategory(_:mode:options:) function_ref=single)
+              (argument_list implicit
+                (argument
+                  (declref_expr type='AVAudioSession' location=ViewController.swift:104:13 range=[ViewController.swift:104:13 - line:104:13] decl=ViewController.(file).ViewController.startRecording().audioSession@ViewController.swift:103:13 function_ref=unapplied))))
+            (argument_list labels=_:mode:options:
+              (argument
+                (member_ref_expr type='AVAudioSession.Category' location=ViewController.swift:104:39 range=[ViewController.swift:104:38 - line:104:39] decl=AVFAudio.(file).Category extension.record
+                  (type_expr implicit type='AVAudioSession.Category.Type' location=ViewController.swift:104:38 range=[ViewController.swift:104:38 - line:104:38] typerepr='AVAudioSession.Category')))
+              (argument label=mode
+                (member_ref_expr type='AVAudioSession.Mode' location=ViewController.swift:104:54 range=[ViewController.swift:104:53 - line:104:54] decl=AVFAudio.(file).Mode extension.measurement
+                  (type_expr implicit type='AVAudioSession.Mode.Type' location=ViewController.swift:104:53 range=[ViewController.swift:104:53 - line:104:53] typerepr='AVAudioSession.Mode')))
+              (argument label=options
+                (member_ref_expr type='AVAudioSession.CategoryOptions' location=ViewController.swift:104:77 range=[ViewController.swift:104:76 - line:104:77] decl=AVFAudio.(file).AVAudioSession extension.CategoryOptions.duckOthers
+                  (type_expr implicit type='AVAudioSession.CategoryOptions.Type' location=ViewController.swift:104:76 range=[ViewController.swift:104:76 - line:104:76] typerepr='AVAudioSession.CategoryOptions'))))))
+        (try_expr type='()' location=ViewController.swift:105:26 range=[ViewController.swift:105:9 - line:105:78]
+          (call_expr type='()' location=ViewController.swift:105:26 range=[ViewController.swift:105:13 - line:105:78] throws isolationCrossing=none
+            (dot_syntax_call_expr type='(Bool, AVAudioSession.SetActiveOptions) throws -> ()' location=ViewController.swift:105:26 range=[ViewController.swift:105:13 - line:105:26] nothrow isolationCrossing=none
+              (declref_expr type='(AVAudioSession) -> (Bool, AVAudioSession.SetActiveOptions) throws -> ()' location=ViewController.swift:105:26 range=[ViewController.swift:105:26 - line:105:26] decl=AVFAudio.(file).AVAudioSession extension.setActive(_:options:) function_ref=single)
+              (argument_list implicit
+                (argument
+                  (declref_expr type='AVAudioSession' location=ViewController.swift:105:13 range=[ViewController.swift:105:13 - line:105:13] decl=ViewController.(file).ViewController.startRecording().audioSession@ViewController.swift:103:13 function_ref=unapplied))))
+            (argument_list labels=_:options:
+              (argument
+                (boolean_literal_expr type='Bool' location=ViewController.swift:105:36 range=[ViewController.swift:105:36 - line:105:36] value=true builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+              (argument label=options
+                (member_ref_expr type='AVAudioSession.SetActiveOptions' location=ViewController.swift:105:52 range=[ViewController.swift:105:51 - line:105:52] decl=AVFAudio.(file).AVAudioSession extension.SetActiveOptions.notifyOthersOnDeactivation
+                  (type_expr implicit type='AVAudioSession.SetActiveOptions.Type' location=ViewController.swift:105:51 range=[ViewController.swift:105:51 - line:105:51] typerepr='AVAudioSession.SetActiveOptions'))))))
+        (pattern_binding_decl range=[ViewController.swift:106:9 - line:106:37]
+          (pattern_named type='AVAudioInputNode' 'inputNode')
+          Original init:
+          (unresolved_dot_expr type='<null>' field 'inputNode' function_ref=unapplied
+            (member_ref_expr type='AVAudioEngine' location=ViewController.swift:106:25 range=[ViewController.swift:106:25 - line:106:25] decl=ViewController.(file).ViewController.audioEngine@ViewController.swift:20:17
+              (declref_expr implicit type='ViewController' location=ViewController.swift:106:25 range=[ViewController.swift:106:25 - line:106:25] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))
+          Processed init:
+          (member_ref_expr type='AVAudioInputNode' location=ViewController.swift:106:37 range=[ViewController.swift:106:25 - line:106:37] decl=AVFAudio.(file).AVAudioEngine.inputNode
+            (member_ref_expr type='AVAudioEngine' location=ViewController.swift:106:25 range=[ViewController.swift:106:25 - line:106:25] decl=ViewController.(file).ViewController.audioEngine@ViewController.swift:20:17
+              (declref_expr implicit type='ViewController' location=ViewController.swift:106:25 range=[ViewController.swift:106:25 - line:106:25] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))))
+
+        (var_decl range=[ViewController.swift:106:13 - line:106:13] "inputNode" interface type='AVAudioInputNode' access=private let readImpl=stored immutable)
+
+        (assign_expr type='()' location=ViewController.swift:109:28 range=[ViewController.swift:109:9 - line:109:68]
+          (member_ref_expr type='@lvalue SFSpeechAudioBufferRecognitionRequest?' location=ViewController.swift:109:9 range=[ViewController.swift:109:9 - line:109:9] decl=ViewController.(file).ViewController.recognitionRequest@ViewController.swift:16:17
+            (declref_expr implicit type='ViewController' location=ViewController.swift:109:9 range=[ViewController.swift:109:9 - line:109:9] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))
+          (inject_into_optional implicit type='SFSpeechAudioBufferRecognitionRequest?' location=ViewController.swift:109:30 range=[ViewController.swift:109:30 - line:109:68]
+            (call_expr type='SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:109:30 range=[ViewController.swift:109:30 - line:109:68] nothrow isolationCrossing=none
+              (constructor_ref_call_expr type='() -> SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:109:30 range=[ViewController.swift:109:30 - line:109:30] nothrow isolationCrossing=none
+                (declref_expr implicit type='(SFSpeechAudioBufferRecognitionRequest.Type) -> () -> SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:109:30 range=[ViewController.swift:109:30 - line:109:30] decl=Speech.(file).SFSpeechAudioBufferRecognitionRequest.init() function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (type_expr type='SFSpeechAudioBufferRecognitionRequest.Type' location=ViewController.swift:109:30 range=[ViewController.swift:109:30 - line:109:30] typerepr='SFSpeechAudioBufferRecognitionRequest'))))
+              (argument_list))))
+        (guard_stmt range=[ViewController.swift:110:9 - line:110:145]
+          (pattern
+            (pattern_optional_some implicit type='SFSpeechAudioBufferRecognitionRequest?'
+              (pattern_let implicit type='SFSpeechAudioBufferRecognitionRequest'
+                (pattern_named type='SFSpeechAudioBufferRecognitionRequest' 'recognitionRequest')))
+            (load_expr implicit type='SFSpeechAudioBufferRecognitionRequest?' location=ViewController.swift:110:40 range=[ViewController.swift:110:40 - line:110:40]
+              (member_ref_expr type='@lvalue SFSpeechAudioBufferRecognitionRequest?' location=ViewController.swift:110:40 range=[ViewController.swift:110:40 - line:110:40] decl=ViewController.(file).ViewController.recognitionRequest@ViewController.swift:16:17
+                (declref_expr implicit type='ViewController' location=ViewController.swift:110:40 range=[ViewController.swift:110:40 - line:110:40] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))))
+          (brace_stmt range=[ViewController.swift:110:64 - line:110:145]
+            (call_expr type='Never' location=ViewController.swift:110:66 range=[ViewController.swift:110:66 - line:110:143] nothrow isolationCrossing=none
+              (declref_expr type='(@autoclosure () -> String, StaticString, UInt) -> Never' location=ViewController.swift:110:66 range=[ViewController.swift:110:66 - line:110:66] decl=Swift.(file).fatalError(_:file:line:) function_ref=single)
+              (argument_list labels=_:file:line:
+                (argument
+                  (autoclosure_expr implicit type='() -> String' location=ViewController.swift:110:77 range=[ViewController.swift:110:77 - line:110:77] discriminator=0 global-actor-isolated=MainActor
+
+                    (parameter_list)
+                    (string_literal_expr type='String' location=ViewController.swift:110:77 range=[ViewController.swift:110:77 - line:110:77] encoding=utf8 value="Unable to created a SFSpeechAudioBufferRecognitionRequest object" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                (argument label=file
+                  (default_argument_expr implicit type='StaticString' location=ViewController.swift:110:76 range=[ViewController.swift:110:76 - line:110:76] default_args_owner=Swift.(file).fatalError(_:file:line:) param=1))
+                (argument label=line
+                  (default_argument_expr implicit type='UInt' location=ViewController.swift:110:76 range=[ViewController.swift:110:76 - line:110:76] default_args_owner=Swift.(file).fatalError(_:file:line:) param=2))))))
+        (assign_expr type='()' location=ViewController.swift:111:55 range=[ViewController.swift:111:9 - line:111:57]
+          (member_ref_expr type='@lvalue Bool' location=ViewController.swift:111:28 range=[ViewController.swift:111:9 - line:111:28] decl=Speech.(file).SFSpeechRecognitionRequest.shouldReportPartialResults
+            (derived_to_base_expr implicit type='SFSpeechRecognitionRequest' location=ViewController.swift:111:9 range=[ViewController.swift:111:9 - line:111:9]
+              (declref_expr type='SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:111:9 range=[ViewController.swift:111:9 - line:111:9] decl=ViewController.(file).ViewController.startRecording().recognitionRequest@ViewController.swift:110:19 function_ref=unapplied)))
+          (boolean_literal_expr type='Bool' location=ViewController.swift:111:57 range=[ViewController.swift:111:57 - line:111:57] value=true builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+        (if_stmt range=[ViewController.swift:114:9 - line:119:9]
+          (#available
+
+            (platform_version_constraint_availability_spec platform='iOS' version='13')
+            (other_constraint_availability_spec ))
+          (brace_stmt range=[ViewController.swift:114:34 - line:119:9]
+            (assign_expr type='()' location=ViewController.swift:115:60 range=[ViewController.swift:115:13 - line:115:62]
+              (member_ref_expr type='@lvalue Bool' location=ViewController.swift:115:32 range=[ViewController.swift:115:13 - line:115:32] decl=Speech.(file).SFSpeechRecognitionRequest.requiresOnDeviceRecognition
+                (derived_to_base_expr implicit type='SFSpeechRecognitionRequest' location=ViewController.swift:115:13 range=[ViewController.swift:115:13 - line:115:13]
+                  (declref_expr type='SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:115:13 range=[ViewController.swift:115:13 - line:115:13] decl=ViewController.(file).ViewController.startRecording().recognitionRequest@ViewController.swift:110:19 function_ref=unapplied)))
+              (boolean_literal_expr type='Bool' location=ViewController.swift:115:62 range=[ViewController.swift:115:62 - line:115:62] value=true builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+            (if_stmt range=[ViewController.swift:116:13 - line:118:13]
+              (#available
+
+                (platform_version_constraint_availability_spec platform='iOS' version='17')
+                (other_constraint_availability_spec ))
+              (brace_stmt range=[ViewController.swift:116:38 - line:118:13]
+                (assign_expr type='()' location=ViewController.swift:117:60 range=[ViewController.swift:117:17 - line:117:67]
+                  (member_ref_expr type='@lvalue SFSpeechLanguageModel.Configuration?' location=ViewController.swift:117:36 range=[ViewController.swift:117:17 - line:117:36] decl=Speech.(file).SFSpeechRecognitionRequest.customizedLanguageModel
+                    (derived_to_base_expr implicit type='SFSpeechRecognitionRequest' location=ViewController.swift:117:17 range=[ViewController.swift:117:17 - line:117:17]
+                      (declref_expr type='SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:117:17 range=[ViewController.swift:117:17 - line:117:17] decl=ViewController.(file).ViewController.startRecording().recognitionRequest@ViewController.swift:110:19 function_ref=unapplied)))
+                  (inject_into_optional implicit type='SFSpeechLanguageModel.Configuration?' location=ViewController.swift:117:67 range=[ViewController.swift:117:62 - line:117:67]
+                    (member_ref_expr type='SFSpeechLanguageModel.Configuration' location=ViewController.swift:117:67 range=[ViewController.swift:117:62 - line:117:67] decl=ViewController.(file).ViewController.lmConfiguration@ViewController.swift:29:17
+                      (declref_expr type='ViewController' location=ViewController.swift:117:62 range=[ViewController.swift:117:62 - line:117:62] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))))))))
+        (assign_expr type='()' location=ViewController.swift:123:25 range=[ViewController.swift:123:9 - line:143:9]
+          (member_ref_expr type='@lvalue SFSpeechRecognitionTask?' location=ViewController.swift:123:9 range=[ViewController.swift:123:9 - line:123:9] decl=ViewController.(file).ViewController.recognitionTask@ViewController.swift:18:17
+            (declref_expr implicit type='ViewController' location=ViewController.swift:123:9 range=[ViewController.swift:123:9 - line:123:9] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))
+          (inject_into_optional implicit type='SFSpeechRecognitionTask?' location=ViewController.swift:123:44 range=[ViewController.swift:123:27 - line:143:9]
+            (call_expr type='SFSpeechRecognitionTask' location=ViewController.swift:123:44 range=[ViewController.swift:123:27 - line:143:9] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='(SFSpeechRecognitionRequest, @escaping (SFSpeechRecognitionResult?, (any Error)?) -> Void) -> SFSpeechRecognitionTask' location=ViewController.swift:123:44 range=[ViewController.swift:123:27 - line:123:44] nothrow isolationCrossing=none
+                (declref_expr type='(SFSpeechRecognizer) -> (SFSpeechRecognitionRequest, @escaping (SFSpeechRecognitionResult?, (any Error)?) -> Void) -> SFSpeechRecognitionTask' location=ViewController.swift:123:44 range=[ViewController.swift:123:44 - line:123:44] decl=Speech.(file).SFSpeechRecognizer.recognitionTask(with:resultHandler:) function_ref=double)
+                (argument_list implicit
+                  (argument
+                    (member_ref_expr type='SFSpeechRecognizer' location=ViewController.swift:123:27 range=[ViewController.swift:123:27 - line:123:27] decl=ViewController.(file).ViewController.speechRecognizer@ViewController.swift:14:17
+                      (declref_expr implicit type='ViewController' location=ViewController.swift:123:27 range=[ViewController.swift:123:27 - line:123:27] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))))
+              (argument_list labels=with:resultHandler:
+                (argument label=with
+                  (derived_to_base_expr implicit type='SFSpeechRecognitionRequest' location=ViewController.swift:123:66 range=[ViewController.swift:123:66 - line:123:66]
+                    (declref_expr type='SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:123:66 range=[ViewController.swift:123:66 - line:123:66] decl=ViewController.(file).ViewController.startRecording().recognitionRequest@ViewController.swift:110:19 function_ref=unapplied)))
+                (argument label=resultHandler
+                  (closure_expr type='(SFSpeechRecognitionResult?, (any Error)?) -> Void' location=ViewController.swift:123:86 range=[ViewController.swift:123:86 - line:143:9] discriminator=0 global-actor-isolated=MainActor captures=(self<direct>, inputNode<direct>) escaping
+                    (parameter_list range=[ViewController.swift:123:88 - line:123:96]
+                      (parameter "result" interface type='SFSpeechRecognitionResult?')
+                      (parameter "error" interface type='(any Error)?'))
+                    (brace_stmt range=[ViewController.swift:123:86 - line:143:9]
+                      (pattern_binding_decl range=[ViewController.swift:124:13 - line:124:27]
+                        (pattern_named type='Bool' 'isFinal')
+                        Original init:
+                        (boolean_literal_expr type='Bool' location=ViewController.swift:124:27 range=[ViewController.swift:124:27 - line:124:27] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**)
+                        Processed init:
+                        (boolean_literal_expr type='Bool' location=ViewController.swift:124:27 range=[ViewController.swift:124:27 - line:124:27] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+
+                      (var_decl range=[ViewController.swift:124:17 - line:124:17] "isFinal" interface type='Bool' access=private readImpl=stored writeImpl=stored readWriteImpl=stored)
+
+                      (if_stmt range=[ViewController.swift:126:13 - line:130:13]
+                        (pattern
+                          (pattern_optional_some implicit type='SFSpeechRecognitionResult?'
+                            (pattern_let implicit type='SFSpeechRecognitionResult'
+                              (pattern_named type='SFSpeechRecognitionResult' 'result')))
+                          (declref_expr type='SFSpeechRecognitionResult?' location=ViewController.swift:126:29 range=[ViewController.swift:126:29 - line:126:29] decl=ViewController.(file).ViewController.startRecording().explicit closure discriminator=0.result@ViewController.swift:123:88 function_ref=unapplied))
+                        (brace_stmt range=[ViewController.swift:126:36 - line:130:13]
+                          (assign_expr type='()' location=ViewController.swift:128:36 range=[ViewController.swift:128:17 - line:128:63]
+                            (member_ref_expr type='@lvalue String?' location=ViewController.swift:128:31 range=[ViewController.swift:128:17 - line:128:31] decl=UIKit.(file).UITextView.text
+                              (force_value_expr implicit type='UITextView' location=ViewController.swift:128:22 range=[ViewController.swift:128:17 - line:128:22] implicit_iuo_unwrap
+                                (load_expr implicit type='UITextView?' location=ViewController.swift:128:22 range=[ViewController.swift:128:17 - line:128:22]
+                                  (member_ref_expr type='@lvalue UITextView?' location=ViewController.swift:128:22 range=[ViewController.swift:128:17 - line:128:22] decl=ViewController.(file).ViewController.textView@ViewController.swift:22:19
+                                    (declref_expr type='ViewController' location=ViewController.swift:128:17 range=[ViewController.swift:128:17 - line:128:17] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))))
+                            (inject_into_optional implicit type='String?' location=ViewController.swift:128:63 range=[ViewController.swift:128:38 - line:128:63]
+                              (member_ref_expr type='String' location=ViewController.swift:128:63 range=[ViewController.swift:128:38 - line:128:63] decl=Speech.(file).SFTranscription.formattedString
+                                (member_ref_expr type='SFTranscription' location=ViewController.swift:128:45 range=[ViewController.swift:128:38 - line:128:45] decl=Speech.(file).SFSpeechRecognitionResult.bestTranscription
+                                  (declref_expr type='SFSpeechRecognitionResult' location=ViewController.swift:128:38 range=[ViewController.swift:128:38 - line:128:38] decl=ViewController.(file).ViewController.startRecording().explicit closure discriminator=0.result@ViewController.swift:126:20 function_ref=unapplied)))))
+                          (assign_expr type='()' location=ViewController.swift:129:25 range=[ViewController.swift:129:17 - line:129:34]
+                            (declref_expr type='@lvalue Bool' location=ViewController.swift:129:17 range=[ViewController.swift:129:17 - line:129:17] decl=ViewController.(file).ViewController.startRecording().explicit closure discriminator=0.isFinal@ViewController.swift:124:17 function_ref=unapplied)
+                            (member_ref_expr type='Bool' location=ViewController.swift:129:34 range=[ViewController.swift:129:27 - line:129:34] decl=Speech.(file).SFSpeechRecognitionResult.isFinal
+                              (declref_expr type='SFSpeechRecognitionResult' location=ViewController.swift:129:27 range=[ViewController.swift:129:27 - line:129:27] decl=ViewController.(file).ViewController.startRecording().explicit closure discriminator=0.result@ViewController.swift:126:20 function_ref=unapplied)))))
+                      (if_stmt range=[ViewController.swift:132:13 - line:142:13]
+                        (binary_expr type='Bool' location=ViewController.swift:132:29 range=[ViewController.swift:132:16 - line:132:32] nothrow isolationCrossing=none
+                          (dot_syntax_call_expr implicit type='(Bool, @autoclosure () throws -> Bool) throws -> Bool' location=ViewController.swift:132:29 range=[ViewController.swift:132:29 - line:132:29] nothrow isolationCrossing=none
+                            (declref_expr type='(Bool.Type) -> (Bool, @autoclosure () throws -> Bool) throws -> Bool' location=ViewController.swift:132:29 range=[ViewController.swift:132:29 - line:132:29] decl=Swift.(file).Bool extension.|| function_ref=double)
+                            (argument_list implicit
+                              (argument
+                                (type_expr implicit type='Bool.Type' location=ViewController.swift:132:29 range=[ViewController.swift:132:29 - line:132:29] typerepr='Bool'))))
+                          (argument_list implicit
+                            (argument
+                              (binary_expr type='Bool' location=ViewController.swift:132:22 range=[ViewController.swift:132:16 - line:132:25] nothrow isolationCrossing=none
+                                (dot_syntax_call_expr implicit type='((any Error)?, _OptionalNilComparisonType) -> Bool' location=ViewController.swift:132:22 range=[ViewController.swift:132:22 - line:132:22] nothrow isolationCrossing=none
+                                  (declref_expr type='(Optional<any Error>.Type) -> ((any Error)?, _OptionalNilComparisonType) -> Bool' location=ViewController.swift:132:22 range=[ViewController.swift:132:22 - line:132:22] decl=Swift.(file).Optional extension.!= [with (substitution_map generic_signature=<Wrapped> (substitution Wrapped -> any Error))] function_ref=double)
+                                  (argument_list implicit
+                                    (argument
+                                      (type_expr implicit type='Optional<any Error>.Type' location=ViewController.swift:132:22 range=[ViewController.swift:132:22 - line:132:22] typerepr='Optional<any Error>'))))
+                                (argument_list implicit
+                                  (argument
+                                    (declref_expr type='(any Error)?' location=ViewController.swift:132:16 range=[ViewController.swift:132:16 - line:132:16] decl=ViewController.(file).ViewController.startRecording().explicit closure discriminator=0.error@ViewController.swift:123:96 function_ref=unapplied))
+                                  (argument
+                                    (nil_literal_expr type='_OptionalNilComparisonType' location=ViewController.swift:132:25 range=[ViewController.swift:132:25 - line:132:25] initializer=Swift.(file)._OptionalNilComparisonType.init(nilLiteral:))))))
+                            (argument
+                              (autoclosure_expr implicit type='() throws -> Bool' location=ViewController.swift:132:32 range=[ViewController.swift:132:32 - line:132:32] discriminator=0 global-actor-isolated=MainActor captures=(isFinal<direct><noescape>)
+
+                                (parameter_list)
+                                (load_expr implicit type='Bool' location=ViewController.swift:132:32 range=[ViewController.swift:132:32 - line:132:32]
+                                  (declref_expr type='@lvalue Bool' location=ViewController.swift:132:32 range=[ViewController.swift:132:32 - line:132:32] decl=ViewController.(file).ViewController.startRecording().explicit closure discriminator=0.isFinal@ViewController.swift:124:17 function_ref=unapplied))))))
+                        (brace_stmt range=[ViewController.swift:132:40 - line:142:13]
+                          (call_expr type='Void' location=ViewController.swift:134:34 range=[ViewController.swift:134:17 - line:134:39] nothrow isolationCrossing=none
+                            (dot_syntax_call_expr type='() -> Void' location=ViewController.swift:134:34 range=[ViewController.swift:134:17 - line:134:34] nothrow isolationCrossing=none
+                              (declref_expr type='(AVAudioEngine) -> () -> Void' location=ViewController.swift:134:34 range=[ViewController.swift:134:34 - line:134:34] decl=AVFAudio.(file).AVAudioEngine.stop() function_ref=double)
+                              (argument_list implicit
+                                (argument
+                                  (member_ref_expr type='AVAudioEngine' location=ViewController.swift:134:22 range=[ViewController.swift:134:17 - line:134:22] decl=ViewController.(file).ViewController.audioEngine@ViewController.swift:20:17
+                                    (declref_expr type='ViewController' location=ViewController.swift:134:17 range=[ViewController.swift:134:17 - line:134:17] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))))
+                            (argument_list))
+                          (call_expr type='Void' location=ViewController.swift:135:27 range=[ViewController.swift:135:17 - line:135:45] nothrow isolationCrossing=none
+                            (dot_syntax_call_expr type='(AVAudioNodeBus) -> Void' location=ViewController.swift:135:27 range=[ViewController.swift:135:17 - line:135:27] nothrow isolationCrossing=none
+                              (declref_expr type='(AVAudioNode) -> (AVAudioNodeBus) -> Void' location=ViewController.swift:135:27 range=[ViewController.swift:135:27 - line:135:27] decl=AVFAudio.(file).AVAudioNode.removeTap(onBus:) function_ref=double)
+                              (argument_list implicit
+                                (argument
+                                  (derived_to_base_expr implicit type='AVAudioNode' location=ViewController.swift:135:17 range=[ViewController.swift:135:17 - line:135:17]
+                                    (declref_expr type='AVAudioInputNode' location=ViewController.swift:135:17 range=[ViewController.swift:135:17 - line:135:17] decl=ViewController.(file).ViewController.startRecording().inputNode@ViewController.swift:106:13 function_ref=unapplied)))))
+                            (argument_list labels=onBus:
+                              (argument label=onBus
+                                (integer_literal_expr type='Int' location=ViewController.swift:135:44 range=[ViewController.swift:135:44 - line:135:44] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))))
+                          (assign_expr type='()' location=ViewController.swift:137:41 range=[ViewController.swift:137:17 - line:137:43]
+                            (member_ref_expr type='@lvalue SFSpeechAudioBufferRecognitionRequest?' location=ViewController.swift:137:22 range=[ViewController.swift:137:17 - line:137:22] decl=ViewController.(file).ViewController.recognitionRequest@ViewController.swift:16:17
+                              (declref_expr type='ViewController' location=ViewController.swift:137:17 range=[ViewController.swift:137:17 - line:137:17] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))
+                            (nil_literal_expr type='SFSpeechAudioBufferRecognitionRequest?' location=ViewController.swift:137:43 range=[ViewController.swift:137:43 - line:137:43] initializer=**NULL**))
+                          (assign_expr type='()' location=ViewController.swift:138:38 range=[ViewController.swift:138:17 - line:138:40]
+                            (member_ref_expr type='@lvalue SFSpeechRecognitionTask?' location=ViewController.swift:138:22 range=[ViewController.swift:138:17 - line:138:22] decl=ViewController.(file).ViewController.recognitionTask@ViewController.swift:18:17
+                              (declref_expr type='ViewController' location=ViewController.swift:138:17 range=[ViewController.swift:138:17 - line:138:17] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))
+                            (nil_literal_expr type='SFSpeechRecognitionTask?' location=ViewController.swift:138:40 range=[ViewController.swift:138:40 - line:138:40] initializer=**NULL**))
+                          (assign_expr type='()' location=ViewController.swift:140:45 range=[ViewController.swift:140:17 - line:140:47]
+                            (member_ref_expr type='@lvalue Bool' location=ViewController.swift:140:35 range=[ViewController.swift:140:17 - line:140:35] decl=UIKit.(file).UIControl.isEnabled
+                              (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:140:22 range=[ViewController.swift:140:17 - line:140:22]
+                                (force_value_expr implicit type='UIButton' location=ViewController.swift:140:22 range=[ViewController.swift:140:17 - line:140:22] implicit_iuo_unwrap
+                                  (load_expr implicit type='UIButton?' location=ViewController.swift:140:22 range=[ViewController.swift:140:17 - line:140:22]
+                                    (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:140:22 range=[ViewController.swift:140:17 - line:140:22] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                      (declref_expr type='ViewController' location=ViewController.swift:140:17 range=[ViewController.swift:140:17 - line:140:17] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied))))))
+                            (boolean_literal_expr type='Bool' location=ViewController.swift:140:47 range=[ViewController.swift:140:47 - line:140:47] value=true builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+                          (call_expr type='Void' location=ViewController.swift:141:35 range=[ViewController.swift:141:17 - line:141:70] nothrow isolationCrossing=none
+                            (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:141:35 range=[ViewController.swift:141:17 - line:141:35] nothrow isolationCrossing=none
+                              (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:141:35 range=[ViewController.swift:141:35 - line:141:35] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=double)
+                              (argument_list implicit
+                                (argument
+                                  (force_value_expr implicit type='UIButton' location=ViewController.swift:141:22 range=[ViewController.swift:141:17 - line:141:22] implicit_iuo_unwrap
+                                    (load_expr implicit type='UIButton?' location=ViewController.swift:141:22 range=[ViewController.swift:141:17 - line:141:22]
+                                      (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:141:22 range=[ViewController.swift:141:17 - line:141:22] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                        (declref_expr type='ViewController' location=ViewController.swift:141:17 range=[ViewController.swift:141:17 - line:141:17] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))))))
+                            (argument_list labels=_:for:
+                              (argument
+                                (inject_into_optional implicit type='String?' location=ViewController.swift:141:44 range=[ViewController.swift:141:44 - line:141:44]
+                                  (string_literal_expr type='String' location=ViewController.swift:141:44 range=[ViewController.swift:141:44 - line:141:44] encoding=utf8 value="Start Recording" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                              (argument label=for
+                                (array_expr type='UIControl.State' location=ViewController.swift:141:68 range=[ViewController.swift:141:68 - line:141:69] initializer=Swift.(file).SetAlgebra extension.init(arrayLiteral:) [with (substitution_map generic_signature=<Self where Self : SetAlgebra, Self.ArrayLiteralElement == Self.Element> (substitution Self -> UIControl.State))])))))))))))))
+        (pattern_binding_decl range=[ViewController.swift:146:9 - line:146:63]
+          (pattern_named type='AVAudioFormat' 'recordingFormat')
+          Original init:
+          (call_expr type='AVAudioFormat' location=ViewController.swift:146:41 range=[ViewController.swift:146:31 - line:146:63] nothrow isolationCrossing=none
+            (dot_syntax_call_expr type='(AVAudioNodeBus) -> AVAudioFormat' location=ViewController.swift:146:41 range=[ViewController.swift:146:31 - line:146:41] nothrow isolationCrossing=none
+              (declref_expr type='(AVAudioNode) -> (AVAudioNodeBus) -> AVAudioFormat' location=ViewController.swift:146:41 range=[ViewController.swift:146:41 - line:146:41] decl=AVFAudio.(file).AVAudioNode.outputFormat(forBus:) function_ref=single)
+              (argument_list implicit
+                (argument
+                  (derived_to_base_expr implicit type='AVAudioNode' location=ViewController.swift:146:31 range=[ViewController.swift:146:31 - line:146:31]
+                    (declref_expr type='AVAudioInputNode' location=ViewController.swift:146:31 range=[ViewController.swift:146:31 - line:146:31] decl=ViewController.(file).ViewController.startRecording().inputNode@ViewController.swift:106:13 function_ref=unapplied)))))
+            (argument_list labels=forBus:
+              (argument label=forBus
+                (integer_literal_expr type='Int' location=ViewController.swift:146:62 range=[ViewController.swift:146:62 - line:146:62] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))))
+          Processed init:
+          (call_expr type='AVAudioFormat' location=ViewController.swift:146:41 range=[ViewController.swift:146:31 - line:146:63] nothrow isolationCrossing=none
+            (dot_syntax_call_expr type='(AVAudioNodeBus) -> AVAudioFormat' location=ViewController.swift:146:41 range=[ViewController.swift:146:31 - line:146:41] nothrow isolationCrossing=none
+              (declref_expr type='(AVAudioNode) -> (AVAudioNodeBus) -> AVAudioFormat' location=ViewController.swift:146:41 range=[ViewController.swift:146:41 - line:146:41] decl=AVFAudio.(file).AVAudioNode.outputFormat(forBus:) function_ref=single)
+              (argument_list implicit
+                (argument
+                  (derived_to_base_expr implicit type='AVAudioNode' location=ViewController.swift:146:31 range=[ViewController.swift:146:31 - line:146:31]
+                    (declref_expr type='AVAudioInputNode' location=ViewController.swift:146:31 range=[ViewController.swift:146:31 - line:146:31] decl=ViewController.(file).ViewController.startRecording().inputNode@ViewController.swift:106:13 function_ref=unapplied)))))
+            (argument_list labels=forBus:
+              (argument label=forBus
+                (integer_literal_expr type='Int' location=ViewController.swift:146:62 range=[ViewController.swift:146:62 - line:146:62] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**)))))
+
+        (var_decl range=[ViewController.swift:146:13 - line:146:13] "recordingFormat" interface type='AVAudioFormat' access=private let readImpl=stored immutable)
+
+        (call_expr type='Void' location=ViewController.swift:147:19 range=[ViewController.swift:147:9 - line:149:9] nothrow isolationCrossing=none
+          (dot_syntax_call_expr type='(AVAudioNodeBus, AVAudioFrameCount, AVAudioFormat?, @escaping AVAudioNodeTapBlock) -> Void' location=ViewController.swift:147:19 range=[ViewController.swift:147:9 - line:147:19] nothrow isolationCrossing=none
+            (declref_expr type='(AVAudioNode) -> (AVAudioNodeBus, AVAudioFrameCount, AVAudioFormat?, @escaping AVAudioNodeTapBlock) -> Void' location=ViewController.swift:147:19 range=[ViewController.swift:147:19 - line:147:19] decl=AVFAudio.(file).AVAudioNode.installTap(onBus:bufferSize:format:block:) function_ref=single)
+            (argument_list implicit
+              (argument
+                (derived_to_base_expr implicit type='AVAudioNode' location=ViewController.swift:147:9 range=[ViewController.swift:147:9 - line:147:9]
+                  (declref_expr type='AVAudioInputNode' location=ViewController.swift:147:9 range=[ViewController.swift:147:9 - line:147:9] decl=ViewController.(file).ViewController.startRecording().inputNode@ViewController.swift:106:13 function_ref=unapplied)))))
+          (argument_list labels=onBus:bufferSize:format:block:
+            (argument label=onBus
+              (integer_literal_expr type='Int' location=ViewController.swift:147:37 range=[ViewController.swift:147:37 - line:147:37] value=0 builtin_initializer=Swift.(file).Int.init(_builtinIntegerLiteral:) initializer=**NULL**))
+            (argument label=bufferSize
+              (integer_literal_expr type='AVAudioFrameCount' location=ViewController.swift:147:52 range=[ViewController.swift:147:52 - line:147:52] value=1024 builtin_initializer=Swift.(file).UInt32.init(_builtinIntegerLiteral:) initializer=**NULL**))
+            (argument label=format
+              (inject_into_optional implicit type='AVAudioFormat?' location=ViewController.swift:147:66 range=[ViewController.swift:147:66 - line:147:66]
+                (declref_expr type='AVAudioFormat' location=ViewController.swift:147:66 range=[ViewController.swift:147:66 - line:147:66] decl=ViewController.(file).ViewController.startRecording().recordingFormat@ViewController.swift:146:13 function_ref=unapplied)))
+            (argument label=block
+              (closure_expr type='(AVAudioPCMBuffer, AVAudioTime) -> Void' location=ViewController.swift:147:83 range=[ViewController.swift:147:83 - line:149:9] discriminator=1 global-actor-isolated=MainActor captures=(self<direct>) escaping single-expression
+                (parameter_list range=[ViewController.swift:147:85 - line:147:129]
+                  (parameter "buffer" interface type='AVAudioPCMBuffer')
+                  (parameter "when" interface type='AVAudioTime'))
+                (brace_stmt range=[ViewController.swift:147:83 - line:149:9]
+                  (optional_evaluation_expr implicit type='Void?' location=ViewController.swift:148:38 range=[ViewController.swift:148:13 - line:148:51]
+                    (inject_into_optional implicit type='Void?' location=ViewController.swift:148:38 range=[ViewController.swift:148:13 - line:148:51]
+                      (call_expr type='Void' location=ViewController.swift:148:38 range=[ViewController.swift:148:13 - line:148:51] nothrow isolationCrossing=none
+                        (dot_syntax_call_expr type='(AVAudioPCMBuffer) -> Void' location=ViewController.swift:148:38 range=[ViewController.swift:148:13 - line:148:38] nothrow isolationCrossing=none
+                          (declref_expr type='(SFSpeechAudioBufferRecognitionRequest) -> (AVAudioPCMBuffer) -> Void' location=ViewController.swift:148:38 range=[ViewController.swift:148:38 - line:148:38] decl=Speech.(file).SFSpeechAudioBufferRecognitionRequest.append function_ref=single)
+                          (argument_list implicit
+                            (argument
+                              (load_expr implicit type='SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:148:36 range=[ViewController.swift:148:13 - line:148:36]
+                                (bind_optional_expr type='@lvalue SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:148:36 range=[ViewController.swift:148:13 - line:148:36] depth=0
+                                  (member_ref_expr type='@lvalue SFSpeechAudioBufferRecognitionRequest?' location=ViewController.swift:148:18 range=[ViewController.swift:148:13 - line:148:18] decl=ViewController.(file).ViewController.recognitionRequest@ViewController.swift:16:17
+                                    (declref_expr type='ViewController' location=ViewController.swift:148:13 range=[ViewController.swift:148:13 - line:148:13] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))))))
+                        (argument_list
+                          (argument
+                            (declref_expr type='AVAudioPCMBuffer' location=ViewController.swift:148:45 range=[ViewController.swift:148:45 - line:148:45] decl=ViewController.(file).ViewController.startRecording().explicit closure discriminator=1.buffer@ViewController.swift:147:86 function_ref=unapplied)))))))))))
+        (call_expr type='Void' location=ViewController.swift:151:21 range=[ViewController.swift:151:9 - line:151:29] nothrow isolationCrossing=none
+          (dot_syntax_call_expr type='() -> Void' location=ViewController.swift:151:21 range=[ViewController.swift:151:9 - line:151:21] nothrow isolationCrossing=none
+            (declref_expr type='(AVAudioEngine) -> () -> Void' location=ViewController.swift:151:21 range=[ViewController.swift:151:21 - line:151:21] decl=AVFAudio.(file).AVAudioEngine.prepare() function_ref=single)
+            (argument_list implicit
+              (argument
+                (member_ref_expr type='AVAudioEngine' location=ViewController.swift:151:9 range=[ViewController.swift:151:9 - line:151:9] decl=ViewController.(file).ViewController.audioEngine@ViewController.swift:20:17
+                  (declref_expr implicit type='ViewController' location=ViewController.swift:151:9 range=[ViewController.swift:151:9 - line:151:9] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))))
+          (argument_list))
+        (try_expr type='()' location=ViewController.swift:152:25 range=[ViewController.swift:152:9 - line:152:31]
+          (call_expr type='()' location=ViewController.swift:152:25 range=[ViewController.swift:152:13 - line:152:31] throws isolationCrossing=none
+            (dot_syntax_call_expr type='() throws -> ()' location=ViewController.swift:152:25 range=[ViewController.swift:152:13 - line:152:25] nothrow isolationCrossing=none
+              (declref_expr type='(AVAudioEngine) -> () throws -> ()' location=ViewController.swift:152:25 range=[ViewController.swift:152:25 - line:152:25] decl=AVFAudio.(file).AVAudioEngine.start() function_ref=single)
+              (argument_list implicit
+                (argument
+                  (member_ref_expr type='AVAudioEngine' location=ViewController.swift:152:13 range=[ViewController.swift:152:13 - line:152:13] decl=ViewController.(file).ViewController.audioEngine@ViewController.swift:20:17
+                    (declref_expr implicit type='ViewController' location=ViewController.swift:152:13 range=[ViewController.swift:152:13 - line:152:13] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))))
+            (argument_list)))
+        (assign_expr type='()' location=ViewController.swift:155:23 range=[ViewController.swift:155:9 - line:155:25]
+          (member_ref_expr type='@lvalue String?' location=ViewController.swift:155:18 range=[ViewController.swift:155:9 - line:155:18] decl=UIKit.(file).UITextView.text
+            (force_value_expr implicit type='UITextView' location=ViewController.swift:155:9 range=[ViewController.swift:155:9 - line:155:9] implicit_iuo_unwrap
+              (load_expr implicit type='UITextView?' location=ViewController.swift:155:9 range=[ViewController.swift:155:9 - line:155:9]
+                (member_ref_expr type='@lvalue UITextView?' location=ViewController.swift:155:9 range=[ViewController.swift:155:9 - line:155:9] decl=ViewController.(file).ViewController.textView@ViewController.swift:22:19
+                  (declref_expr implicit type='ViewController' location=ViewController.swift:155:9 range=[ViewController.swift:155:9 - line:155:9] decl=ViewController.(file).ViewController.startRecording().self@ViewController.swift:94:18 function_ref=unapplied)))))
+          (inject_into_optional implicit type='String?' location=ViewController.swift:155:25 range=[ViewController.swift:155:25 - line:155:25]
+            (string_literal_expr type='String' location=ViewController.swift:155:25 range=[ViewController.swift:155:25 - line:155:25] encoding=utf8 value="(Go ahead, I'm listening)" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))))
+    (func_decl range=[ViewController.swift:160:12 - line:168:5] "speechRecognizer(_:availabilityDidChange:)" interface type='(ViewController) -> (SFSpeechRecognizer, Bool) -> ()' access=public @objc
+      (parameter "self" interface type='ViewController')
+      (parameter_list range=[ViewController.swift:160:33 - line:160:111]
+        (parameter "speechRecognizer" interface type='SFSpeechRecognizer')
+        (parameter "available" apiName=availabilityDidChange interface type='Bool'))
+      (brace_stmt range=[ViewController.swift:160:113 - line:168:5]
+        (if_stmt range=[ViewController.swift:161:9 - line:167:9]
+          (declref_expr type='Bool' location=ViewController.swift:161:12 range=[ViewController.swift:161:12 - line:161:12] decl=ViewController.(file).ViewController.speechRecognizer(_:availabilityDidChange:).available@ViewController.swift:160:96 function_ref=unapplied)
+          (brace_stmt range=[ViewController.swift:161:22 - line:164:9]
+            (assign_expr type='()' location=ViewController.swift:162:36 range=[ViewController.swift:162:13 - line:162:38]
+              (member_ref_expr type='@lvalue Bool' location=ViewController.swift:162:26 range=[ViewController.swift:162:13 - line:162:26] decl=UIKit.(file).UIControl.isEnabled
+                (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:162:13 range=[ViewController.swift:162:13 - line:162:13]
+                  (force_value_expr implicit type='UIButton' location=ViewController.swift:162:13 range=[ViewController.swift:162:13 - line:162:13] implicit_iuo_unwrap
+                    (load_expr implicit type='UIButton?' location=ViewController.swift:162:13 range=[ViewController.swift:162:13 - line:162:13]
+                      (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:162:13 range=[ViewController.swift:162:13 - line:162:13] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                        (declref_expr implicit type='ViewController' location=ViewController.swift:162:13 range=[ViewController.swift:162:13 - line:162:13] decl=ViewController.(file).ViewController.speechRecognizer(_:availabilityDidChange:).self@ViewController.swift:160:17 function_ref=unapplied))))))
+              (boolean_literal_expr type='Bool' location=ViewController.swift:162:38 range=[ViewController.swift:162:38 - line:162:38] value=true builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+            (call_expr type='Void' location=ViewController.swift:163:26 range=[ViewController.swift:163:13 - line:163:61] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:163:26 range=[ViewController.swift:163:13 - line:163:26] nothrow isolationCrossing=none
+                (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:163:26 range=[ViewController.swift:163:26 - line:163:26] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (force_value_expr implicit type='UIButton' location=ViewController.swift:163:13 range=[ViewController.swift:163:13 - line:163:13] implicit_iuo_unwrap
+                      (load_expr implicit type='UIButton?' location=ViewController.swift:163:13 range=[ViewController.swift:163:13 - line:163:13]
+                        (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:163:13 range=[ViewController.swift:163:13 - line:163:13] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                          (declref_expr implicit type='ViewController' location=ViewController.swift:163:13 range=[ViewController.swift:163:13 - line:163:13] decl=ViewController.(file).ViewController.speechRecognizer(_:availabilityDidChange:).self@ViewController.swift:160:17 function_ref=unapplied)))))))
+              (argument_list labels=_:for:
+                (argument
+                  (inject_into_optional implicit type='String?' location=ViewController.swift:163:35 range=[ViewController.swift:163:35 - line:163:35]
+                    (string_literal_expr type='String' location=ViewController.swift:163:35 range=[ViewController.swift:163:35 - line:163:35] encoding=utf8 value="Start Recording" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                (argument label=for
+                  (array_expr type='UIControl.State' location=ViewController.swift:163:59 range=[ViewController.swift:163:59 - line:163:60] initializer=Swift.(file).SetAlgebra extension.init(arrayLiteral:) [with (substitution_map generic_signature=<Self where Self : SetAlgebra, Self.ArrayLiteralElement == Self.Element> (substitution Self -> UIControl.State))])))))
+          (brace_stmt range=[ViewController.swift:164:16 - line:167:9]
+            (assign_expr type='()' location=ViewController.swift:165:36 range=[ViewController.swift:165:13 - line:165:38]
+              (member_ref_expr type='@lvalue Bool' location=ViewController.swift:165:26 range=[ViewController.swift:165:13 - line:165:26] decl=UIKit.(file).UIControl.isEnabled
+                (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:165:13 range=[ViewController.swift:165:13 - line:165:13]
+                  (force_value_expr implicit type='UIButton' location=ViewController.swift:165:13 range=[ViewController.swift:165:13 - line:165:13] implicit_iuo_unwrap
+                    (load_expr implicit type='UIButton?' location=ViewController.swift:165:13 range=[ViewController.swift:165:13 - line:165:13]
+                      (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:165:13 range=[ViewController.swift:165:13 - line:165:13] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                        (declref_expr implicit type='ViewController' location=ViewController.swift:165:13 range=[ViewController.swift:165:13 - line:165:13] decl=ViewController.(file).ViewController.speechRecognizer(_:availabilityDidChange:).self@ViewController.swift:160:17 function_ref=unapplied))))))
+              (boolean_literal_expr type='Bool' location=ViewController.swift:165:38 range=[ViewController.swift:165:38 - line:165:38] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+            (call_expr type='Void' location=ViewController.swift:166:26 range=[ViewController.swift:166:13 - line:166:78] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:166:26 range=[ViewController.swift:166:13 - line:166:26] nothrow isolationCrossing=none
+                (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:166:26 range=[ViewController.swift:166:26 - line:166:26] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (force_value_expr implicit type='UIButton' location=ViewController.swift:166:13 range=[ViewController.swift:166:13 - line:166:13] implicit_iuo_unwrap
+                      (load_expr implicit type='UIButton?' location=ViewController.swift:166:13 range=[ViewController.swift:166:13 - line:166:13]
+                        (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:166:13 range=[ViewController.swift:166:13 - line:166:13] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                          (declref_expr implicit type='ViewController' location=ViewController.swift:166:13 range=[ViewController.swift:166:13 - line:166:13] decl=ViewController.(file).ViewController.speechRecognizer(_:availabilityDidChange:).self@ViewController.swift:160:17 function_ref=unapplied)))))))
+              (argument_list labels=_:for:
+                (argument
+                  (inject_into_optional implicit type='String?' location=ViewController.swift:166:35 range=[ViewController.swift:166:35 - line:166:35]
+                    (string_literal_expr type='String' location=ViewController.swift:166:35 range=[ViewController.swift:166:35 - line:166:35] encoding=utf8 value="Recognition Not Available" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                (argument label=for
+                  (member_ref_expr type='UIControl.State' location=ViewController.swift:166:70 range=[ViewController.swift:166:69 - line:166:70] decl=UIKit.(file).UIControl extension.State.disabled
+                    (type_expr implicit type='UIControl.State.Type' location=ViewController.swift:166:69 range=[ViewController.swift:166:69 - line:166:69] typerepr='UIControl.State')))))))))
+    (func_decl range=[ViewController.swift:172:15 - line:186:5] "recordButtonTapped()" interface type='(ViewController) -> () -> ()' access=internal
+      (parameter "self" interface type='ViewController')
+      (parameter_list range=[ViewController.swift:172:38 - line:172:39])
+      (brace_stmt range=[ViewController.swift:172:41 - line:186:5]
+        (if_stmt range=[ViewController.swift:173:9 - line:185:9]
+          (member_ref_expr type='Bool' location=ViewController.swift:173:24 range=[ViewController.swift:173:12 - line:173:24] decl=AVFAudio.(file).AVAudioEngine.isRunning
+            (member_ref_expr type='AVAudioEngine' location=ViewController.swift:173:12 range=[ViewController.swift:173:12 - line:173:12] decl=ViewController.(file).ViewController.audioEngine@ViewController.swift:20:17
+              (declref_expr implicit type='ViewController' location=ViewController.swift:173:12 range=[ViewController.swift:173:12 - line:173:12] decl=ViewController.(file).ViewController.recordButtonTapped().self@ViewController.swift:172:20 function_ref=unapplied)))
+          (brace_stmt range=[ViewController.swift:173:34 - line:178:9]
+            (call_expr type='Void' location=ViewController.swift:174:25 range=[ViewController.swift:174:13 - line:174:30] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='() -> Void' location=ViewController.swift:174:25 range=[ViewController.swift:174:13 - line:174:25] nothrow isolationCrossing=none
+                (declref_expr type='(AVAudioEngine) -> () -> Void' location=ViewController.swift:174:25 range=[ViewController.swift:174:25 - line:174:25] decl=AVFAudio.(file).AVAudioEngine.stop() function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (member_ref_expr type='AVAudioEngine' location=ViewController.swift:174:13 range=[ViewController.swift:174:13 - line:174:13] decl=ViewController.(file).ViewController.audioEngine@ViewController.swift:20:17
+                      (declref_expr implicit type='ViewController' location=ViewController.swift:174:13 range=[ViewController.swift:174:13 - line:174:13] decl=ViewController.(file).ViewController.recordButtonTapped().self@ViewController.swift:172:20 function_ref=unapplied)))))
+              (argument_list))
+            (optional_evaluation_expr implicit type='Void?' location=ViewController.swift:175:33 range=[ViewController.swift:175:13 - line:175:42]
+              (inject_into_optional implicit type='Void?' location=ViewController.swift:175:33 range=[ViewController.swift:175:13 - line:175:42]
+                (call_expr type='Void' location=ViewController.swift:175:33 range=[ViewController.swift:175:13 - line:175:42] nothrow isolationCrossing=none
+                  (dot_syntax_call_expr type='() -> Void' location=ViewController.swift:175:33 range=[ViewController.swift:175:13 - line:175:33] nothrow isolationCrossing=none
+                    (declref_expr type='(SFSpeechAudioBufferRecognitionRequest) -> () -> Void' location=ViewController.swift:175:33 range=[ViewController.swift:175:33 - line:175:33] decl=Speech.(file).SFSpeechAudioBufferRecognitionRequest.endAudio() function_ref=single)
+                    (argument_list implicit
+                      (argument
+                        (load_expr implicit type='SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:175:31 range=[ViewController.swift:175:13 - line:175:31]
+                          (bind_optional_expr type='@lvalue SFSpeechAudioBufferRecognitionRequest' location=ViewController.swift:175:31 range=[ViewController.swift:175:13 - line:175:31] depth=0
+                            (member_ref_expr type='@lvalue SFSpeechAudioBufferRecognitionRequest?' location=ViewController.swift:175:13 range=[ViewController.swift:175:13 - line:175:13] decl=ViewController.(file).ViewController.recognitionRequest@ViewController.swift:16:17
+                              (declref_expr implicit type='ViewController' location=ViewController.swift:175:13 range=[ViewController.swift:175:13 - line:175:13] decl=ViewController.(file).ViewController.recordButtonTapped().self@ViewController.swift:172:20 function_ref=unapplied)))))))
+                  (argument_list))))
+            (assign_expr type='()' location=ViewController.swift:176:36 range=[ViewController.swift:176:13 - line:176:38]
+              (member_ref_expr type='@lvalue Bool' location=ViewController.swift:176:26 range=[ViewController.swift:176:13 - line:176:26] decl=UIKit.(file).UIControl.isEnabled
+                (derived_to_base_expr implicit type='UIControl' location=ViewController.swift:176:13 range=[ViewController.swift:176:13 - line:176:13]
+                  (force_value_expr implicit type='UIButton' location=ViewController.swift:176:13 range=[ViewController.swift:176:13 - line:176:13] implicit_iuo_unwrap
+                    (load_expr implicit type='UIButton?' location=ViewController.swift:176:13 range=[ViewController.swift:176:13 - line:176:13]
+                      (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:176:13 range=[ViewController.swift:176:13 - line:176:13] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                        (declref_expr implicit type='ViewController' location=ViewController.swift:176:13 range=[ViewController.swift:176:13 - line:176:13] decl=ViewController.(file).ViewController.recordButtonTapped().self@ViewController.swift:172:20 function_ref=unapplied))))))
+              (boolean_literal_expr type='Bool' location=ViewController.swift:176:38 range=[ViewController.swift:176:38 - line:176:38] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))
+            (call_expr type='Void' location=ViewController.swift:177:26 range=[ViewController.swift:177:13 - line:177:61] nothrow isolationCrossing=none
+              (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:177:26 range=[ViewController.swift:177:13 - line:177:26] nothrow isolationCrossing=none
+                (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:177:26 range=[ViewController.swift:177:26 - line:177:26] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=single)
+                (argument_list implicit
+                  (argument
+                    (force_value_expr implicit type='UIButton' location=ViewController.swift:177:13 range=[ViewController.swift:177:13 - line:177:13] implicit_iuo_unwrap
+                      (load_expr implicit type='UIButton?' location=ViewController.swift:177:13 range=[ViewController.swift:177:13 - line:177:13]
+                        (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:177:13 range=[ViewController.swift:177:13 - line:177:13] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                          (declref_expr implicit type='ViewController' location=ViewController.swift:177:13 range=[ViewController.swift:177:13 - line:177:13] decl=ViewController.(file).ViewController.recordButtonTapped().self@ViewController.swift:172:20 function_ref=unapplied)))))))
+              (argument_list labels=_:for:
+                (argument
+                  (inject_into_optional implicit type='String?' location=ViewController.swift:177:35 range=[ViewController.swift:177:35 - line:177:35]
+                    (string_literal_expr type='String' location=ViewController.swift:177:35 range=[ViewController.swift:177:35 - line:177:35] encoding=utf8 value="Stopping" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                (argument label=for
+                  (member_ref_expr type='UIControl.State' location=ViewController.swift:177:53 range=[ViewController.swift:177:52 - line:177:53] decl=UIKit.(file).UIControl extension.State.disabled
+                    (type_expr implicit type='UIControl.State.Type' location=ViewController.swift:177:52 range=[ViewController.swift:177:52 - line:177:52] typerepr='UIControl.State'))))))
+          (brace_stmt range=[ViewController.swift:178:16 - line:185:9]
+            (do_catch_stmt range=[ViewController.swift:179:13 - line:184:13]
+              (brace_stmt range=[ViewController.swift:179:16 - line:182:13]
+                (try_expr type='()' location=ViewController.swift:180:21 range=[ViewController.swift:180:17 - line:180:36]
+                  (call_expr type='()' location=ViewController.swift:180:21 range=[ViewController.swift:180:21 - line:180:36] throws isolationCrossing=none
+                    (dot_syntax_call_expr implicit type='() throws -> ()' location=ViewController.swift:180:21 range=[ViewController.swift:180:21 - line:180:21] nothrow isolationCrossing=none
+                      (declref_expr type='(ViewController) -> () throws -> ()' location=ViewController.swift:180:21 range=[ViewController.swift:180:21 - line:180:21] decl=ViewController.(file).ViewController.startRecording()@ViewController.swift:94:18 function_ref=single)
+                      (argument_list implicit
+                        (argument
+                          (declref_expr implicit type='ViewController' location=ViewController.swift:180:21 range=[ViewController.swift:180:21 - line:180:21] decl=ViewController.(file).ViewController.recordButtonTapped().self@ViewController.swift:172:20 function_ref=unapplied))))
+                    (argument_list)))
+                (call_expr type='Void' location=ViewController.swift:181:30 range=[ViewController.swift:181:17 - line:181:64] nothrow isolationCrossing=none
+                  (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:181:30 range=[ViewController.swift:181:17 - line:181:30] nothrow isolationCrossing=none
+                    (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:181:30 range=[ViewController.swift:181:30 - line:181:30] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=single)
+                    (argument_list implicit
+                      (argument
+                        (force_value_expr implicit type='UIButton' location=ViewController.swift:181:17 range=[ViewController.swift:181:17 - line:181:17] implicit_iuo_unwrap
+                          (load_expr implicit type='UIButton?' location=ViewController.swift:181:17 range=[ViewController.swift:181:17 - line:181:17]
+                            (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:181:17 range=[ViewController.swift:181:17 - line:181:17] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                              (declref_expr implicit type='ViewController' location=ViewController.swift:181:17 range=[ViewController.swift:181:17 - line:181:17] decl=ViewController.(file).ViewController.recordButtonTapped().self@ViewController.swift:172:20 function_ref=unapplied)))))))
+                  (argument_list labels=_:for:
+                    (argument
+                      (inject_into_optional implicit type='String?' location=ViewController.swift:181:39 range=[ViewController.swift:181:39 - line:181:39]
+                        (string_literal_expr type='String' location=ViewController.swift:181:39 range=[ViewController.swift:181:39 - line:181:39] encoding=utf8 value="Stop Recording" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                    (argument label=for
+                      (array_expr type='UIControl.State' location=ViewController.swift:181:62 range=[ViewController.swift:181:62 - line:181:63] initializer=Swift.(file).SetAlgebra extension.init(arrayLiteral:) [with (substitution_map generic_signature=<Self where Self : SetAlgebra, Self.ArrayLiteralElement == Self.Element> (substitution Self -> UIControl.State))])))))
+              (case_stmt range=[ViewController.swift:182:15 - line:184:13]
+                (case_body_variables
+                  (var_decl implicit range=[ViewController.swift:182:21 - line:182:21] "error" interface type='any Error' let readImpl=stored immutable)
+                )
+                (case_label_item
+                (pattern_let implicit type='any Error'
+                  (pattern_named type='any Error' 'error')))
+                (brace_stmt range=[ViewController.swift:182:21 - line:184:13]
+                  (call_expr type='Void' location=ViewController.swift:183:30 range=[ViewController.swift:183:17 - line:183:73] nothrow isolationCrossing=none
+                    (dot_syntax_call_expr type='(String?, UIControl.State) -> Void' location=ViewController.swift:183:30 range=[ViewController.swift:183:17 - line:183:30] nothrow isolationCrossing=none
+                      (declref_expr type='(UIButton) -> (String?, UIControl.State) -> Void' location=ViewController.swift:183:30 range=[ViewController.swift:183:30 - line:183:30] decl=UIKit.(file).UIButton.setTitle(_:for:) function_ref=single)
+                      (argument_list implicit
+                        (argument
+                          (force_value_expr implicit type='UIButton' location=ViewController.swift:183:17 range=[ViewController.swift:183:17 - line:183:17] implicit_iuo_unwrap
+                            (load_expr implicit type='UIButton?' location=ViewController.swift:183:17 range=[ViewController.swift:183:17 - line:183:17]
+                              (member_ref_expr type='@lvalue UIButton?' location=ViewController.swift:183:17 range=[ViewController.swift:183:17 - line:183:17] decl=ViewController.(file).ViewController.recordButton@ViewController.swift:24:19
+                                (declref_expr implicit type='ViewController' location=ViewController.swift:183:17 range=[ViewController.swift:183:17 - line:183:17] decl=ViewController.(file).ViewController.recordButtonTapped().self@ViewController.swift:172:20 function_ref=unapplied)))))))
+                    (argument_list labels=_:for:
+                      (argument
+                        (inject_into_optional implicit type='String?' location=ViewController.swift:183:39 range=[ViewController.swift:183:39 - line:183:39]
+                          (string_literal_expr type='String' location=ViewController.swift:183:39 range=[ViewController.swift:183:39 - line:183:39] encoding=utf8 value="Recording Not Available" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))
+                      (argument label=for
+                        (array_expr type='UIControl.State' location=ViewController.swift:183:71 range=[ViewController.swift:183:71 - line:183:72] initializer=Swift.(file).SetAlgebra extension.init(arrayLiteral:) [with (substitution_map generic_signature=<Self where Self : SetAlgebra, Self.ArrayLiteralElement == Self.Element> (substitution Self -> UIControl.State))])))))))))))
+    (destructor_decl implicit range=[ViewController.swift:11:14 - line:11:14] "deinit" interface type='(ViewController) -> () -> ()' access=public
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ViewController.swift:11:14 - line:11:14]))
+    (constructor_decl implicit range=[ViewController.swift:11:75 - line:11:75] "init(nibName:bundle:)" interface type='(ViewController.Type) -> (String?, Bundle?) -> ViewController' access=public override=UIKit.(file).UIViewController.init(nibName:bundle:) @objc dynamic designated
+      (parameter "self" interface type='ViewController')
+      (parameter_list
+        (parameter "nibNameOrNil" apiName=nibName interface type='String?')
+        (parameter "nibBundleOrNil" apiName=bundle interface type='Bundle?'))
+      (brace_stmt implicit
+        (rebind_self_in_constructor_expr implicit type='()'
+          (call_expr implicit type='UIViewController' nothrow isolationCrossing=none
+            (dot_syntax_call_expr implicit type='(String?, Bundle?) -> UIViewController' nothrow isolationCrossing=none
+              (other_constructor_ref_expr implicit type='(UIViewController) -> (String?, Bundle?) -> UIViewController' decl=UIKit.(file).UIViewController.init(nibName:bundle:))
+              (argument_list implicit
+                (argument
+                  (super_ref_expr implicit type='UIViewController'))))
+            (argument_list implicit labels=nibName:bundle:
+              (argument label=nibName
+                (declref_expr implicit type='String?' decl=ViewController.(file).ViewController.init(nibName:bundle:).nibNameOrNil function_ref=unapplied))
+              (argument label=bundle
+                (declref_expr implicit type='Bundle?' decl=ViewController.(file).ViewController.init(nibName:bundle:).nibBundleOrNil function_ref=unapplied)))))
+        (return_stmt implicit)))
+    (constructor_decl implicit range=[ViewController.swift:11:75 - line:11:75] "init(coder:)" interface type='(ViewController.Type) -> (NSCoder) -> ViewController?' access=public override=UIKit.(file).UIViewController.init(coder:) @objc dynamic required designated failable=Optional
+      (parameter "self" interface type='ViewController')
+      (parameter_list
+        (parameter "coder" apiName=coder interface type='NSCoder'))
+      (brace_stmt implicit
+        (rebind_self_in_constructor_expr implicit type='()'
+          (call_expr implicit type='UIViewController?' nothrow isolationCrossing=none
+            (dot_syntax_call_expr implicit type='(NSCoder) -> UIViewController?' nothrow isolationCrossing=none
+              (other_constructor_ref_expr implicit type='(UIViewController) -> (NSCoder) -> UIViewController?' decl=UIKit.(file).UIViewController.init(coder:))
+              (argument_list implicit
+                (argument
+                  (super_ref_expr implicit type='UIViewController'))))
+            (argument_list implicit labels=coder:
+              (argument label=coder
+                (declref_expr implicit type='NSCoder' decl=ViewController.(file).ViewController.init(coder:).coder function_ref=unapplied)))))
+        (return_stmt implicit)))))

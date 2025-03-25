@@ -1,0 +1,173 @@
+(source_file "PropertiesAndMethodsUsed.swift"
+  (struct_decl range=[PropertiesAndMethodsUsed.swift:1:1 - line:7:1] "Type2" interface type='Type2.Type' access=internal non-resilient
+    (pattern_binding_decl range=[PropertiesAndMethodsUsed.swift:2:3 - line:2:10]
+      (pattern_typed type='Int'
+        (pattern_named type='Int' 'a')
+        (type_ident id='Int' bind=Swift.(file).Int)))
+    (var_decl range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7] "a" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7] 'anonname=0x55a95dec5700' interface type='(Type2) -> () -> Int' access=internal get_for=a
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Int' decl=PropertiesAndMethodsUsed.(file).Type2.a@PropertiesAndMethodsUsed.swift:2:7 direct_to_storage
+              (declref_expr implicit type='Type2' decl=PropertiesAndMethodsUsed.(file).Type2.<anonymous>.self@PropertiesAndMethodsUsed.swift:2:7 function_ref=unapplied)))))
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7] 'anonname=0x55a95dec5970' interface type='(inout Type2) -> (Int) -> ()' access=internal set_for=a
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7]
+          (parameter "value" type='Int' interface type='Int'))
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Int' decl=PropertiesAndMethodsUsed.(file).Type2.a@PropertiesAndMethodsUsed.swift:2:7 direct_to_storage
+              (declref_expr implicit type='@lvalue Type2' decl=PropertiesAndMethodsUsed.(file).Type2.<anonymous>.self@PropertiesAndMethodsUsed.swift:2:7 function_ref=unapplied))
+            (declref_expr implicit type='Int' decl=PropertiesAndMethodsUsed.(file).Type2.<anonymous>.value@PropertiesAndMethodsUsed.swift:2:7 function_ref=unapplied))))
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7] 'anonname=0x55a95dec5b40' interface type='(inout Type2) -> () -> ()' access=internal _modify_for=a
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7]
+          (yield_stmt implicit range=[PropertiesAndMethodsUsed.swift:2:7 - line:2:7]
+            (inout_expr implicit type='inout Int'
+              (member_ref_expr implicit type='@lvalue Int' decl=PropertiesAndMethodsUsed.(file).Type2.a@PropertiesAndMethodsUsed.swift:2:7 direct_to_impl
+                (declref_expr implicit type='@lvalue Type2' decl=PropertiesAndMethodsUsed.(file).Type2.<anonymous>.self@PropertiesAndMethodsUsed.swift:2:7 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[PropertiesAndMethodsUsed.swift:3:3 - line:3:10]
+      (pattern_typed type='Int'
+        (pattern_named type='Int' 'b')
+        (type_ident id='Int' bind=Swift.(file).Int)))
+    (var_decl range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7] "b" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7] 'anonname=0x55a95dec5d40' interface type='(Type2) -> () -> Int' access=internal get_for=b
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Int' decl=PropertiesAndMethodsUsed.(file).Type2.b@PropertiesAndMethodsUsed.swift:3:7 direct_to_storage
+              (declref_expr implicit type='Type2' decl=PropertiesAndMethodsUsed.(file).Type2.<anonymous>.self@PropertiesAndMethodsUsed.swift:3:7 function_ref=unapplied)))))
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7] 'anonname=0x55a95dec5f38' interface type='(inout Type2) -> (Int) -> ()' access=internal set_for=b
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7]
+          (parameter "value" type='Int' interface type='Int'))
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Int' decl=PropertiesAndMethodsUsed.(file).Type2.b@PropertiesAndMethodsUsed.swift:3:7 direct_to_storage
+              (declref_expr implicit type='@lvalue Type2' decl=PropertiesAndMethodsUsed.(file).Type2.<anonymous>.self@PropertiesAndMethodsUsed.swift:3:7 function_ref=unapplied))
+            (declref_expr implicit type='Int' decl=PropertiesAndMethodsUsed.(file).Type2.<anonymous>.value@PropertiesAndMethodsUsed.swift:3:7 function_ref=unapplied))))
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7] 'anonname=0x55a95dec6048' interface type='(inout Type2) -> () -> ()' access=internal _modify_for=b
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7]
+          (yield_stmt implicit range=[PropertiesAndMethodsUsed.swift:3:7 - line:3:7]
+            (inout_expr implicit type='inout Int'
+              (member_ref_expr implicit type='@lvalue Int' decl=PropertiesAndMethodsUsed.(file).Type2.b@PropertiesAndMethodsUsed.swift:3:7 direct_to_impl
+                (declref_expr implicit type='@lvalue Type2' decl=PropertiesAndMethodsUsed.(file).Type2.<anonymous>.self@PropertiesAndMethodsUsed.swift:3:7 function_ref=unapplied)))))))
+    (func_decl range=[PropertiesAndMethodsUsed.swift:4:3 - line:4:23] "doSomething()" interface type='(Type2) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list range=[PropertiesAndMethodsUsed.swift:4:19 - line:4:20])
+      (brace_stmt range=[PropertiesAndMethodsUsed.swift:4:22 - line:4:23]))
+    (func_decl range=[PropertiesAndMethodsUsed.swift:5:3 - line:5:26] "doSomethingToo()" interface type='(Type2) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list range=[PropertiesAndMethodsUsed.swift:5:22 - line:5:23])
+      (brace_stmt range=[PropertiesAndMethodsUsed.swift:5:25 - line:5:26]))
+    (constructor_decl implicit range=[PropertiesAndMethodsUsed.swift:1:8 - line:1:8] "init(a:b:)" interface type='(Type2.Type) -> (Int, Int) -> Type2' access=internal designated
+      (parameter "self")
+      (parameter_list range=[PropertiesAndMethodsUsed.swift:1:8 - line:1:8]
+        (parameter "a" apiName=a type='Int' interface type='Int')
+        (parameter "b" apiName=b type='Int' interface type='Int'))))
+  (struct_decl range=[PropertiesAndMethodsUsed.swift:8:1 - line:17:1] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (pattern_binding_decl range=[PropertiesAndMethodsUsed.swift:9:3 - line:9:10]
+      (pattern_typed type='Type2'
+        (pattern_named type='Type2' 'c')
+        (type_ident id='Type2' bind=PropertiesAndMethodsUsed.(file).Type2@PropertiesAndMethodsUsed.swift:1:8)))
+    (var_decl range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7] "c" type='Type2' interface type='Type2' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7] 'anonname=0x55a95dee8478' interface type='(Type1) -> () -> Type2' access=internal get_for=c
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Type2' decl=PropertiesAndMethodsUsed.(file).Type1.c@PropertiesAndMethodsUsed.swift:9:7 direct_to_storage
+              (declref_expr implicit type='Type1' decl=PropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@PropertiesAndMethodsUsed.swift:9:7 function_ref=unapplied)))))
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7] 'anonname=0x55a95dee86d0' interface type='(inout Type1) -> (Type2) -> ()' access=internal set_for=c
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7]
+          (parameter "value" type='Type2' interface type='Type2'))
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Type2' decl=PropertiesAndMethodsUsed.(file).Type1.c@PropertiesAndMethodsUsed.swift:9:7 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=PropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@PropertiesAndMethodsUsed.swift:9:7 function_ref=unapplied))
+            (declref_expr implicit type='Type2' decl=PropertiesAndMethodsUsed.(file).Type1.<anonymous>.value@PropertiesAndMethodsUsed.swift:9:7 function_ref=unapplied))))
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7] 'anonname=0x55a95dee8860' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=c
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7]
+          (yield_stmt implicit range=[PropertiesAndMethodsUsed.swift:9:7 - line:9:7]
+            (inout_expr implicit type='inout Type2'
+              (member_ref_expr implicit type='@lvalue Type2' decl=PropertiesAndMethodsUsed.(file).Type1.c@PropertiesAndMethodsUsed.swift:9:7 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=PropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@PropertiesAndMethodsUsed.swift:9:7 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[PropertiesAndMethodsUsed.swift:10:3 - line:10:10]
+      (pattern_typed type='Int'
+        (pattern_named type='Int' 'd')
+        (type_ident id='Int' bind=Swift.(file).Int)))
+    (var_decl range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7] "d" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7] 'anonname=0x55a95dee8a18' interface type='(Type1) -> () -> Int' access=internal get_for=d
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Int' decl=PropertiesAndMethodsUsed.(file).Type1.d@PropertiesAndMethodsUsed.swift:10:7 direct_to_storage
+              (declref_expr implicit type='Type1' decl=PropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@PropertiesAndMethodsUsed.swift:10:7 function_ref=unapplied)))))
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7] 'anonname=0x55a95deeadc0' interface type='(inout Type1) -> (Int) -> ()' access=internal set_for=d
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7]
+          (parameter "value" type='Int' interface type='Int'))
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Int' decl=PropertiesAndMethodsUsed.(file).Type1.d@PropertiesAndMethodsUsed.swift:10:7 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=PropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@PropertiesAndMethodsUsed.swift:10:7 function_ref=unapplied))
+            (declref_expr implicit type='Int' decl=PropertiesAndMethodsUsed.(file).Type1.<anonymous>.value@PropertiesAndMethodsUsed.swift:10:7 function_ref=unapplied))))
+      (accessor_decl implicit range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7] 'anonname=0x55a95deeaf10' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=d
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7]
+          (yield_stmt implicit range=[PropertiesAndMethodsUsed.swift:10:7 - line:10:7]
+            (inout_expr implicit type='inout Int'
+              (member_ref_expr implicit type='@lvalue Int' decl=PropertiesAndMethodsUsed.(file).Type1.d@PropertiesAndMethodsUsed.swift:10:7 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=PropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@PropertiesAndMethodsUsed.swift:10:7 function_ref=unapplied)))))))
+    (func_decl range=[PropertiesAndMethodsUsed.swift:11:12 - line:16:3] "doSomethingElse()" interface type='(inout Type1) -> () -> ()' access=internal
+      (parameter "self" type='Type1' interface type='Type1' inout)
+      (parameter_list range=[PropertiesAndMethodsUsed.swift:11:32 - line:11:33])
+      (brace_stmt range=[PropertiesAndMethodsUsed.swift:11:35 - line:16:3]
+        (assign_expr type='()' location=PropertiesAndMethodsUsed.swift:12:9 range=[PropertiesAndMethodsUsed.swift:12:7 - line:12:13]
+          (member_ref_expr type='@lvalue Int' location=PropertiesAndMethodsUsed.swift:12:7 range=[PropertiesAndMethodsUsed.swift:12:7 - line:12:7] decl=PropertiesAndMethodsUsed.(file).Type1.d@PropertiesAndMethodsUsed.swift:10:7
+            (declref_expr implicit type='@lvalue Type1' location=PropertiesAndMethodsUsed.swift:12:7 range=[PropertiesAndMethodsUsed.swift:12:7 - line:12:7] decl=PropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@PropertiesAndMethodsUsed.swift:11:17 function_ref=unapplied))
+          (load_expr implicit type='Int' location=PropertiesAndMethodsUsed.swift:12:13 range=[PropertiesAndMethodsUsed.swift:12:11 - line:12:13]
+            (member_ref_expr type='@lvalue Int' location=PropertiesAndMethodsUsed.swift:12:13 range=[PropertiesAndMethodsUsed.swift:12:11 - line:12:13] decl=PropertiesAndMethodsUsed.(file).Type2.a@PropertiesAndMethodsUsed.swift:2:7
+              (member_ref_expr type='@lvalue Type2' location=PropertiesAndMethodsUsed.swift:12:11 range=[PropertiesAndMethodsUsed.swift:12:11 - line:12:11] decl=PropertiesAndMethodsUsed.(file).Type1.c@PropertiesAndMethodsUsed.swift:9:7
+                (declref_expr implicit type='@lvalue Type1' location=PropertiesAndMethodsUsed.swift:12:11 range=[PropertiesAndMethodsUsed.swift:12:11 - line:12:11] decl=PropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@PropertiesAndMethodsUsed.swift:11:17 function_ref=unapplied)))))
+        (assign_expr type='()' location=PropertiesAndMethodsUsed.swift:13:9 range=[PropertiesAndMethodsUsed.swift:13:7 - line:13:13]
+          (member_ref_expr type='@lvalue Int' location=PropertiesAndMethodsUsed.swift:13:7 range=[PropertiesAndMethodsUsed.swift:13:7 - line:13:7] decl=PropertiesAndMethodsUsed.(file).Type1.d@PropertiesAndMethodsUsed.swift:10:7
+            (declref_expr implicit type='@lvalue Type1' location=PropertiesAndMethodsUsed.swift:13:7 range=[PropertiesAndMethodsUsed.swift:13:7 - line:13:7] decl=PropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@PropertiesAndMethodsUsed.swift:11:17 function_ref=unapplied))
+          (load_expr implicit type='Int' location=PropertiesAndMethodsUsed.swift:13:13 range=[PropertiesAndMethodsUsed.swift:13:11 - line:13:13]
+            (member_ref_expr type='@lvalue Int' location=PropertiesAndMethodsUsed.swift:13:13 range=[PropertiesAndMethodsUsed.swift:13:11 - line:13:13] decl=PropertiesAndMethodsUsed.(file).Type2.b@PropertiesAndMethodsUsed.swift:3:7
+              (member_ref_expr type='@lvalue Type2' location=PropertiesAndMethodsUsed.swift:13:11 range=[PropertiesAndMethodsUsed.swift:13:11 - line:13:11] decl=PropertiesAndMethodsUsed.(file).Type1.c@PropertiesAndMethodsUsed.swift:9:7
+                (declref_expr implicit type='@lvalue Type1' location=PropertiesAndMethodsUsed.swift:13:11 range=[PropertiesAndMethodsUsed.swift:13:11 - line:13:11] decl=PropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@PropertiesAndMethodsUsed.swift:11:17 function_ref=unapplied)))))
+        (call_expr type='()' location=PropertiesAndMethodsUsed.swift:14:9 range=[PropertiesAndMethodsUsed.swift:14:7 - line:14:21] nothrow
+          (dot_syntax_call_expr type='() -> ()' location=PropertiesAndMethodsUsed.swift:14:9 range=[PropertiesAndMethodsUsed.swift:14:7 - line:14:9] nothrow
+            (declref_expr type='(Type2) -> () -> ()' location=PropertiesAndMethodsUsed.swift:14:9 range=[PropertiesAndMethodsUsed.swift:14:9 - line:14:9] decl=PropertiesAndMethodsUsed.(file).Type2.doSomething()@PropertiesAndMethodsUsed.swift:4:8 function_ref=single)
+            (argument_list implicit
+              (argument
+                (load_expr implicit type='Type2' location=PropertiesAndMethodsUsed.swift:14:7 range=[PropertiesAndMethodsUsed.swift:14:7 - line:14:7]
+                  (member_ref_expr type='@lvalue Type2' location=PropertiesAndMethodsUsed.swift:14:7 range=[PropertiesAndMethodsUsed.swift:14:7 - line:14:7] decl=PropertiesAndMethodsUsed.(file).Type1.c@PropertiesAndMethodsUsed.swift:9:7
+                    (declref_expr implicit type='@lvalue Type1' location=PropertiesAndMethodsUsed.swift:14:7 range=[PropertiesAndMethodsUsed.swift:14:7 - line:14:7] decl=PropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@PropertiesAndMethodsUsed.swift:11:17 function_ref=unapplied))))))
+          (argument_list))
+        (call_expr type='()' location=PropertiesAndMethodsUsed.swift:15:9 range=[PropertiesAndMethodsUsed.swift:15:7 - line:15:24] nothrow
+          (dot_syntax_call_expr type='() -> ()' location=PropertiesAndMethodsUsed.swift:15:9 range=[PropertiesAndMethodsUsed.swift:15:7 - line:15:9] nothrow
+            (declref_expr type='(Type2) -> () -> ()' location=PropertiesAndMethodsUsed.swift:15:9 range=[PropertiesAndMethodsUsed.swift:15:9 - line:15:9] decl=PropertiesAndMethodsUsed.(file).Type2.doSomethingToo()@PropertiesAndMethodsUsed.swift:5:8 function_ref=single)
+            (argument_list implicit
+              (argument
+                (load_expr implicit type='Type2' location=PropertiesAndMethodsUsed.swift:15:7 range=[PropertiesAndMethodsUsed.swift:15:7 - line:15:7]
+                  (member_ref_expr type='@lvalue Type2' location=PropertiesAndMethodsUsed.swift:15:7 range=[PropertiesAndMethodsUsed.swift:15:7 - line:15:7] decl=PropertiesAndMethodsUsed.(file).Type1.c@PropertiesAndMethodsUsed.swift:9:7
+                    (declref_expr implicit type='@lvalue Type1' location=PropertiesAndMethodsUsed.swift:15:7 range=[PropertiesAndMethodsUsed.swift:15:7 - line:15:7] decl=PropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@PropertiesAndMethodsUsed.swift:11:17 function_ref=unapplied))))))
+          (argument_list))))
+    (constructor_decl implicit range=[PropertiesAndMethodsUsed.swift:8:8 - line:8:8] "init(c:d:)" interface type='(Type1.Type) -> (Type2, Int) -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list range=[PropertiesAndMethodsUsed.swift:8:8 - line:8:8]
+        (parameter "c" apiName=c type='Type2' interface type='Type2')
+        (parameter "d" apiName=d type='Int' interface type='Int')))))

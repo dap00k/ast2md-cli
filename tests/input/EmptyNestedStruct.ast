@@ -1,0 +1,19 @@
+(source_file "EmptyNestedStruct.swift"
+  (struct_decl range=[EmptyNestedStruct.swift:1:1 - line:5:1] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (struct_decl range=[EmptyNestedStruct.swift:2:5 - line:4:5] "Type2" interface type='Type1.Type2.Type' access=internal non-resilient
+      (struct_decl range=[EmptyNestedStruct.swift:3:9 - line:3:23] "Type3" interface type='Type1.Type2.Type3.Type' access=internal non-resilient
+        (constructor_decl implicit range=[EmptyNestedStruct.swift:3:16 - line:3:16] "init()" interface type='(Type1.Type2.Type3.Type) -> () -> Type1.Type2.Type3' access=internal designated
+          (parameter "self")
+          (parameter_list)
+          (brace_stmt implicit range=[EmptyNestedStruct.swift:3:16 - line:3:16]
+            (return_stmt range=[EmptyNestedStruct.swift:3:16 - line:3:16]))))
+      (constructor_decl implicit range=[EmptyNestedStruct.swift:2:12 - line:2:12] "init()" interface type='(Type1.Type2.Type) -> () -> Type1.Type2' access=internal designated
+        (parameter "self")
+        (parameter_list)
+        (brace_stmt implicit range=[EmptyNestedStruct.swift:2:12 - line:2:12]
+          (return_stmt range=[EmptyNestedStruct.swift:2:12 - line:2:12]))))
+    (constructor_decl implicit range=[EmptyNestedStruct.swift:1:8 - line:1:8] "init()" interface type='(Type1.Type) -> () -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[EmptyNestedStruct.swift:1:8 - line:1:8]
+        (return_stmt range=[EmptyNestedStruct.swift:1:8 - line:1:8])))))

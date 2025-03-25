@@ -1,0 +1,73 @@
+[
+    {
+        "name": "Vehicle",
+        "namespace": "",
+        "properties": [
+            "isOn"
+        ],
+        "methods": [
+            "start()",
+            "stop()"
+        ],
+        "uses": [],
+        "is_abstract": true,
+        "implements": []
+    },
+    {
+        "name": "Car",
+        "namespace": "",
+        "properties": [
+            "isOn"
+        ],
+        "methods": [
+            "start()",
+            "stop()"
+        ],
+        "uses": [
+            {
+                "name": "Vehicle",
+                "namespace": "",
+                "type": true,
+                "properties": [
+                    "isOn"
+                ],
+                "methods": [
+                    "start()",
+                    "stop()"
+                ],
+                "type_freq": 1,
+                "property_freq": 1,
+                "method_freq": 2
+            }
+        ],
+        "is_abstract": false,
+        "implements": ["Vehicle"]
+    },
+    {
+        "name": "MyCar",
+        "namespace": "",
+        "properties": [
+            "myCar"
+        ],
+        "methods": [
+            "carOperations()"
+        ],
+        "uses": [
+            {
+                "name": "Vehicle",
+                "namespace": "",
+                "type": true,
+                "properties": [],
+                "methods": [
+                    "start()",
+                    "stop()"
+                ],
+                "type_freq": 1,
+                "property_freq": 0,
+                "method_freq": 2
+            }
+        ],
+        "is_abstract": false,
+        "implements": []
+    }
+]

@@ -1,0 +1,99 @@
+(source_file "ClassesTypesUsedReverse.swift"
+  (class_decl range=[ClassesTypesUsedReverse.swift:1:1 - line:9:1] "Type2" interface type='Type2.Type' access=internal non-resilient
+    (pattern_binding_decl range=[ClassesTypesUsedReverse.swift:2:5 - line:2:16]
+      (pattern_typed type='Type3'
+        (pattern_named type='Type3' 'prop1')
+        (type_ident id='Type3' bind=ClassesTypesUsedReverse.(file).Type3@ClassesTypesUsedReverse.swift:14:7)))
+    (var_decl range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9] "prop1" type='Type3' interface type='Type3' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9] 'anonname=0x5610915f8ea0' interface type='(Type2) -> () -> Type3' access=internal get_for=prop1
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Type3' decl=ClassesTypesUsedReverse.(file).Type2.prop1@ClassesTypesUsedReverse.swift:2:9 direct_to_storage
+              (declref_expr implicit type='Type2' decl=ClassesTypesUsedReverse.(file).Type2.<anonymous>.self@ClassesTypesUsedReverse.swift:2:9 function_ref=unapplied)))))
+      (accessor_decl implicit range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9] 'anonname=0x5610915f9110' interface type='(Type2) -> (Type3) -> ()' access=internal set_for=prop1
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9]
+          (parameter "value" type='Type3' interface type='Type3'))
+        (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Type3' decl=ClassesTypesUsedReverse.(file).Type2.prop1@ClassesTypesUsedReverse.swift:2:9 direct_to_storage
+              (declref_expr implicit type='Type2' decl=ClassesTypesUsedReverse.(file).Type2.<anonymous>.self@ClassesTypesUsedReverse.swift:2:9 function_ref=unapplied))
+            (declref_expr implicit type='Type3' decl=ClassesTypesUsedReverse.(file).Type2.<anonymous>.value@ClassesTypesUsedReverse.swift:2:9 function_ref=unapplied))))
+      (accessor_decl implicit range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9] 'anonname=0x5610915f92e0' interface type='(Type2) -> () -> ()' access=internal _modify_for=prop1
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9]
+          (yield_stmt implicit range=[ClassesTypesUsedReverse.swift:2:9 - line:2:9]
+            (inout_expr implicit type='inout Type3'
+              (member_ref_expr implicit type='@lvalue Type3' decl=ClassesTypesUsedReverse.(file).Type2.prop1@ClassesTypesUsedReverse.swift:2:9 direct_to_impl
+                (declref_expr implicit type='Type2' decl=ClassesTypesUsedReverse.(file).Type2.<anonymous>.self@ClassesTypesUsedReverse.swift:2:9 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[ClassesTypesUsedReverse.swift:3:5 - line:3:16]
+      (pattern_typed type='Type1'
+        (pattern_named type='Type1' 'prop2')
+        (type_ident id='Type1' bind=ClassesTypesUsedReverse.(file).Type1@ClassesTypesUsedReverse.swift:10:7)))
+    (var_decl range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9] "prop2" type='Type1' interface type='Type1' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9] 'anonname=0x5610915f9478' interface type='(Type2) -> () -> Type1' access=internal get_for=prop2
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Type1' decl=ClassesTypesUsedReverse.(file).Type2.prop2@ClassesTypesUsedReverse.swift:3:9 direct_to_storage
+              (declref_expr implicit type='Type2' decl=ClassesTypesUsedReverse.(file).Type2.<anonymous>.self@ClassesTypesUsedReverse.swift:3:9 function_ref=unapplied)))))
+      (accessor_decl implicit range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9] 'anonname=0x5610915f96d0' interface type='(Type2) -> (Type1) -> ()' access=internal set_for=prop2
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9]
+          (parameter "value" type='Type1' interface type='Type1'))
+        (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Type1' decl=ClassesTypesUsedReverse.(file).Type2.prop2@ClassesTypesUsedReverse.swift:3:9 direct_to_storage
+              (declref_expr implicit type='Type2' decl=ClassesTypesUsedReverse.(file).Type2.<anonymous>.self@ClassesTypesUsedReverse.swift:3:9 function_ref=unapplied))
+            (declref_expr implicit type='Type1' decl=ClassesTypesUsedReverse.(file).Type2.<anonymous>.value@ClassesTypesUsedReverse.swift:3:9 function_ref=unapplied))))
+      (accessor_decl implicit range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9] 'anonname=0x561091605258' interface type='(Type2) -> () -> ()' access=internal _modify_for=prop2
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9]
+          (yield_stmt implicit range=[ClassesTypesUsedReverse.swift:3:9 - line:3:9]
+            (inout_expr implicit type='inout Type1'
+              (member_ref_expr implicit type='@lvalue Type1' decl=ClassesTypesUsedReverse.(file).Type2.prop2@ClassesTypesUsedReverse.swift:3:9 direct_to_impl
+                (declref_expr implicit type='Type2' decl=ClassesTypesUsedReverse.(file).Type2.<anonymous>.self@ClassesTypesUsedReverse.swift:3:9 function_ref=unapplied)))))))
+    (constructor_decl range=[ClassesTypesUsedReverse.swift:5:5 - line:8:5] "init(prop1:prop2:)" interface type='(Type2.Type) -> (Type3, Type1) -> Type2' access=internal designated
+      (parameter "self" type='Type2' interface type='Type2')
+      (parameter_list range=[ClassesTypesUsedReverse.swift:5:9 - line:5:36]
+        (parameter "prop1" apiName=prop1 type='Type3' interface type='Type3')
+        (parameter "prop2" apiName=prop2 type='Type1' interface type='Type1'))
+      (brace_stmt range=[ClassesTypesUsedReverse.swift:5:38 - line:8:5]
+        (assign_expr type='()' location=ClassesTypesUsedReverse.swift:6:20 range=[ClassesTypesUsedReverse.swift:6:9 - line:6:22]
+          (member_ref_expr type='@lvalue Type3' location=ClassesTypesUsedReverse.swift:6:14 range=[ClassesTypesUsedReverse.swift:6:9 - line:6:14] decl=ClassesTypesUsedReverse.(file).Type2.prop1@ClassesTypesUsedReverse.swift:2:9 direct_to_storage
+            (declref_expr type='Type2' location=ClassesTypesUsedReverse.swift:6:9 range=[ClassesTypesUsedReverse.swift:6:9 - line:6:9] decl=ClassesTypesUsedReverse.(file).Type2.init(prop1:prop2:).self@ClassesTypesUsedReverse.swift:5:5 function_ref=unapplied))
+          (declref_expr type='Type3' location=ClassesTypesUsedReverse.swift:6:22 range=[ClassesTypesUsedReverse.swift:6:22 - line:6:22] decl=ClassesTypesUsedReverse.(file).Type2.init(prop1:prop2:).prop1@ClassesTypesUsedReverse.swift:5:10 function_ref=unapplied))
+        (assign_expr type='()' location=ClassesTypesUsedReverse.swift:7:20 range=[ClassesTypesUsedReverse.swift:7:9 - line:7:22]
+          (member_ref_expr type='@lvalue Type1' location=ClassesTypesUsedReverse.swift:7:14 range=[ClassesTypesUsedReverse.swift:7:9 - line:7:14] decl=ClassesTypesUsedReverse.(file).Type2.prop2@ClassesTypesUsedReverse.swift:3:9 direct_to_storage
+            (declref_expr type='Type2' location=ClassesTypesUsedReverse.swift:7:9 range=[ClassesTypesUsedReverse.swift:7:9 - line:7:9] decl=ClassesTypesUsedReverse.(file).Type2.init(prop1:prop2:).self@ClassesTypesUsedReverse.swift:5:5 function_ref=unapplied))
+          (declref_expr type='Type1' location=ClassesTypesUsedReverse.swift:7:22 range=[ClassesTypesUsedReverse.swift:7:22 - line:7:22] decl=ClassesTypesUsedReverse.(file).Type2.init(prop1:prop2:).prop2@ClassesTypesUsedReverse.swift:5:24 function_ref=unapplied))
+        (return_stmt implicit range=[ClassesTypesUsedReverse.swift:8:5 - line:8:5])))
+    (destructor_decl implicit range=[ClassesTypesUsedReverse.swift:1:7 - line:1:7] "deinit" interface type='(Type2) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:1:7 - line:1:7])))
+  (class_decl range=[ClassesTypesUsedReverse.swift:10:1 - line:12:1] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (destructor_decl implicit range=[ClassesTypesUsedReverse.swift:10:7 - line:10:7] "deinit" interface type='(Type1) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:10:7 - line:10:7]))
+    (constructor_decl implicit range=[ClassesTypesUsedReverse.swift:10:7 - line:10:7] "init()" interface type='(Type1.Type) -> () -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:10:7 - line:10:7]
+        (return_stmt range=[ClassesTypesUsedReverse.swift:10:7 - line:10:7]))))
+  (class_decl range=[ClassesTypesUsedReverse.swift:14:1 - line:16:1] "Type3" interface type='Type3.Type' access=internal non-resilient
+    (destructor_decl implicit range=[ClassesTypesUsedReverse.swift:14:7 - line:14:7] "deinit" interface type='(Type3) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:14:7 - line:14:7]))
+    (constructor_decl implicit range=[ClassesTypesUsedReverse.swift:14:7 - line:14:7] "init()" interface type='(Type3.Type) -> () -> Type3' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ClassesTypesUsedReverse.swift:14:7 - line:14:7]
+        (return_stmt range=[ClassesTypesUsedReverse.swift:14:7 - line:14:7])))))

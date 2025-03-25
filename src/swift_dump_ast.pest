@@ -1,0 +1,68 @@
+/*
+ * PEST (https://docs.rs/pest/latest/pest/index.html) grammar that
+ * recognizes the language of the output of "-dump-ast" option in the
+ * Swift compiler front-end.
+ *
+ * Note from Jordan Rose on 2018: "We don't actually want to promise
+ * -dump-ast output is a stable or sensible format, and we don't want
+ * people writing tools that depend on swift -frontend (which is
+ * itself an internal, unstable interface). But others may feel
+ * differently."
+ */
+
+ast = { SOI ~ node+ ~ END_OF_INPUT }
+
+/* EOI appears in pairs, I use this trick to to avoid it*/
+END_OF_INPUT = _{ !ANY }
+
+node = { processed? ~ "(" ~ identifier ~ attribute* ~ node* ~ ")" }
+
+processed = { "Original init:" | "Processed init:" }
+
+identifier = @{ (ASCII_ALPHA | "_") ~ (ASCII_ALPHANUMERIC | "_" | "-")* }
+
+attribute = { string | property | identifier }
+
+property = { identifier ~ "=" ~ value }
+
+value = { null | "+" | string | integer | decl | range }
+
+null = @{ "**NULL**" }
+
+string = { single_quoted_str | double_quoted_str }
+
+double_quoted_str = @{ "\"" ~ ( "\"\"" | (!"\"" ~ ANY) )* ~ "\"" }
+
+single_quoted_str = @{ "'" ~ ( "''" | (!"'" ~ ANY) )* ~ "'" }
+
+integer = { hex | dec }
+
+hex = @{ "0x" ~ ASCII_HEX_DIGIT+}
+
+dec = @{ ASCII_DIGIT+ }
+
+/*
+ * This rule must be refined: a range contains a filename and a range
+ * of positions in the file (see decl)
+ */
+range = @{ "[" ~ ( (!"]" ~ ANY) )* ~ "]" }
+
+/*
+ * This rule must be studied: it looks like to be structured around a
+ * sequence of elements separated by dots. Elements include
+ * identifiers, identifiers in parenthesis (be careful with nodes),
+ * identifiers between angles, identifiers with other tokens (@, :,
+ * -, ...). One important problem is that white space appears in some
+ * tokens like "Int extension" or "A extension".
+ *
+ * This rule must be refined, here is an option to check:
+ *
+ * decl = @{ identifier ~ ("." ~ (identifier | "(file)"))* ~ "@" ~ path ~ ":" ~ position }
+ * path = @{ "/"? ~ identifier ~ ("/" ~ identifier)* }
+ * position = @{ number ~ ":" ~ number}
+ * number = @{ ASCII_DIGIT+ }
+ */
+decl = @{ ASCII_ALPHA ~ (" extension" | ASCII_ALPHANUMERIC | "@" | ":" | "." | "/" | "<" | ">" | "-" | "+" | parenthesized )* }
+parenthesized = @{ "(" ~ identifier? ~ ":"? ~ ")" }
+
+WHITESPACE = _{ " " | NEWLINE }

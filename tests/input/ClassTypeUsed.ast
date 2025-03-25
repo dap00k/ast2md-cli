@@ -1,0 +1,55 @@
+(source_file "ClassTypeUsed.swift"
+  (class_decl range=[ClassTypeUsed.swift:1:1 - line:2:1] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (destructor_decl implicit range=[ClassTypeUsed.swift:1:7 - line:1:7] "deinit" interface type='(Type1) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ClassTypeUsed.swift:1:7 - line:1:7]))
+    (constructor_decl implicit range=[ClassTypeUsed.swift:1:7 - line:1:7] "init()" interface type='(Type1.Type) -> () -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ClassTypeUsed.swift:1:7 - line:1:7]
+        (return_stmt range=[ClassTypeUsed.swift:1:7 - line:1:7]))))
+  (class_decl range=[ClassTypeUsed.swift:4:1 - line:9:1] "Type2" interface type='Type2.Type' access=internal non-resilient
+    (pattern_binding_decl range=[ClassTypeUsed.swift:5:5 - line:5:16]
+      (pattern_typed type='Type1'
+        (pattern_named type='Type1' 'prop2')
+        (type_ident id='Type1' bind=ClassTypeUsed.(file).Type1@ClassTypeUsed.swift:1:7)))
+    (var_decl range=[ClassTypeUsed.swift:5:9 - line:5:9] "prop2" type='Type1' interface type='Type1' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[ClassTypeUsed.swift:5:9 - line:5:9] 'anonname=0x55b298bbe530' interface type='(Type2) -> () -> Type1' access=internal get_for=prop2
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[ClassTypeUsed.swift:5:9 - line:5:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Type1' decl=ClassTypeUsed.(file).Type2.prop2@ClassTypeUsed.swift:5:9 direct_to_storage
+              (declref_expr implicit type='Type2' decl=ClassTypeUsed.(file).Type2.<anonymous>.self@ClassTypeUsed.swift:5:9 function_ref=unapplied)))))
+      (accessor_decl implicit range=[ClassTypeUsed.swift:5:9 - line:5:9] 'anonname=0x55b298bbe780' interface type='(Type2) -> (Type1) -> ()' access=internal set_for=prop2
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list range=[ClassTypeUsed.swift:5:9 - line:5:9]
+          (parameter "value" type='Type1' interface type='Type1'))
+        (brace_stmt implicit range=[ClassTypeUsed.swift:5:9 - line:5:9]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Type1' decl=ClassTypeUsed.(file).Type2.prop2@ClassTypeUsed.swift:5:9 direct_to_storage
+              (declref_expr implicit type='Type2' decl=ClassTypeUsed.(file).Type2.<anonymous>.self@ClassTypeUsed.swift:5:9 function_ref=unapplied))
+            (declref_expr implicit type='Type1' decl=ClassTypeUsed.(file).Type2.<anonymous>.value@ClassTypeUsed.swift:5:9 function_ref=unapplied))))
+      (accessor_decl implicit range=[ClassTypeUsed.swift:5:9 - line:5:9] 'anonname=0x55b298bbe950' interface type='(Type2) -> () -> ()' access=internal _modify_for=prop2
+        (parameter "self" type='Type2' interface type='Type2')
+        (parameter_list)
+        (brace_stmt implicit range=[ClassTypeUsed.swift:5:9 - line:5:9]
+          (yield_stmt implicit range=[ClassTypeUsed.swift:5:9 - line:5:9]
+            (inout_expr implicit type='inout Type1'
+              (member_ref_expr implicit type='@lvalue Type1' decl=ClassTypeUsed.(file).Type2.prop2@ClassTypeUsed.swift:5:9 direct_to_impl
+                (declref_expr implicit type='Type2' decl=ClassTypeUsed.(file).Type2.<anonymous>.self@ClassTypeUsed.swift:5:9 function_ref=unapplied)))))))
+    (constructor_decl range=[ClassTypeUsed.swift:6:5 - line:8:5] "init(prop2:)" interface type='(Type2.Type) -> (Type1) -> Type2' access=internal designated
+      (parameter "self" type='Type2' interface type='Type2')
+      (parameter_list range=[ClassTypeUsed.swift:6:9 - line:6:22]
+        (parameter "prop2" apiName=prop2 type='Type1' interface type='Type1'))
+      (brace_stmt range=[ClassTypeUsed.swift:6:24 - line:8:5]
+        (assign_expr type='()' location=ClassTypeUsed.swift:7:20 range=[ClassTypeUsed.swift:7:9 - line:7:22]
+          (member_ref_expr type='@lvalue Type1' location=ClassTypeUsed.swift:7:14 range=[ClassTypeUsed.swift:7:9 - line:7:14] decl=ClassTypeUsed.(file).Type2.prop2@ClassTypeUsed.swift:5:9 direct_to_storage
+            (declref_expr type='Type2' location=ClassTypeUsed.swift:7:9 range=[ClassTypeUsed.swift:7:9 - line:7:9] decl=ClassTypeUsed.(file).Type2.init(prop2:).self@ClassTypeUsed.swift:6:5 function_ref=unapplied))
+          (declref_expr type='Type1' location=ClassTypeUsed.swift:7:22 range=[ClassTypeUsed.swift:7:22 - line:7:22] decl=ClassTypeUsed.(file).Type2.init(prop2:).prop2@ClassTypeUsed.swift:6:10 function_ref=unapplied))
+        (return_stmt implicit range=[ClassTypeUsed.swift:8:5 - line:8:5])))
+    (destructor_decl implicit range=[ClassTypeUsed.swift:4:7 - line:4:7] "deinit" interface type='(Type2) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[ClassTypeUsed.swift:4:7 - line:4:7]))))

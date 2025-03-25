@@ -1,0 +1,25 @@
+[
+ {
+   "properties": [
+                  "prop1",
+		  "prop2",
+		  "prop3",
+		  "prop4"
+		 ],
+   "namespace":"",
+   "methods": [],
+   "uses": [],
+   "name":"Type1",
+   "is_abstract": false,
+   "implements": []
+ },
+ {
+  "properties": [],
+  "namespace":"Type1",
+  "methods": [],
+  "uses": [],
+  "name":"Type2",
+  "is_abstract": false,
+  "implements": []
+  }
+]

@@ -1,0 +1,12 @@
+[
+    {
+      "properties": [],
+      "namespace":"",
+      "methods":["doSomethingCool()"],
+      "uses": [],
+      "name":"Type1",
+      "is_abstract": false,
+      "implements": []
+    }
+   ]
+   

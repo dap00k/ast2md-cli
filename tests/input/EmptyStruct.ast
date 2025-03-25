@@ -1,0 +1,7 @@
+(source_file "EmptyStruct.swift"
+  (struct_decl range=[EmptyStruct.swift:1:1 - line:1:15] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (constructor_decl implicit range=[EmptyStruct.swift:1:8 - line:1:8] "init()" interface type='(Type1.Type) -> () -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[EmptyStruct.swift:1:8 - line:1:8]
+        (return_stmt range=[EmptyStruct.swift:1:8 - line:1:8])))))

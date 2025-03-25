@@ -1,0 +1,2 @@
+(source_file "EmptyEnum.swift"
+  (enum_decl range=[EmptyEnum.swift:1:1 - line:1:13] "Type1" interface type='Type1.Type' access=internal non-resilient))

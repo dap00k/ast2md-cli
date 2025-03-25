@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Type1",
+    "namespace": "",
+    "properties": [],
+    "methods": [],
+    "uses": [],
+    "is_abstract": false,
+    "implements": []
+  },
+  {
+    "name": "Type2",
+    "namespace": "Type1",
+    "properties": [],
+    "methods": [],
+    "uses": [],
+    "is_abstract": false,
+    "implements": []
+  },
+  {
+    "name": "Type3",
+    "namespace": "Type1.Type2",
+    "properties": [],
+    "methods": [],
+    "uses": [],
+    "is_abstract": false,
+    "implements": []
+  }
+]

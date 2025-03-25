@@ -1,0 +1,168 @@
+(source_file "Protocol1.swift"
+  (protocol range=[Protocol1.swift:1:1 - line:5:1] "Vehicle" interface type='Vehicle.Protocol' access=internal non-resilient requirement signature=<Self>
+    (pattern_binding_decl range=[Protocol1.swift:2:5 - line:2:30]
+      (pattern_typed type='Bool'
+        (pattern_named type='Bool' 'isOn')
+        (type_ident id='Bool' bind=Swift.(file).Bool)))
+    (var_decl range=[Protocol1.swift:2:9 - line:2:9] "isOn" type='Bool' interface type='Bool' access=internal readImpl=getter writeImpl=setter readWriteImpl=modify_coroutine
+      (accessor_decl range=[Protocol1.swift:2:22 - line:2:22] 'anonname=0x634f03fa30c0' interface type='<Self where Self : Vehicle> (Self) -> () -> Bool' access=internal get_for=isOn
+        (parameter "self")
+        (parameter_list))
+      (accessor_decl range=[Protocol1.swift:2:26 - line:2:26] 'anonname=0x634f03fa32b8' interface type='<Self where Self : Vehicle> (inout Self) -> (Bool) -> ()' access=internal set_for=isOn
+        (parameter "self")
+        (parameter_list range=[Protocol1.swift:2:26 - line:2:26]
+          (parameter "newValue" type='Bool' interface type='Bool')))
+      (accessor_decl implicit range=[Protocol1.swift:2:9 - line:2:9] 'anonname=0x634f04009228' interface type='<Self where Self : Vehicle> (inout Self) -> () -> ()' access=internal _modify_for=isOn
+        (parameter "self")
+        (parameter_list)))
+    (func_decl range=[Protocol1.swift:3:5 - line:3:16] "start()" interface type='<Self where Self : Vehicle> (Self) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list range=[Protocol1.swift:3:15 - line:3:16]))
+    (func_decl range=[Protocol1.swift:4:5 - line:4:15] "stop()" interface type='<Self where Self : Vehicle> (Self) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list range=[Protocol1.swift:4:14 - line:4:15])))
+  (class_decl range=[Protocol1.swift:7:1 - line:21:1] "Car" interface type='Car.Type' access=internal non-resilient inherits: Vehicle
+    (pattern_binding_decl range=[Protocol1.swift:8:5 - line:8:15]
+      (pattern_typed type='Bool'
+        (pattern_named type='Bool' 'isOn')
+        (type_ident id='Bool' bind=Swift.(file).Bool)))
+    (var_decl range=[Protocol1.swift:8:9 - line:8:9] "isOn" type='Bool' interface type='Bool' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[Protocol1.swift:8:9 - line:8:9] 'anonname=0x634f0401b618' interface type='(Car) -> () -> Bool' access=internal get_for=isOn
+        (parameter "self" type='Car' interface type='Car')
+        (parameter_list)
+        (brace_stmt implicit range=[Protocol1.swift:8:9 - line:8:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Bool' decl=Protocol1.(file).Car.isOn@Protocol1.swift:8:9 direct_to_storage
+              (declref_expr implicit type='Car' decl=Protocol1.(file).Car.<anonymous>.self@Protocol1.swift:8:9 function_ref=unapplied)))))
+      (accessor_decl implicit range=[Protocol1.swift:8:9 - line:8:9] 'anonname=0x634f0401b850' interface type='(Car) -> (Bool) -> ()' access=internal set_for=isOn
+        (parameter "self" type='Car' interface type='Car')
+        (parameter_list range=[Protocol1.swift:8:9 - line:8:9]
+          (parameter "value" type='Bool' interface type='Bool'))
+        (brace_stmt implicit range=[Protocol1.swift:8:9 - line:8:9]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Bool' decl=Protocol1.(file).Car.isOn@Protocol1.swift:8:9 direct_to_storage
+              (declref_expr implicit type='Car' decl=Protocol1.(file).Car.<anonymous>.self@Protocol1.swift:8:9 function_ref=unapplied))
+            (declref_expr implicit type='Bool' decl=Protocol1.(file).Car.<anonymous>.value@Protocol1.swift:8:9 function_ref=unapplied))))
+      (accessor_decl implicit range=[Protocol1.swift:8:9 - line:8:9] 'anonname=0x634f0401b9e0' interface type='(Car) -> () -> ()' access=internal _modify_for=isOn
+        (parameter "self" type='Car' interface type='Car')
+        (parameter_list)
+        (brace_stmt implicit range=[Protocol1.swift:8:9 - line:8:9]
+          (yield_stmt implicit range=[Protocol1.swift:8:9 - line:8:9]
+            (inout_expr implicit type='inout Bool'
+              (member_ref_expr implicit type='@lvalue Bool' decl=Protocol1.(file).Car.isOn@Protocol1.swift:8:9 direct_to_impl
+                (declref_expr implicit type='Car' decl=Protocol1.(file).Car.<anonymous>.self@Protocol1.swift:8:9 function_ref=unapplied)))))))
+    (constructor_decl range=[Protocol1.swift:10:5 - line:12:5] "init(isOn:)" interface type='(Car.Type) -> (Bool) -> Car' access=internal designated
+      (parameter "self" type='Car' interface type='Car')
+      (parameter_list range=[Protocol1.swift:10:9 - line:10:20]
+        (parameter "isOn" apiName=isOn type='Bool' interface type='Bool'))
+      (brace_stmt range=[Protocol1.swift:10:21 - line:12:5]
+        (assign_expr type='()' location=Protocol1.swift:11:19 range=[Protocol1.swift:11:9 - line:11:21]
+          (member_ref_expr type='@lvalue Bool' location=Protocol1.swift:11:14 range=[Protocol1.swift:11:9 - line:11:14] decl=Protocol1.(file).Car.isOn@Protocol1.swift:8:9 direct_to_storage
+            (declref_expr type='Car' location=Protocol1.swift:11:9 range=[Protocol1.swift:11:9 - line:11:9] decl=Protocol1.(file).Car.init(isOn:).self@Protocol1.swift:10:5 function_ref=unapplied))
+          (declref_expr type='Bool' location=Protocol1.swift:11:21 range=[Protocol1.swift:11:21 - line:11:21] decl=Protocol1.(file).Car.init(isOn:).isOn@Protocol1.swift:10:10 function_ref=unapplied))
+        (return_stmt implicit range=[Protocol1.swift:12:5 - line:12:5])))
+    (func_decl range=[Protocol1.swift:14:5 - line:16:5] "start()" interface type='(Car) -> () -> ()' access=internal
+      (parameter "self" type='Car' interface type='Car')
+      (parameter_list range=[Protocol1.swift:14:15 - line:14:16])
+      (brace_stmt range=[Protocol1.swift:14:18 - line:16:5]
+        (assign_expr type='()' location=Protocol1.swift:15:14 range=[Protocol1.swift:15:9 - line:15:16]
+          (member_ref_expr type='@lvalue Bool' location=Protocol1.swift:15:9 range=[Protocol1.swift:15:9 - line:15:9] decl=Protocol1.(file).Car.isOn@Protocol1.swift:8:9
+            (declref_expr implicit type='Car' location=Protocol1.swift:15:9 range=[Protocol1.swift:15:9 - line:15:9] decl=Protocol1.(file).Car.start().self@Protocol1.swift:14:10 function_ref=unapplied))
+          (boolean_literal_expr type='Bool' location=Protocol1.swift:15:16 range=[Protocol1.swift:15:16 - line:15:16] value=true builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))))
+    (func_decl range=[Protocol1.swift:18:5 - line:20:5] "stop()" interface type='(Car) -> () -> ()' access=internal
+      (parameter "self" type='Car' interface type='Car')
+      (parameter_list range=[Protocol1.swift:18:14 - line:18:15])
+      (brace_stmt range=[Protocol1.swift:18:17 - line:20:5]
+        (assign_expr type='()' location=Protocol1.swift:19:14 range=[Protocol1.swift:19:9 - line:19:16]
+          (member_ref_expr type='@lvalue Bool' location=Protocol1.swift:19:9 range=[Protocol1.swift:19:9 - line:19:9] decl=Protocol1.(file).Car.isOn@Protocol1.swift:8:9
+            (declref_expr implicit type='Car' location=Protocol1.swift:19:9 range=[Protocol1.swift:19:9 - line:19:9] decl=Protocol1.(file).Car.stop().self@Protocol1.swift:18:10 function_ref=unapplied))
+          (boolean_literal_expr type='Bool' location=Protocol1.swift:19:16 range=[Protocol1.swift:19:16 - line:19:16] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))))
+    (destructor_decl implicit range=[Protocol1.swift:7:7 - line:7:7] "deinit" interface type='(Car) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[Protocol1.swift:7:7 - line:7:7])))
+  (class_decl range=[Protocol1.swift:23:1 - line:31:1] "MyCar" interface type='MyCar.Type' access=internal non-resilient
+    (pattern_binding_decl range=[Protocol1.swift:24:5 - line:24:40]
+      (pattern_typed type='Vehicle'
+        (pattern_named type='Vehicle' 'myCar')
+        (type_ident id='Vehicle' bind=Protocol1.(file).Vehicle@Protocol1.swift:1:10))
+      Original init:
+      (call_expr type='Car' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:40] nothrow
+        (constructor_ref_call_expr type='(Bool) -> Car' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:26] nothrow
+          (declref_expr implicit type='(Car.Type) -> (Bool) -> Car' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:26] decl=Protocol1.(file).Car.init(isOn:)@Protocol1.swift:10:5 function_ref=single)
+          (argument_list implicit
+            (argument
+              (type_expr type='Car.Type' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:26] typerepr='Car'))))
+        (argument_list labels=isOn:
+          (argument label=isOn
+            (boolean_literal_expr type='Bool' location=Protocol1.swift:24:35 range=[Protocol1.swift:24:35 - line:24:35] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))))
+      Processed init:
+      (erasure_expr implicit type='Vehicle' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:40]
+        (normal_conformance type=Car protocol=Vehicle
+          (value req=isOn witness=Protocol1.(file).Car.isOn@Protocol1.swift:8:9)
+          (value req=start() witness=Protocol1.(file).Car.start()@Protocol1.swift:14:10)
+          (value req=stop() witness=Protocol1.(file).Car.stop()@Protocol1.swift:18:10))
+        (call_expr type='Car' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:40] nothrow
+          (constructor_ref_call_expr type='(Bool) -> Car' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:26] nothrow
+            (declref_expr implicit type='(Car.Type) -> (Bool) -> Car' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:26] decl=Protocol1.(file).Car.init(isOn:)@Protocol1.swift:10:5 function_ref=single)
+            (argument_list implicit
+              (argument
+                (type_expr type='Car.Type' location=Protocol1.swift:24:26 range=[Protocol1.swift:24:26 - line:24:26] typerepr='Car'))))
+          (argument_list labels=isOn:
+            (argument label=isOn
+              (boolean_literal_expr type='Bool' location=Protocol1.swift:24:35 range=[Protocol1.swift:24:35 - line:24:35] value=false builtin_initializer=Swift.(file).Bool extension.init(_builtinBooleanLiteral:) initializer=**NULL**))))))
+    (var_decl range=[Protocol1.swift:24:9 - line:24:9] "myCar" type='Vehicle' interface type='Vehicle' access=internal let readImpl=stored immutable
+      (accessor_decl implicit range=[Protocol1.swift:24:9 - line:24:9] 'anonname=0x634f04026310' interface type='(MyCar) -> () -> Vehicle' access=internal get_for=myCar
+        (parameter "self" type='MyCar' interface type='MyCar')
+        (parameter_list)
+        (brace_stmt implicit range=[Protocol1.swift:24:9 - line:24:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Vehicle' decl=Protocol1.(file).MyCar.myCar@Protocol1.swift:24:9 direct_to_storage
+              (declref_expr implicit type='MyCar' decl=Protocol1.(file).MyCar.<anonymous>.self@Protocol1.swift:24:9 function_ref=unapplied))))))
+    (func_decl range=[Protocol1.swift:26:5 - line:30:5] "carOperations()" interface type='(MyCar) -> () -> ()' access=internal
+      (parameter "self" type='MyCar' interface type='MyCar')
+      (parameter_list range=[Protocol1.swift:26:23 - line:26:24])
+      (brace_stmt range=[Protocol1.swift:26:26 - line:30:5]
+        (open_existential_expr implicit type='()' location=Protocol1.swift:27:15 range=[Protocol1.swift:27:9 - line:27:21]
+          (opaque_value_expr implicit type='Vehicle' location=Protocol1.swift:27:9 range=[Protocol1.swift:27:9 - line:27:9] @ 0x634f0404dfd0)
+          (member_ref_expr type='Vehicle' location=Protocol1.swift:27:9 range=[Protocol1.swift:27:9 - line:27:9] decl=Protocol1.(file).MyCar.myCar@Protocol1.swift:24:9
+            (declref_expr implicit type='MyCar' location=Protocol1.swift:27:9 range=[Protocol1.swift:27:9 - line:27:9] decl=Protocol1.(file).MyCar.carOperations().self@Protocol1.swift:26:10 function_ref=unapplied))
+          (call_expr type='()' location=Protocol1.swift:27:15 range=[Protocol1.swift:27:9 - line:27:21] nothrow
+            (dot_syntax_call_expr type='() -> ()' location=Protocol1.swift:27:15 range=[Protocol1.swift:27:9 - line:27:15] nothrow
+              (declref_expr type='(Vehicle) -> () -> ()' location=Protocol1.swift:27:15 range=[Protocol1.swift:27:15 - line:27:15] decl=Protocol1.(file).Vehicle.start()@Protocol1.swift:3:10 [with (substitution_map generic_signature=<Self where Self : Vehicle> (substitution Self -> @opened("528CA1BC-1152-11EF-AEB4-EBBE499D5E6F", Vehicle) Self))] function_ref=single)
+              (argument_list implicit
+                (argument
+                  (opaque_value_expr implicit type='Vehicle' location=Protocol1.swift:27:9 range=[Protocol1.swift:27:9 - line:27:9] @ 0x634f0404dfd0))))
+            (argument_list)))
+        (open_existential_expr implicit type='()' location=Protocol1.swift:28:15 range=[Protocol1.swift:28:9 - line:28:20]
+          (opaque_value_expr implicit type='Vehicle' location=Protocol1.swift:28:9 range=[Protocol1.swift:28:9 - line:28:9] @ 0x634f0404e2e8)
+          (member_ref_expr type='Vehicle' location=Protocol1.swift:28:9 range=[Protocol1.swift:28:9 - line:28:9] decl=Protocol1.(file).MyCar.myCar@Protocol1.swift:24:9
+            (declref_expr implicit type='MyCar' location=Protocol1.swift:28:9 range=[Protocol1.swift:28:9 - line:28:9] decl=Protocol1.(file).MyCar.carOperations().self@Protocol1.swift:26:10 function_ref=unapplied))
+          (call_expr type='()' location=Protocol1.swift:28:15 range=[Protocol1.swift:28:9 - line:28:20] nothrow
+            (dot_syntax_call_expr type='() -> ()' location=Protocol1.swift:28:15 range=[Protocol1.swift:28:9 - line:28:15] nothrow
+              (declref_expr type='(Vehicle) -> () -> ()' location=Protocol1.swift:28:15 range=[Protocol1.swift:28:15 - line:28:15] decl=Protocol1.(file).Vehicle.stop()@Protocol1.swift:4:10 [with (substitution_map generic_signature=<Self where Self : Vehicle> (substitution Self -> @opened("528CA1BD-1152-11EF-AEB4-EBBE499D5E6F", Vehicle) Self))] function_ref=single)
+              (argument_list implicit
+                (argument
+                  (opaque_value_expr implicit type='Vehicle' location=Protocol1.swift:28:9 range=[Protocol1.swift:28:9 - line:28:9] @ 0x634f0404e2e8))))
+            (argument_list)))
+        (call_expr type='()' location=Protocol1.swift:29:9 range=[Protocol1.swift:29:9 - line:29:23] nothrow
+          (declref_expr type='(Any..., String, String) -> ()' location=Protocol1.swift:29:9 range=[Protocol1.swift:29:9 - line:29:9] decl=Swift.(file).print(_:separator:terminator:) function_ref=single)
+          (argument_list labels=_:separator:terminator:
+            (argument
+              (vararg_expansion_expr implicit type='Any...' location=Protocol1.swift:29:15 range=[Protocol1.swift:29:15 - line:29:15]
+                (array_expr implicit type='Any...' location=Protocol1.swift:29:15 range=[Protocol1.swift:29:15 - line:29:15] initializer=**NULL**
+                  (erasure_expr implicit type='Any' location=Protocol1.swift:29:15 range=[Protocol1.swift:29:15 - line:29:15]
+                    (string_literal_expr type='String' location=Protocol1.swift:29:15 range=[Protocol1.swift:29:15 - line:29:15] encoding=utf8 value="My car" builtin_initializer=Swift.(file).String extension.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:) initializer=**NULL**)))))
+            (argument label=separator
+              (default_argument_expr implicit type='String' location=Protocol1.swift:29:14 range=[Protocol1.swift:29:14 - line:29:14] default_args_owner=Swift.(file).print(_:separator:terminator:) param=1))
+            (argument label=terminator
+              (default_argument_expr implicit type='String' location=Protocol1.swift:29:14 range=[Protocol1.swift:29:14 - line:29:14] default_args_owner=Swift.(file).print(_:separator:terminator:) param=2))))))
+    (destructor_decl implicit range=[Protocol1.swift:23:7 - line:23:7] "deinit" interface type='(MyCar) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[Protocol1.swift:23:7 - line:23:7]))
+    (constructor_decl implicit range=[Protocol1.swift:23:7 - line:23:7] "init()" interface type='(MyCar.Type) -> () -> MyCar' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[Protocol1.swift:23:7 - line:23:7]
+        (return_stmt range=[Protocol1.swift:23:7 - line:23:7])))))

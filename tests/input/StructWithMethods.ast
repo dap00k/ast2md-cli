@@ -1,0 +1,11 @@
+(source_file "StructWithMethods.swift"
+  (struct_decl range=[StructWithMethods.swift:1:1 - line:6:1] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (func_decl range=[StructWithMethods.swift:2:5 - line:4:5] "doSomethingCool()" interface type='(Type1) -> () -> ()' access=internal
+      (parameter "self")
+      (parameter_list range=[StructWithMethods.swift:2:25 - line:2:26])
+      (brace_stmt range=[StructWithMethods.swift:2:27 - line:4:5]))
+    (constructor_decl implicit range=[StructWithMethods.swift:1:8 - line:1:8] "init()" interface type='(Type1.Type) -> () -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[StructWithMethods.swift:1:8 - line:1:8]
+        (return_stmt range=[StructWithMethods.swift:1:8 - line:1:8])))))

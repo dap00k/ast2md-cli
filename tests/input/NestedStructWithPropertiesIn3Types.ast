@@ -1,0 +1,160 @@
+(source_file "NestedStructWithPropertiesIn3Types.swift"
+  (struct_decl range=[NestedStructWithPropertiesIn3Types.swift:1:1 - line:13:1] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (pattern_binding_decl range=[NestedStructWithPropertiesIn3Types.swift:2:9 - line:2:20]
+      (pattern_typed type='Int'
+        (pattern_named type='Int' 'prop1')
+        (type_ident id='Int' bind=Swift.(file).Int)))
+    (var_decl range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13] "prop1" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13] 'anonname=0x55ccfa05c4c8' interface type='(Type1) -> () -> Int' access=internal get_for=prop1
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Int' decl=NestedStructWithPropertiesIn3Types.(file).Type1.prop1@NestedStructWithPropertiesIn3Types.swift:2:13 direct_to_storage
+              (declref_expr implicit type='Type1' decl=NestedStructWithPropertiesIn3Types.(file).Type1.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:2:13 function_ref=unapplied)))))
+      (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13] 'anonname=0x55ccfa05c738' interface type='(inout Type1) -> (Int) -> ()' access=internal set_for=prop1
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13]
+          (parameter "value" type='Int' interface type='Int'))
+        (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Int' decl=NestedStructWithPropertiesIn3Types.(file).Type1.prop1@NestedStructWithPropertiesIn3Types.swift:2:13 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=NestedStructWithPropertiesIn3Types.(file).Type1.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:2:13 function_ref=unapplied))
+            (declref_expr implicit type='Int' decl=NestedStructWithPropertiesIn3Types.(file).Type1.<anonymous>.value@NestedStructWithPropertiesIn3Types.swift:2:13 function_ref=unapplied))))
+      (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13] 'anonname=0x55ccfa05c908' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=prop1
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13]
+          (yield_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:2:13 - line:2:13]
+            (inout_expr implicit type='inout Int'
+              (member_ref_expr implicit type='@lvalue Int' decl=NestedStructWithPropertiesIn3Types.(file).Type1.prop1@NestedStructWithPropertiesIn3Types.swift:2:13 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=NestedStructWithPropertiesIn3Types.(file).Type1.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:2:13 function_ref=unapplied)))))))
+    (struct_decl range=[NestedStructWithPropertiesIn3Types.swift:3:5 - line:11:5] "Type2" interface type='Type1.Type2.Type' access=internal non-resilient
+      (pattern_binding_decl range=[NestedStructWithPropertiesIn3Types.swift:4:9 - line:4:20]
+        (pattern_typed type='Float'
+          (pattern_named type='Float' 'prop2')
+          (type_ident id='Float' bind=Swift.(file).Float)))
+      (var_decl range=[NestedStructWithPropertiesIn3Types.swift:4:13 - line:4:13] "prop2" type='Float' interface type='Float' access=internal let readImpl=stored immutable
+        (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:4:13 - line:4:13] 'anonname=0x55ccfa06a310' interface type='(Type1.Type2) -> () -> Float' access=internal get_for=prop2
+          (parameter "self" type='Type1.Type2' interface type='Type1.Type2')
+          (parameter_list)
+          (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:4:13 - line:4:13]
+            (return_stmt implicit
+              (member_ref_expr implicit type='Float' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.prop2@NestedStructWithPropertiesIn3Types.swift:4:13 direct_to_storage
+                (declref_expr implicit type='Type1.Type2' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:4:13 function_ref=unapplied))))))
+      (struct_decl range=[NestedStructWithPropertiesIn3Types.swift:5:9 - line:9:9] "Type3" interface type='Type1.Type2.Type3.Type' access=internal non-resilient
+        (pattern_binding_decl range=[NestedStructWithPropertiesIn3Types.swift:7:13 - line:7:24]
+          (pattern_typed type='Int'
+            (pattern_named type='Int' 'prop3')
+            (type_ident id='Int' bind=Swift.(file).Int)))
+        (var_decl range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17] "prop3" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+          (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17] 'anonname=0x55ccfa06e0f0' interface type='(Type1.Type2.Type3) -> () -> Int' access=internal get_for=prop3
+            (parameter "self" type='Type1.Type2.Type3' interface type='Type1.Type2.Type3')
+            (parameter_list)
+            (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17]
+              (return_stmt implicit
+                (member_ref_expr implicit type='Int' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.prop3@NestedStructWithPropertiesIn3Types.swift:7:17 direct_to_storage
+                  (declref_expr implicit type='Type1.Type2.Type3' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:7:17 function_ref=unapplied)))))
+          (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17] 'anonname=0x55ccfa06e328' interface type='(inout Type1.Type2.Type3) -> (Int) -> ()' access=internal set_for=prop3
+            (parameter "self" type='Type1.Type2.Type3' interface type='Type1.Type2.Type3')
+            (parameter_list range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17]
+              (parameter "value" type='Int' interface type='Int'))
+            (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17]
+              (assign_expr implicit type='()'
+                (member_ref_expr implicit type='@lvalue Int' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.prop3@NestedStructWithPropertiesIn3Types.swift:7:17 direct_to_storage
+                  (declref_expr implicit type='@lvalue Type1.Type2.Type3' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:7:17 function_ref=unapplied))
+                (declref_expr implicit type='Int' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.<anonymous>.value@NestedStructWithPropertiesIn3Types.swift:7:17 function_ref=unapplied))))
+          (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17] 'anonname=0x55ccfa06e478' interface type='(inout Type1.Type2.Type3) -> () -> ()' access=internal _modify_for=prop3
+            (parameter "self" type='Type1.Type2.Type3' interface type='Type1.Type2.Type3')
+            (parameter_list)
+            (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17]
+              (yield_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:7:17 - line:7:17]
+                (inout_expr implicit type='inout Int'
+                  (member_ref_expr implicit type='@lvalue Int' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.prop3@NestedStructWithPropertiesIn3Types.swift:7:17 direct_to_impl
+                    (declref_expr implicit type='@lvalue Type1.Type2.Type3' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:7:17 function_ref=unapplied)))))))
+        (pattern_binding_decl range=[NestedStructWithPropertiesIn3Types.swift:8:13 - line:8:24]
+          (pattern_typed type='Float'
+            (pattern_named type='Float' 'prop4')
+            (type_ident id='Float' bind=Swift.(file).Float)))
+        (var_decl range=[NestedStructWithPropertiesIn3Types.swift:8:17 - line:8:17] "prop4" type='Float' interface type='Float' access=internal let readImpl=stored immutable
+          (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:8:17 - line:8:17] 'anonname=0x55ccfa06e630' interface type='(Type1.Type2.Type3) -> () -> Float' access=internal get_for=prop4
+            (parameter "self" type='Type1.Type2.Type3' interface type='Type1.Type2.Type3')
+            (parameter_list)
+            (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:8:17 - line:8:17]
+              (return_stmt implicit
+                (member_ref_expr implicit type='Float' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.prop4@NestedStructWithPropertiesIn3Types.swift:8:17 direct_to_storage
+                  (declref_expr implicit type='Type1.Type2.Type3' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.Type3.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:8:17 function_ref=unapplied))))))
+        (constructor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:5:16 - line:5:16] "init(prop3:prop4:)" interface type='(Type1.Type2.Type3.Type) -> (Int, Float) -> Type1.Type2.Type3' access=internal designated
+          (parameter "self")
+          (parameter_list range=[NestedStructWithPropertiesIn3Types.swift:5:16 - line:5:16]
+            (parameter "prop3" apiName=prop3 type='Int' interface type='Int')
+            (parameter "prop4" apiName=prop4 type='Float' interface type='Float'))))
+      (pattern_binding_decl range=[NestedStructWithPropertiesIn3Types.swift:10:9 - line:10:20]
+        (pattern_typed type='String'
+          (pattern_named type='String' 'prop5')
+          (type_ident id='String' bind=Swift.(file).String)))
+      (var_decl range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13] "prop5" type='String' interface type='String' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+        (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13] 'anonname=0x55ccfa08c0b8' interface type='(Type1.Type2) -> () -> String' access=internal get_for=prop5
+          (parameter "self" type='Type1.Type2' interface type='Type1.Type2')
+          (parameter_list)
+          (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13]
+            (return_stmt implicit
+              (member_ref_expr implicit type='String' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.prop5@NestedStructWithPropertiesIn3Types.swift:10:13 direct_to_storage
+                (declref_expr implicit type='Type1.Type2' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:10:13 function_ref=unapplied)))))
+        (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13] 'anonname=0x55ccfa08c310' interface type='(inout Type1.Type2) -> (String) -> ()' access=internal set_for=prop5
+          (parameter "self" type='Type1.Type2' interface type='Type1.Type2')
+          (parameter_list range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13]
+            (parameter "value" type='String' interface type='String'))
+          (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13]
+            (assign_expr implicit type='()'
+              (member_ref_expr implicit type='@lvalue String' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.prop5@NestedStructWithPropertiesIn3Types.swift:10:13 direct_to_storage
+                (declref_expr implicit type='@lvalue Type1.Type2' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:10:13 function_ref=unapplied))
+              (declref_expr implicit type='String' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.<anonymous>.value@NestedStructWithPropertiesIn3Types.swift:10:13 function_ref=unapplied))))
+        (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13] 'anonname=0x55ccfa08c4e0' interface type='(inout Type1.Type2) -> () -> ()' access=internal _modify_for=prop5
+          (parameter "self" type='Type1.Type2' interface type='Type1.Type2')
+          (parameter_list)
+          (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13]
+            (yield_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:10:13 - line:10:13]
+              (inout_expr implicit type='inout String'
+                (member_ref_expr implicit type='@lvalue String' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.prop5@NestedStructWithPropertiesIn3Types.swift:10:13 direct_to_impl
+                  (declref_expr implicit type='@lvalue Type1.Type2' decl=NestedStructWithPropertiesIn3Types.(file).Type1.Type2.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:10:13 function_ref=unapplied)))))))
+      (constructor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:3:12 - line:3:12] "init(prop2:prop5:)" interface type='(Type1.Type2.Type) -> (Float, String) -> Type1.Type2' access=internal designated
+        (parameter "self")
+        (parameter_list range=[NestedStructWithPropertiesIn3Types.swift:3:12 - line:3:12]
+          (parameter "prop2" apiName=prop2 type='Float' interface type='Float')
+          (parameter "prop5" apiName=prop5 type='String' interface type='String'))))
+    (pattern_binding_decl range=[NestedStructWithPropertiesIn3Types.swift:12:5 - line:12:23]
+      (pattern_typed type='[String]'
+        (pattern_named type='[String]' 'prop6')
+        (type_array
+          (type_ident id='String' bind=Swift.(file).String))))
+    (var_decl range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9] "prop6" type='[String]' interface type='[String]' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9] 'anonname=0x55ccfa0a7360' interface type='(Type1) -> () -> [String]' access=internal get_for=prop6
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='[String]' decl=NestedStructWithPropertiesIn3Types.(file).Type1.prop6@NestedStructWithPropertiesIn3Types.swift:12:9 direct_to_storage
+              (declref_expr implicit type='Type1' decl=NestedStructWithPropertiesIn3Types.(file).Type1.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:12:9 function_ref=unapplied)))))
+      (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9] 'anonname=0x55ccfa0a7650' interface type='(inout Type1) -> ([String]) -> ()' access=internal set_for=prop6
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9]
+          (parameter "value" type='[String]' interface type='[String]'))
+        (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue [String]' decl=NestedStructWithPropertiesIn3Types.(file).Type1.prop6@NestedStructWithPropertiesIn3Types.swift:12:9 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=NestedStructWithPropertiesIn3Types.(file).Type1.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:12:9 function_ref=unapplied))
+            (declref_expr implicit type='[String]' decl=NestedStructWithPropertiesIn3Types.(file).Type1.<anonymous>.value@NestedStructWithPropertiesIn3Types.swift:12:9 function_ref=unapplied))))
+      (accessor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9] 'anonname=0x55ccfa0a7820' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=prop6
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9]
+          (yield_stmt implicit range=[NestedStructWithPropertiesIn3Types.swift:12:9 - line:12:9]
+            (inout_expr implicit type='inout [String]'
+              (member_ref_expr implicit type='@lvalue [String]' decl=NestedStructWithPropertiesIn3Types.(file).Type1.prop6@NestedStructWithPropertiesIn3Types.swift:12:9 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=NestedStructWithPropertiesIn3Types.(file).Type1.<anonymous>.self@NestedStructWithPropertiesIn3Types.swift:12:9 function_ref=unapplied)))))))
+    (constructor_decl implicit range=[NestedStructWithPropertiesIn3Types.swift:1:8 - line:1:8] "init(prop1:prop6:)" interface type='(Type1.Type) -> (Int, [String]) -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list range=[NestedStructWithPropertiesIn3Types.swift:1:8 - line:1:8]
+        (parameter "prop1" apiName=prop1 type='Int' interface type='Int')
+        (parameter "prop6" apiName=prop6 type='[String]' interface type='[String]')))))

@@ -1,0 +1,113 @@
+(source_file "Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift"
+  (struct_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:1:1 - line:6:1] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (pattern_binding_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:5 - line:2:16]
+      (pattern_typed type='Int'
+        (pattern_named type='Int' 'prop1')
+        (type_ident
+          (component id='Int' bind=Swift.(file).Int))))
+    (var_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9] "prop1" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9] 'anonname=0x1210b7ae0' interface type='(Type1) -> () -> Int' access=internal get_for=prop1
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Int' decl=StructWithProperties.(file).Type1.prop1@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 direct_to_storage
+              (declref_expr implicit type='Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 function_ref=unapplied)))))
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9] 'anonname=0x1210b7d50' interface type='(inout Type1) -> (Int) -> ()' access=internal set_for=prop1
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9]
+          (parameter "value" type='Int' interface type='Int'))
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Int' decl=StructWithProperties.(file).Type1.prop1@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 function_ref=unapplied))
+            (declref_expr implicit type='Int' decl=StructWithProperties.(file).Type1.<anonymous>.value@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 function_ref=unapplied))))
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9] 'anonname=0x1210b7f20' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=prop1
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9]
+          (yield_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 - line:2:9]
+            (inout_expr implicit type='inout Int'
+              (member_ref_expr implicit type='@lvalue Int' decl=StructWithProperties.(file).Type1.prop1@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:2:9 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:3:5 - line:3:16]
+      (pattern_typed type='Float'
+        (pattern_named type='Float' 'prop2')
+        (type_ident
+          (component id='Float' bind=Swift.(file).Float))))
+    (var_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:3:9 - line:3:9] "prop2" type='Float' interface type='Float' access=internal let readImpl=stored immutable
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:3:9 - line:3:9] 'anonname=0x1210c1700' interface type='(Type1) -> () -> Float' access=internal get_for=prop2
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:3:9 - line:3:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Float' decl=StructWithProperties.(file).Type1.prop2@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:3:9 direct_to_storage
+              (declref_expr implicit type='Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:3:9 function_ref=unapplied))))))
+    (pattern_binding_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:5 - line:4:16]
+      (pattern_typed type='String'
+        (pattern_named type='String' 'prop3')
+        (type_ident
+          (component id='String' bind=Swift.(file).String))))
+    (var_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9] "prop3" type='String' interface type='String' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9] 'anonname=0x1210c18d8' interface type='(Type1) -> () -> String' access=internal get_for=prop3
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='String' decl=StructWithProperties.(file).Type1.prop3@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 direct_to_storage
+              (declref_expr implicit type='Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 function_ref=unapplied)))))
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9] 'anonname=0x1210c1b30' interface type='(inout Type1) -> (String) -> ()' access=internal set_for=prop3
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9]
+          (parameter "value" type='String' interface type='String'))
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue String' decl=StructWithProperties.(file).Type1.prop3@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 function_ref=unapplied))
+            (declref_expr implicit type='String' decl=StructWithProperties.(file).Type1.<anonymous>.value@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 function_ref=unapplied))))
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9] 'anonname=0x1210c1d00' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=prop3
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9]
+          (yield_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 - line:4:9]
+            (inout_expr implicit type='inout String'
+              (member_ref_expr implicit type='@lvalue String' decl=StructWithProperties.(file).Type1.prop3@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:4:9 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:5 - line:5:23]
+      (pattern_typed type='[String]'
+        (pattern_named type='[String]' 'prop4')
+        (type_array
+          (type_ident
+            (component id='String' bind=Swift.(file).String)))))
+    (var_decl range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9] "prop4" type='[String]' interface type='[String]' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9] 'anonname=0x1210c1e38' interface type='(Type1) -> () -> [String]' access=internal get_for=prop4
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9]
+          (return_stmt implicit
+            (member_ref_expr implicit type='[String]' decl=StructWithProperties.(file).Type1.prop4@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 direct_to_storage
+              (declref_expr implicit type='Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 function_ref=unapplied)))))
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9] 'anonname=0x1210c20b0' interface type='(inout Type1) -> ([String]) -> ()' access=internal set_for=prop4
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9]
+          (parameter "value" type='[String]' interface type='[String]'))
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue [String]' decl=StructWithProperties.(file).Type1.prop4@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 function_ref=unapplied))
+            (declref_expr implicit type='[String]' decl=StructWithProperties.(file).Type1.<anonymous>.value@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 function_ref=unapplied))))
+      (accessor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9] 'anonname=0x1210c2280' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=prop4
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9]
+          (yield_stmt implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 - line:5:9]
+            (inout_expr implicit type='inout [String]'
+              (member_ref_expr implicit type='@lvalue [String]' decl=StructWithProperties.(file).Type1.prop4@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=StructWithProperties.(file).Type1.<anonymous>.self@Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:5:9 function_ref=unapplied)))))))
+    (constructor_decl implicit range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:1:8 - line:1:8] "init(prop1:prop2:prop3:prop4:)" interface type='(Type1.Type) -> (Int, Float, String, [String]) -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list range=[Tests/ProQuaMeMeTests/testFiles/StructWithProperties.swift:1:8 - line:1:8]
+        (parameter "prop1" apiName=prop1 type='Int' interface type='Int')
+        (parameter "prop2" apiName=prop2 type='Float' interface type='Float')
+        (parameter "prop3" apiName=prop3 type='String' interface type='String')
+        (parameter "prop4" apiName=prop4 type='[String]' interface type='[String]')))))

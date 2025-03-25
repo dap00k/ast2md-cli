@@ -1,0 +1,13 @@
+(source_file "EmptyMultiStruct.swift"
+  (struct_decl range=[EmptyMultiStruct.swift:1:1 - line:1:15] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (constructor_decl implicit range=[EmptyMultiStruct.swift:1:8 - line:1:8] "init()" interface type='(Type1.Type) -> () -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[EmptyMultiStruct.swift:1:8 - line:1:8]
+        (return_stmt range=[EmptyMultiStruct.swift:1:8 - line:1:8]))))
+  (struct_decl range=[EmptyMultiStruct.swift:2:1 - line:2:15] "Type2" interface type='Type2.Type' access=internal non-resilient
+    (constructor_decl implicit range=[EmptyMultiStruct.swift:2:8 - line:2:8] "init()" interface type='(Type2.Type) -> () -> Type2' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[EmptyMultiStruct.swift:2:8 - line:2:8]
+        (return_stmt range=[EmptyMultiStruct.swift:2:8 - line:2:8])))))

@@ -1,0 +1,197 @@
+(source_file "NestedPropertiesAndMethodsUsed.swift"
+  (struct_decl range=[NestedPropertiesAndMethodsUsed.swift:1:1 - line:9:1] "Type2" interface type='Type2.Type' access=internal non-resilient
+    (struct_decl range=[NestedPropertiesAndMethodsUsed.swift:2:3 - line:7:3] "Type3" interface type='Type2.Type3.Type' access=internal non-resilient
+      (pattern_binding_decl range=[NestedPropertiesAndMethodsUsed.swift:3:5 - line:3:12]
+        (pattern_typed type='Int'
+          (pattern_named type='Int' 'a')
+          (type_ident id='Int' bind=Swift.(file).Int)))
+      (var_decl range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9] "a" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+        (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9] 'anonname=0x55b80c4aba30' interface type='(Type2.Type3) -> () -> Int' access=internal get_for=a
+          (parameter "self" type='Type2.Type3' interface type='Type2.Type3')
+          (parameter_list)
+          (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9]
+            (return_stmt implicit
+              (member_ref_expr implicit type='Int' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.a@NestedPropertiesAndMethodsUsed.swift:3:9 direct_to_storage
+                (declref_expr implicit type='Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:3:9 function_ref=unapplied)))))
+        (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9] 'anonname=0x55b80c4abca0' interface type='(inout Type2.Type3) -> (Int) -> ()' access=internal set_for=a
+          (parameter "self" type='Type2.Type3' interface type='Type2.Type3')
+          (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9]
+            (parameter "value" type='Int' interface type='Int'))
+          (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9]
+            (assign_expr implicit type='()'
+              (member_ref_expr implicit type='@lvalue Int' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.a@NestedPropertiesAndMethodsUsed.swift:3:9 direct_to_storage
+                (declref_expr implicit type='@lvalue Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:3:9 function_ref=unapplied))
+              (declref_expr implicit type='Int' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.<anonymous>.value@NestedPropertiesAndMethodsUsed.swift:3:9 function_ref=unapplied))))
+        (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9] 'anonname=0x55b80c4abe70' interface type='(inout Type2.Type3) -> () -> ()' access=internal _modify_for=a
+          (parameter "self" type='Type2.Type3' interface type='Type2.Type3')
+          (parameter_list)
+          (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9]
+            (yield_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:3:9 - line:3:9]
+              (inout_expr implicit type='inout Int'
+                (member_ref_expr implicit type='@lvalue Int' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.a@NestedPropertiesAndMethodsUsed.swift:3:9 direct_to_impl
+                  (declref_expr implicit type='@lvalue Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:3:9 function_ref=unapplied)))))))
+      (pattern_binding_decl range=[NestedPropertiesAndMethodsUsed.swift:4:5 - line:4:12]
+        (pattern_typed type='Int'
+          (pattern_named type='Int' 'b')
+          (type_ident id='Int' bind=Swift.(file).Int)))
+      (var_decl range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9] "b" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+        (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9] 'anonname=0x55b80c4b8160' interface type='(Type2.Type3) -> () -> Int' access=internal get_for=b
+          (parameter "self" type='Type2.Type3' interface type='Type2.Type3')
+          (parameter_list)
+          (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9]
+            (return_stmt implicit
+              (member_ref_expr implicit type='Int' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.b@NestedPropertiesAndMethodsUsed.swift:4:9 direct_to_storage
+                (declref_expr implicit type='Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:4:9 function_ref=unapplied)))))
+        (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9] 'anonname=0x55b80c4b8358' interface type='(inout Type2.Type3) -> (Int) -> ()' access=internal set_for=b
+          (parameter "self" type='Type2.Type3' interface type='Type2.Type3')
+          (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9]
+            (parameter "value" type='Int' interface type='Int'))
+          (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9]
+            (assign_expr implicit type='()'
+              (member_ref_expr implicit type='@lvalue Int' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.b@NestedPropertiesAndMethodsUsed.swift:4:9 direct_to_storage
+                (declref_expr implicit type='@lvalue Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:4:9 function_ref=unapplied))
+              (declref_expr implicit type='Int' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.<anonymous>.value@NestedPropertiesAndMethodsUsed.swift:4:9 function_ref=unapplied))))
+        (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9] 'anonname=0x55b80c4b8468' interface type='(inout Type2.Type3) -> () -> ()' access=internal _modify_for=b
+          (parameter "self" type='Type2.Type3' interface type='Type2.Type3')
+          (parameter_list)
+          (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9]
+            (yield_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:4:9 - line:4:9]
+              (inout_expr implicit type='inout Int'
+                (member_ref_expr implicit type='@lvalue Int' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.b@NestedPropertiesAndMethodsUsed.swift:4:9 direct_to_impl
+                  (declref_expr implicit type='@lvalue Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:4:9 function_ref=unapplied)))))))
+      (func_decl range=[NestedPropertiesAndMethodsUsed.swift:5:5 - line:5:25] "doSomething()" interface type='(Type2.Type3) -> () -> ()' access=internal
+        (parameter "self")
+        (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:5:21 - line:5:22])
+        (brace_stmt range=[NestedPropertiesAndMethodsUsed.swift:5:24 - line:5:25]))
+      (func_decl range=[NestedPropertiesAndMethodsUsed.swift:6:5 - line:6:28] "doSomethingToo()" interface type='(Type2.Type3) -> () -> ()' access=internal
+        (parameter "self")
+        (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:6:24 - line:6:25])
+        (brace_stmt range=[NestedPropertiesAndMethodsUsed.swift:6:27 - line:6:28]))
+      (constructor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:2:10 - line:2:10] "init(a:b:)" interface type='(Type2.Type3.Type) -> (Int, Int) -> Type2.Type3' access=internal designated
+        (parameter "self")
+        (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:2:10 - line:2:10]
+          (parameter "a" apiName=a type='Int' interface type='Int')
+          (parameter "b" apiName=b type='Int' interface type='Int'))))
+    (constructor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:1:8 - line:1:8] "init()" interface type='(Type2.Type) -> () -> Type2' access=internal designated
+      (parameter "self")
+      (parameter_list)
+      (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:1:8 - line:1:8]
+        (return_stmt range=[NestedPropertiesAndMethodsUsed.swift:1:8 - line:1:8]))))
+  (struct_decl range=[NestedPropertiesAndMethodsUsed.swift:10:1 - line:21:1] "Type1" interface type='Type1.Type' access=internal non-resilient
+    (pattern_binding_decl range=[NestedPropertiesAndMethodsUsed.swift:11:3 - line:11:16]
+      (pattern_typed type='Type2.Type3'
+        (pattern_named type='Type2.Type3' 'c')
+        (type_member
+          (type_ident id='Type2' bind=NestedPropertiesAndMethodsUsed.(file).Type2@NestedPropertiesAndMethodsUsed.swift:1:8)
+          (type_ident id='Type3' bind=NestedPropertiesAndMethodsUsed.(file).Type2.Type3@NestedPropertiesAndMethodsUsed.swift:2:10))))
+    (var_decl range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7] "c" type='Type2.Type3' interface type='Type2.Type3' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7] 'anonname=0x55b80c4db8e0' interface type='(Type1) -> () -> Type2.Type3' access=internal get_for=c
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7 direct_to_storage
+              (declref_expr implicit type='Type1' decl=NestedPropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:11:7 function_ref=unapplied)))))
+      (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7] 'anonname=0x55b80c4dbb38' interface type='(inout Type1) -> (Type2.Type3) -> ()' access=internal set_for=c
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7]
+          (parameter "value" type='Type2.Type3' interface type='Type2.Type3'))
+        (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=NestedPropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:11:7 function_ref=unapplied))
+            (declref_expr implicit type='Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type1.<anonymous>.value@NestedPropertiesAndMethodsUsed.swift:11:7 function_ref=unapplied))))
+      (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7] 'anonname=0x55b80c4dbcc8' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=c
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7]
+          (yield_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:11:7 - line:11:7]
+            (inout_expr implicit type='inout Type2.Type3'
+              (member_ref_expr implicit type='@lvalue Type2.Type3' decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=NestedPropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:11:7 function_ref=unapplied)))))))
+    (pattern_binding_decl range=[NestedPropertiesAndMethodsUsed.swift:12:3 - line:12:10]
+      (pattern_typed type='Int'
+        (pattern_named type='Int' 'd')
+        (type_ident id='Int' bind=Swift.(file).Int)))
+    (var_decl range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7] "d" type='Int' interface type='Int' access=internal readImpl=stored writeImpl=stored readWriteImpl=stored
+      (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7] 'anonname=0x55b80c4dbe80' interface type='(Type1) -> () -> Int' access=internal get_for=d
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7]
+          (return_stmt implicit
+            (member_ref_expr implicit type='Int' decl=NestedPropertiesAndMethodsUsed.(file).Type1.d@NestedPropertiesAndMethodsUsed.swift:12:7 direct_to_storage
+              (declref_expr implicit type='Type1' decl=NestedPropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:12:7 function_ref=unapplied)))))
+      (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7] 'anonname=0x55b80c4dc0b8' interface type='(inout Type1) -> (Int) -> ()' access=internal set_for=d
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7]
+          (parameter "value" type='Int' interface type='Int'))
+        (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7]
+          (assign_expr implicit type='()'
+            (member_ref_expr implicit type='@lvalue Int' decl=NestedPropertiesAndMethodsUsed.(file).Type1.d@NestedPropertiesAndMethodsUsed.swift:12:7 direct_to_storage
+              (declref_expr implicit type='@lvalue Type1' decl=NestedPropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:12:7 function_ref=unapplied))
+            (declref_expr implicit type='Int' decl=NestedPropertiesAndMethodsUsed.(file).Type1.<anonymous>.value@NestedPropertiesAndMethodsUsed.swift:12:7 function_ref=unapplied))))
+      (accessor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7] 'anonname=0x55b80c4dc208' interface type='(inout Type1) -> () -> ()' access=internal _modify_for=d
+        (parameter "self" type='Type1' interface type='Type1')
+        (parameter_list)
+        (brace_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7]
+          (yield_stmt implicit range=[NestedPropertiesAndMethodsUsed.swift:12:7 - line:12:7]
+            (inout_expr implicit type='inout Int'
+              (member_ref_expr implicit type='@lvalue Int' decl=NestedPropertiesAndMethodsUsed.(file).Type1.d@NestedPropertiesAndMethodsUsed.swift:12:7 direct_to_impl
+                (declref_expr implicit type='@lvalue Type1' decl=NestedPropertiesAndMethodsUsed.(file).Type1.<anonymous>.self@NestedPropertiesAndMethodsUsed.swift:12:7 function_ref=unapplied)))))))
+    (func_decl range=[NestedPropertiesAndMethodsUsed.swift:13:12 - line:20:3] "doSomethingElse()" interface type='(inout Type1) -> () -> ()' access=internal
+      (parameter "self" type='Type1' interface type='Type1' inout)
+      (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:13:32 - line:13:33])
+      (brace_stmt range=[NestedPropertiesAndMethodsUsed.swift:13:35 - line:20:3]
+        (assign_expr type='()' location=NestedPropertiesAndMethodsUsed.swift:14:9 range=[NestedPropertiesAndMethodsUsed.swift:14:7 - line:14:13]
+          (member_ref_expr type='@lvalue Int' location=NestedPropertiesAndMethodsUsed.swift:14:7 range=[NestedPropertiesAndMethodsUsed.swift:14:7 - line:14:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.d@NestedPropertiesAndMethodsUsed.swift:12:7
+            (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:14:7 range=[NestedPropertiesAndMethodsUsed.swift:14:7 - line:14:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied))
+          (load_expr implicit type='Int' location=NestedPropertiesAndMethodsUsed.swift:14:13 range=[NestedPropertiesAndMethodsUsed.swift:14:11 - line:14:13]
+            (member_ref_expr type='@lvalue Int' location=NestedPropertiesAndMethodsUsed.swift:14:13 range=[NestedPropertiesAndMethodsUsed.swift:14:11 - line:14:13] decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.a@NestedPropertiesAndMethodsUsed.swift:3:9
+              (member_ref_expr type='@lvalue Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:14:11 range=[NestedPropertiesAndMethodsUsed.swift:14:11 - line:14:11] decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7
+                (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:14:11 range=[NestedPropertiesAndMethodsUsed.swift:14:11 - line:14:11] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied)))))
+        (assign_expr type='()' location=NestedPropertiesAndMethodsUsed.swift:15:9 range=[NestedPropertiesAndMethodsUsed.swift:15:7 - line:15:13]
+          (member_ref_expr type='@lvalue Int' location=NestedPropertiesAndMethodsUsed.swift:15:7 range=[NestedPropertiesAndMethodsUsed.swift:15:7 - line:15:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.d@NestedPropertiesAndMethodsUsed.swift:12:7
+            (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:15:7 range=[NestedPropertiesAndMethodsUsed.swift:15:7 - line:15:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied))
+          (load_expr implicit type='Int' location=NestedPropertiesAndMethodsUsed.swift:15:13 range=[NestedPropertiesAndMethodsUsed.swift:15:11 - line:15:13]
+            (member_ref_expr type='@lvalue Int' location=NestedPropertiesAndMethodsUsed.swift:15:13 range=[NestedPropertiesAndMethodsUsed.swift:15:11 - line:15:13] decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.b@NestedPropertiesAndMethodsUsed.swift:4:9
+              (member_ref_expr type='@lvalue Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:15:11 range=[NestedPropertiesAndMethodsUsed.swift:15:11 - line:15:11] decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7
+                (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:15:11 range=[NestedPropertiesAndMethodsUsed.swift:15:11 - line:15:11] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied)))))
+        (assign_expr type='()' location=NestedPropertiesAndMethodsUsed.swift:16:9 range=[NestedPropertiesAndMethodsUsed.swift:16:7 - line:16:13]
+          (member_ref_expr type='@lvalue Int' location=NestedPropertiesAndMethodsUsed.swift:16:7 range=[NestedPropertiesAndMethodsUsed.swift:16:7 - line:16:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.d@NestedPropertiesAndMethodsUsed.swift:12:7
+            (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:16:7 range=[NestedPropertiesAndMethodsUsed.swift:16:7 - line:16:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied))
+          (load_expr implicit type='Int' location=NestedPropertiesAndMethodsUsed.swift:16:13 range=[NestedPropertiesAndMethodsUsed.swift:16:11 - line:16:13]
+            (member_ref_expr type='@lvalue Int' location=NestedPropertiesAndMethodsUsed.swift:16:13 range=[NestedPropertiesAndMethodsUsed.swift:16:11 - line:16:13] decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.b@NestedPropertiesAndMethodsUsed.swift:4:9
+              (member_ref_expr type='@lvalue Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:16:11 range=[NestedPropertiesAndMethodsUsed.swift:16:11 - line:16:11] decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7
+                (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:16:11 range=[NestedPropertiesAndMethodsUsed.swift:16:11 - line:16:11] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied)))))
+        (call_expr type='()' location=NestedPropertiesAndMethodsUsed.swift:17:9 range=[NestedPropertiesAndMethodsUsed.swift:17:7 - line:17:21] nothrow
+          (dot_syntax_call_expr type='() -> ()' location=NestedPropertiesAndMethodsUsed.swift:17:9 range=[NestedPropertiesAndMethodsUsed.swift:17:7 - line:17:9] nothrow
+            (declref_expr type='(Type2.Type3) -> () -> ()' location=NestedPropertiesAndMethodsUsed.swift:17:9 range=[NestedPropertiesAndMethodsUsed.swift:17:9 - line:17:9] decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.doSomething()@NestedPropertiesAndMethodsUsed.swift:5:10 function_ref=single)
+            (argument_list implicit
+              (argument
+                (load_expr implicit type='Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:17:7 range=[NestedPropertiesAndMethodsUsed.swift:17:7 - line:17:7]
+                  (member_ref_expr type='@lvalue Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:17:7 range=[NestedPropertiesAndMethodsUsed.swift:17:7 - line:17:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7
+                    (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:17:7 range=[NestedPropertiesAndMethodsUsed.swift:17:7 - line:17:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied))))))
+          (argument_list))
+        (call_expr type='()' location=NestedPropertiesAndMethodsUsed.swift:18:9 range=[NestedPropertiesAndMethodsUsed.swift:18:7 - line:18:21] nothrow
+          (dot_syntax_call_expr type='() -> ()' location=NestedPropertiesAndMethodsUsed.swift:18:9 range=[NestedPropertiesAndMethodsUsed.swift:18:7 - line:18:9] nothrow
+            (declref_expr type='(Type2.Type3) -> () -> ()' location=NestedPropertiesAndMethodsUsed.swift:18:9 range=[NestedPropertiesAndMethodsUsed.swift:18:9 - line:18:9] decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.doSomething()@NestedPropertiesAndMethodsUsed.swift:5:10 function_ref=single)
+            (argument_list implicit
+              (argument
+                (load_expr implicit type='Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:18:7 range=[NestedPropertiesAndMethodsUsed.swift:18:7 - line:18:7]
+                  (member_ref_expr type='@lvalue Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:18:7 range=[NestedPropertiesAndMethodsUsed.swift:18:7 - line:18:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7
+                    (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:18:7 range=[NestedPropertiesAndMethodsUsed.swift:18:7 - line:18:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied))))))
+          (argument_list))
+        (call_expr type='()' location=NestedPropertiesAndMethodsUsed.swift:19:9 range=[NestedPropertiesAndMethodsUsed.swift:19:7 - line:19:24] nothrow
+          (dot_syntax_call_expr type='() -> ()' location=NestedPropertiesAndMethodsUsed.swift:19:9 range=[NestedPropertiesAndMethodsUsed.swift:19:7 - line:19:9] nothrow
+            (declref_expr type='(Type2.Type3) -> () -> ()' location=NestedPropertiesAndMethodsUsed.swift:19:9 range=[NestedPropertiesAndMethodsUsed.swift:19:9 - line:19:9] decl=NestedPropertiesAndMethodsUsed.(file).Type2.Type3.doSomethingToo()@NestedPropertiesAndMethodsUsed.swift:6:10 function_ref=single)
+            (argument_list implicit
+              (argument
+                (load_expr implicit type='Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:19:7 range=[NestedPropertiesAndMethodsUsed.swift:19:7 - line:19:7]
+                  (member_ref_expr type='@lvalue Type2.Type3' location=NestedPropertiesAndMethodsUsed.swift:19:7 range=[NestedPropertiesAndMethodsUsed.swift:19:7 - line:19:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.c@NestedPropertiesAndMethodsUsed.swift:11:7
+                    (declref_expr implicit type='@lvalue Type1' location=NestedPropertiesAndMethodsUsed.swift:19:7 range=[NestedPropertiesAndMethodsUsed.swift:19:7 - line:19:7] decl=NestedPropertiesAndMethodsUsed.(file).Type1.doSomethingElse().self@NestedPropertiesAndMethodsUsed.swift:13:17 function_ref=unapplied))))))
+          (argument_list))))
+    (constructor_decl implicit range=[NestedPropertiesAndMethodsUsed.swift:10:8 - line:10:8] "init(c:d:)" interface type='(Type1.Type) -> (Type2.Type3, Int) -> Type1' access=internal designated
+      (parameter "self")
+      (parameter_list range=[NestedPropertiesAndMethodsUsed.swift:10:8 - line:10:8]
+        (parameter "c" apiName=c type='Type2.Type3' interface type='Type2.Type3')
+        (parameter "d" apiName=d type='Int' interface type='Int')))))

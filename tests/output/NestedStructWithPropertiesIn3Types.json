@@ -1,0 +1,38 @@
+[
+  {
+    "properties": [
+      "prop1",
+      "prop6"
+    ],
+    "namespace": "",
+    "methods": [],
+    "uses": [],
+    "name": "Type1",
+    "is_abstract": false,
+    "implements": []
+  },
+  {
+    "properties": [
+      "prop2",
+      "prop5"
+    ],
+    "namespace": "Type1",
+    "methods": [],
+    "uses": [],
+    "name": "Type2",
+    "is_abstract": false,
+    "implements": []
+  },
+  {
+    "properties": [
+      "prop3",
+      "prop4"
+    ],
+    "namespace": "Type1.Type2",
+    "methods": [],
+    "uses": [],
+    "name": "Type3",
+    "is_abstract": false,
+    "implements": []
+  }
+]

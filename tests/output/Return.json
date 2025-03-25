@@ -1,0 +1,13 @@
+[
+    {
+        "name": "t1",
+        "namespace": "",
+        "properties": [],
+        "methods": [
+            "x()"
+        ],
+        "uses": [],
+        "is_abstract": false,
+        "implements": []
+    }
+]

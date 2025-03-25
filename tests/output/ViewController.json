@@ -1,0 +1,106 @@
+[
+    {
+        "name": "UIViewController",
+        "namespace": "",
+        "properties": [],
+        "methods": [],
+        "uses": [],
+        "is_abstract": true,
+        "implements": []
+    },
+    {
+        "name": "SFSpeechRecognizerDelegate",
+        "namespace": "",
+        "properties": [],
+        "methods": [],
+        "uses": [],
+        "is_abstract": true,
+        "implements": []
+    },
+    {
+        "name": "ViewController",
+        "namespace": "",
+        "properties": [],
+        "methods": [],
+        "uses": [
+            {
+                "name": "UIViewController",
+                "namespace": "",
+                "type": true,
+                "properties": [],
+                "methods": [],
+                "type_freq": 1,
+                "property_freq": 0,
+                "method_freq": 0
+            },
+            {
+                "name": "SFSpeechRecognizerDelegate",
+                "namespace": "",
+                "type": true,
+                "properties": [],
+                "methods": [],
+                "type_freq": 1,
+                "property_freq": 0,
+                "method_freq": 0
+            },
+            {
+                "name": "",
+                "namespace": "",
+                "type": true,
+                "properties": [
+                    "recordButton",
+                    "recognitionTask",
+                    "recognitionRequest",
+                    "textView"
+                ],
+                "methods": [
+                    "urls(for:in:)",
+                    "FileManager",
+                    "appendingPathComponent",
+                    "outputDir",
+                    "viewDidLoad()",
+                    "viewDidAppear",
+                    "requestAuthorization",
+                    "addOperation",
+                    "Task",
+                    "path(forResource:ofType:inDirectory:)",
+                    "prepareCustomLanguageModel(for:clientIdentifier:configuration:)",
+                    "single",
+                    "swift:68:40 - line:68:40",
+                    "swift:68:70 - line:68:70",
+                    "swift:68:98 - line:68:98",
+                    "MainActor",
+                    "setTitle(_:for:)",
+                    "cancel()",
+                    "recognitionTask",
+                    "sharedInstance()",
+                    "setCategory(_:mode:options:)",
+                    "audioSession",
+                    "AVAudioSession",
+                    "recognitionTask(with:resultHandler:)",
+                    "Bool",
+                    "Optional",
+                    "stop()",
+                    "removeTap(onBus:)",
+                    "inputNode",
+                    "outputFormat(forBus:)",
+                    "installTap(onBus:bufferSize:format:block:)",
+                    "append",
+                    "prepare()",
+                    "start()",
+                    "endAudio()",
+                    "startRecording()",
+                    "swift:180:21 - line:180:21"
+                ],
+                "type_freq": 1,
+                "property_freq": 15,
+                "method_freq": 63
+            }
+        ],
+        "is_abstract": false,
+        "implements": [
+            "UIViewController",
+            "SFSpeechRecognizerDelegate"
+        ]
+    }
+]
